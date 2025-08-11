@@ -1,15 +1,14 @@
 "use client";
 
-import { useRef, Suspense } from "react";
+import { useRef, Suspense, type JSX } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as THREE from "three";
 import { random } from "maath";
 
-export const Star = (props: Record<string, any>) => {
+export const Star = (props: JSX.IntrinsicElements["group"]) => {
   const ref = useRef<THREE.Points>(null);
 
-  // Gera pontos aleatórios como Float32Array garantido
   const sphere = new Float32Array(
     random.inSphere(new Float32Array(5000), { radius: 1.2 })
   );

@@ -1,7 +1,5 @@
 "use client";
-import React, { useRef, useEffect } from "react";
 import { motion } from "motion/react";
-import gsap from "gsap";
 import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";

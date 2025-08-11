@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Kanit } from "next/font/google";
+import { Kanit } from "next/font/google";
 import "./globals.css";
-import { Star } from "lucide-react";
 import StarCanvas from "./_components/star";
 
 const kanit = Kanit({

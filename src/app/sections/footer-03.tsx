@@ -6,13 +6,13 @@ import {
   TwitterIcon,
 } from "lucide-react";
 import Link from "next/link";
-import { SecaoConsultoria } from "../_components/SecaoConsultoria";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+
 
 interface SecaoConsultoriaProps {
   title: string;
   description: string;
-  descriptionButton?: string;
 }
 
 const footerSections = [
@@ -75,7 +75,7 @@ const footerSections = [
 export const Footer03Page = ({
   title,
   description,
-  descriptionButton = "Consulte Nossos Especialistas",
+  // descriptionButton = "Consulte Nossos Especialistas",
 }: SecaoConsultoriaProps) => {
 
   return (
@@ -86,7 +86,8 @@ export const Footer03Page = ({
           <div className="py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-x-8 gap-y-10 px-6 xl:px-0 border-b border-b-gray-200">
             <div className="col-span-full xl:col-span-2 ">
               {/* Logo */}
-              <img src="/Logo Horizontal.png" alt="" width={100} />
+              {/* <Image src="/Logo Horizontal.png" alt="" width={100} /> */}
+              <Image src="/Logo Horizontal.png" alt="" width={100} height={100} />
 
               <p className="mt-4 text-muted-foreground ">
                 Especialistas em Threat Intelligence e investigações digitais, protegendo empresas contra ameaças cibernéticas avançadas com soluções estratégicas e tecnologia de ponta.

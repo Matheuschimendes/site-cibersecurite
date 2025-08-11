@@ -1,7 +1,7 @@
 "use client";
 
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import type { CarouselApi } from "@/components/ui/carousel";
@@ -13,6 +13,7 @@ import {
 import StarCanvas from "../_components/star";
 import { SecaoConsultoria } from "../_components/SecaoConsultoria";
 import { TextReveal } from "@/components/magicui/text-reveal";
+import Image from "next/image";
 
 interface GalleryItem {
   id: string;
@@ -27,7 +28,7 @@ interface GalleryItem {
 
 interface Gallery6Props {
   heading?: string;
-  demoUrl?: string;
+  // demoUrl?: string;
   items?: GalleryItem[];
   listItems?: GalleryItem[];
   headingSecond?: string;
@@ -39,7 +40,7 @@ const Gallery = ({
   headingSecond = "Inteligência",
   paragraph =
   "Soluções completas de threat intelligence e investigações digitais para proteger sua organização.",
-  demoUrl = "https://www.shadcnblocks.com",
+  // demoUrl = "https://www.shadcnblocks.com",
   items = [
     {
       id: "item-1",
@@ -55,7 +56,6 @@ const Gallery = ({
       image:
         "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
     },
-
     {
       id: "item-2",
       title: "Leak Detection",
@@ -70,12 +70,10 @@ const Gallery = ({
       image:
         "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
     },
-
     {
       id: "item-3",
       title: "VIP Protection",
-      summary:
-        "Proteção de executivos em ambientes digitais",
+      summary: "Proteção de executivos em ambientes digitais",
       url: "#",
       listItems: [
         "Monitoramento de ameaças direcionadas",
@@ -86,12 +84,10 @@ const Gallery = ({
       image:
         "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
     },
-
     {
       id: "item-4",
       title: "Cyber Risk Insights",
-      summary:
-        "Análise técnica e estratégica do risco cibernético",
+      summary: "Análise técnica e estratégica do risco cibernético",
       url: "#",
       listItems: [
         "Avaliação de superfície de ataque",
@@ -102,12 +98,10 @@ const Gallery = ({
       image:
         "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
     },
-
     {
       id: "item-5",
       title: "Contrainteligência Corporativa",
-      summary:
-        "Mapeamento de ativos sensíveis e investigações de risco",
+      summary: "Mapeamento de ativos sensíveis e investigações de risco",
       url: "#",
       listItems: [
         "Mapeamento de ativos críticos",
@@ -118,12 +112,10 @@ const Gallery = ({
       image:
         "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
     },
-
     {
       id: "item-6",
       title: "Investigações Digitais",
-      summary:
-        "Investigações avançadas de fraudes e golpes estruturados",
+      summary: "Investigações avançadas de fraudes e golpes estruturados",
       url: "#",
       listItems: [
         "Análise forense digital",
@@ -134,12 +126,10 @@ const Gallery = ({
       image:
         "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
     },
-
     {
       id: "item-7",
       title: "Análise de Ameaças",
-      summary:
-        "Análise de campanhas maliciosas e atuação em Deep/Dark Web",
+      summary: "Análise de campanhas maliciosas e atuação em Deep/Dark Web",
       url: "#",
       listItems: [
         "Análise de campanhas de malware",
@@ -150,12 +140,10 @@ const Gallery = ({
       image:
         "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
     },
-
     {
       id: "item-8",
       title: "Takedown & Desmonte",
-      summary:
-        "Rastreio e desmonte de infraestruturas maliciosas",
+      summary: "Rastreio e desmonte de infraestruturas maliciosas",
       url: "#",
       listItems: [
         "Identificação de infraestruturas maliciosas",
@@ -189,10 +177,8 @@ const Gallery = ({
   }, [carouselApi]);
 
   return (
-
     <section
-      className="md:-mt-10 px-5 flex flex-col items-center justify-center py-24 relative w-full
-      bg-gradient-to-br"
+      className="md:-mt-10 px-5 flex flex-col items-center justify-center py-24 relative w-full bg-gradient-to-br"
     >
       <StarCanvas />
       <div className="container max-w-7xl px-4">
@@ -218,12 +204,7 @@ const Gallery = ({
               variant="outline"
               onClick={() => carouselApi?.scrollPrev()}
               disabled={!canScrollPrev}
-              className="
-                border-[#E32320] text-[#E32320] 
-                hover:bg-[#E32320]/30 hover:shadow-[0_0_15px_rgba(227,35,32,0.7)] 
-                disabled:text-gray-600 disabled:border-gray-600
-                transition-shadow duration-300
-              "
+              className="border-[#E32320] text-[#E32320] hover:bg-[#E32320]/30 hover:shadow-[0_0_15px_rgba(227,35,32,0.7)] disabled:text-gray-600 disabled:border-gray-600 transition-shadow duration-300"
               aria-label="Previous Slide"
             >
               <ArrowLeft className="w-6 h-6" />
@@ -233,12 +214,7 @@ const Gallery = ({
               variant="outline"
               onClick={() => carouselApi?.scrollNext()}
               disabled={!canScrollNext}
-              className="
-                border-[#E32320] text-[#E32320] 
-                hover:bg-[#E32320]/30 hover:shadow-[0_0_15px_rgba(227,35,32,0.7)] 
-                disabled:text-gray-600 disabled:border-gray-600
-                transition-shadow duration-300
-              "
+              className="border-[#E32320] text-[#E32320] hover:bg-[#E32320]/30 hover:shadow-[0_0_15px_rgba(227,35,32,0.7)] disabled:text-gray-600 disabled:border-gray-600 transition-shadow duration-300"
               aria-label="Next Slide"
             >
               <ArrowRight className="w-6 h-6" />
@@ -264,13 +240,12 @@ const Gallery = ({
               <CarouselItem
                 key={item.id}
                 className="
-                  ml-8 mt-10 mb-10 md:max-w-[352px] rounded-[24px]  border-transparent
+                  ml-8 mt-10 mb-10 md:max-w-[352px] rounded-[24px] border-transparent
                   bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f]
                   p-8 text-white shadow-lg shadow-[#E32320]/25
                   transition-shadow duration-300
                   hover:shadow-[#E32320]/60 hover:border-[#E32320]
                   md:hover:shadow-[0_0_40px_rgba(227,35,32,0.6)]
-                  
                 "
               >
                 <a
@@ -280,11 +255,13 @@ const Gallery = ({
                   rel="noopener noreferrer"
                 >
                   <div className="mb-5 flex items-center justify-start gap-4">
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.title}
                       className="w-14 h-14 object-contain"
                       loading="lazy"
+                      width={56}
+                      height={56}
                     />
                     <h3 className="text-2xl font-semibold uppercase tracking-wide text-[#E32320] group-hover:text-[#ff574d] transition-colors duration-300">
                       {item.title}
@@ -298,10 +275,7 @@ const Gallery = ({
                   {item.listItems && (
                     <ul className="mb-8 space-y-3 text-sm text-gray-400">
                       {item.listItems.map((listItem, index) => (
-                        <li
-                          key={index}
-                          className="flex items-center gap-3"
-                        >
+                        <li key={index} className="flex items-center gap-3">
                           <Check className="w-6 h-6 text-[#E32320]" />
                           <span>{listItem}</span>
                         </li>
@@ -319,9 +293,12 @@ const Gallery = ({
           </CarouselContent>
         </Carousel>
       </div>
+
       <SecaoConsultoria
         title={"Precisa de uma Solução Personalizada?"}
-        description={"Nossos especialistas podem desenvolver estratégias de inteligência sob medida para as necessidades específicas da sua organização."}
+        description={
+          "Nossos especialistas podem desenvolver estratégias de inteligência sob medida para as necessidades específicas da sua organização."
+        }
       />
     </section>
   );

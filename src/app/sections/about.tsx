@@ -4,8 +4,6 @@ import { TextReveal } from "@/components/magicui/text-reveal";
 import React, { useRef } from "react";
 import { Cards } from "./cards";
 import StarCanvas from "../_components/star";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { SecaoConsultoria } from "../_components/SecaoConsultoria";
 
 interface Feature {
@@ -110,8 +108,7 @@ const About = ({
 }: DescriptionProps) => {
   return (
     <section
-      className="-mt-50 md:-mt-70 p-5 py-24 lex flex-col items-center justify-center relative w-full
-      bg-gradient-to-br"
+      className="-mt-50 md:-mt-70 p-5 py-24 flex flex-col items-center justify-center relative w-full bg-gradient-to-br"
     >
       <StarCanvas />
       <div className="container max-w-7xl mx-auto">
@@ -149,7 +146,9 @@ const About = ({
 
       <SecaoConsultoria
         title={"Nosso Posicionamento"}
-        description={"A Kryfal se posiciona como referência em inteligência cibernética no mercado B2B, oferecendo soluções estratégicas e operacionais que transformam dados em inteligência acionável, protegendo ativos digitais e fortalecendo a postura de segurança organizacional."}
+        description={
+          "A Kryfal se posiciona como referência em inteligência cibernética no mercado B2B, oferecendo soluções estratégicas e operacionais que transformam dados em inteligência acionável, protegendo ativos digitais e fortalecendo a postura de segurança organizacional."
+        }
       />
     </section>
   );
