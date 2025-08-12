@@ -403,7 +403,7 @@ export default function GlobeDemo() {
     <>
       <div className="flex flex-row items-center justify-center py-10 h-screen md:h-auto relative w-full">
         <StarCanvas />
-        <div className="mt-10 max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[65rem] px-4">
+        <div className="mt-30 max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[65rem] px-4">
           <motion.div
             initial={{
               opacity: 0,

@@ -1,6 +1,6 @@
-import Image from "next/image";  // import novo para imagens otimizadas
+"use client";
+import React, { useState, useEffect } from "react";
 import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
-
 import {
   Accordion,
   AccordionContent,
@@ -23,7 +23,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import type { JSX } from "react";
 
 interface MenuItem {
   title: string;
@@ -103,20 +102,33 @@ const Navbar = ({
     signup: { title: "USA", url: "#" },
   },
 }: Navbar1Props) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section className="p-10 mb:p-10 md:m-0">
-      <div className="container">
+    <section
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${scrolled
+        ? "bg-black/10 backdrop-blur-md shadow-lg"
+        : "bg-transparent"
+        }`}
+    >
+      <div className="container mx-auto w-full p-5">
         {/* Desktop Menu */}
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-6">
             {/* Logo */}
             <a href={logo.url} className="flex items-center gap-2">
-              <Image
+              <img
                 src={logo.src}
+                className="max-h-8 dark:invert"
                 alt={logo.alt}
-                width={120}
-                height={40}
-                className="dark:invert max-h-8"
               />
               <span className="text-lg font-semibold tracking-tighter">
                 {logo.title}
@@ -145,12 +157,10 @@ const Navbar = ({
           <div className="flex items-center justify-between">
             {/* Logo */}
             <a href={logo.url} className="flex items-center gap-2">
-              <Image
+              <img
                 src={logo.src}
+                className="max-h-8 dark:invert"
                 alt={logo.alt}
-                width={120}
-                height={40}
-                className="dark:invert max-h-8"
               />
             </a>
             <Sheet>
@@ -163,12 +173,10 @@ const Navbar = ({
                 <SheetHeader>
                   <SheetTitle>
                     <a href={logo.url} className="flex items-center gap-2">
-                      <Image
+                      <img
                         src={logo.src}
+                        className="max-h-8 dark:invert"
                         alt={logo.alt}
-                        width={120}
-                        height={40}
-                        className="dark:invert max-h-8"
                       />
                     </a>
                   </SheetTitle>
@@ -183,16 +191,10 @@ const Navbar = ({
                   </Accordion>
 
                   <div className="flex flex-col gap-3">
-                    <Button
-                      asChild
-                      className="hover:bg-white hover:text-[#E32320] border "
-                    >
+                    <Button asChild className="hover:bg-white hover:text-[#E32320] border">
                       <a href={auth.login.url}>{auth.login.title}</a>
                     </Button>
-                    <Button
-                      asChild
-                      className="hover:bg-white hover:text-[#E32320] border"
-                    >
+                    <Button asChild className="hover:bg-white hover:text-[#E32320] border">
                       <a href={auth.signup.url}>{auth.signup.title}</a>
                     </Button>
                   </div>
@@ -206,17 +208,18 @@ const Navbar = ({
   );
 };
 
-const renderMenuItem = (item: MenuItem): JSX.Element => {
+// Submenu
+const renderMenuItem = (item: MenuItem) => {
   if (item.items) {
     return (
       <NavigationMenuItem key={item.title}>
         <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-        <NavigationMenuContent className="bg-[#E32320] text-popover-foreground">
+        <NavigationMenuContent className="bg-[#E32320] text-popover-foreground min-w-[350px]">
           {item.items.map((subItem) => (
             <NavigationMenuLink
               asChild
               key={subItem.title}
-              className="w-80 hover:bg-white hover:*:text-[#E32320]"
+              className="p-2 hover:bg-white hover:*:text-[#E32320] transition-colors block"
             >
               <SubMenuLink item={subItem} />
             </NavigationMenuLink>
@@ -230,7 +233,7 @@ const renderMenuItem = (item: MenuItem): JSX.Element => {
     <NavigationMenuItem key={item.title}>
       <NavigationMenuLink
         href={item.url}
-        className="bg-background hover:bg-muted hover:text-accent-foreground group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors"
+        className="bg-transparent hover:bg-muted hover:text-accent-foreground group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors"
       >
         {item.title}
       </NavigationMenuLink>
@@ -238,7 +241,8 @@ const renderMenuItem = (item: MenuItem): JSX.Element => {
   );
 };
 
-const renderMobileMenuItem = (item: MenuItem): JSX.Element => {
+// Mobile
+const renderMobileMenuItem = (item: MenuItem) => {
   if (item.items) {
     return (
       <AccordionItem key={item.title} value={item.title} className="border-b-0">
