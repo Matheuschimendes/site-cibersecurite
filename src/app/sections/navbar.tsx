@@ -67,26 +67,26 @@ const Navbar = ({
       url: "#",
       items: [
         {
-          title: "Help Center",
-          description: "Get all the answers you need right here",
+          title: "Brand Protection",
+          // description: "Get all the answers you need right here",
           icon: <Zap className="size-5 shrink-0" />,
           url: "#",
         },
         {
-          title: "Contact Us",
-          description: "We are here to help you with any questions you have",
+          title: "Leak Detection",
+          // description: "We are here to help you with any questions you have",
           icon: <Sunset className="size-5 shrink-0" />,
           url: "#",
         },
         {
-          title: "Status",
-          description: "Check the current status of our services and APIs",
+          title: "VIP Protection",
+          // description: "Check the current status of our services and APIs",
           icon: <Trees className="size-5 shrink-0" />,
           url: "#",
         },
         {
-          title: "Terms of Service",
-          description: "Our terms and conditions for using our services",
+          title: "Cyber Risk Insights",
+          // description: "Our terms and conditions for using our services",
           icon: <Book className="size-5 shrink-0" />,
           url: "#",
         },
@@ -214,7 +214,7 @@ const renderMenuItem = (item: MenuItem) => {
     return (
       <NavigationMenuItem key={item.title}>
         <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-        <NavigationMenuContent className="bg-[#E32320] text-popover-foreground min-w-[350px]">
+        <NavigationMenuContent className="bg-[#E32320] text-popover-foreground min-w-[220px]">
           {item.items.map((subItem) => (
             <NavigationMenuLink
               asChild
