@@ -5,7 +5,6 @@ import Footer03Page from "@/app/sections/footer-03";
 import Gallery from "@/app/sections/gallery";
 
 
-
 export default function Home() {
   return (
     <div className="">
@@ -13,7 +12,7 @@ export default function Home() {
       <GlobeDemo />
       <About />
       <Gallery />
-      <Footer03Page title={""} description={""} />
+      <Footer03Page />
     </div>
   );
 }
