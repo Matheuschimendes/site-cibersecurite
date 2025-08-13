@@ -11,7 +11,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import StarCanvas from "../_components/star";
-import { SecaoConsultoria } from "../_components/SecaoConsultoria";
+import { SecaoConsultoria } from "../_components/SessaoConsultoria";
 import { TextReveal } from "@/components/magicui/text-reveal";
 import Image from "next/image";
 

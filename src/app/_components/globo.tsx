@@ -10,7 +10,7 @@ const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World)
   ssr: false,
 });
 
-export default function GlobeDemo() {
+export default function Globe() {
 
 
   const globeConfig = {

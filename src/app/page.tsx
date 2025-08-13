@@ -1,7 +1,7 @@
-import GlobeDemo from "./_components/globo";
+import Globe from "./_components/globo";
 import { About } from "./sections/about";
 import { Navbar } from "./sections/navbar";
-import Footer03Page from "@/app/sections/footer-03";
+import FooterPage from "@/app/sections/footer";
 import Gallery from "@/app/sections/gallery";
 
 
@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <div className="">
       <Navbar />
-      <GlobeDemo />
+      <Globe />
       <About />
       <Gallery />
-      <Footer03Page />
+      <FooterPage />
     </div>
   );
 }

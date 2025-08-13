@@ -4,7 +4,7 @@ import { TextReveal } from "@/components/magicui/text-reveal";
 import React, { useRef } from "react";
 import { Cards } from "./cards";
 import StarCanvas from "../_components/star";
-import { SecaoConsultoria } from "../_components/SecaoConsultoria";
+import { SecaoConsultoria } from "../_components/SessaoConsultoria";
 
 interface Feature {
   id: string;
