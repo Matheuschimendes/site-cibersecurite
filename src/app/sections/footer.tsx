@@ -27,17 +27,43 @@ const footerSections = [
       { title: "Treinamentos", href: "#" },
     ],
   },
+  {
+    title: "Contatos",
+    links: [
+      {
+        title: "comercial@kryfal.com",
+        href: "#",
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="w-5 h-5"
+          >
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+          </svg>
+        )
+      },
+      { title: "contato@kryfal.com", href: "#" },
+
+      {
+        title: "+55 (11) 9999-9999",
+        href: "#",
+      },
+      { title: "+55 (11) 8888-8888", href: "#" },
+      { title: "São Paulo, Brasil - Atendimento Nacional", href: "#" },
+    ],
+  },
 ];
 
 export const FooterPage = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <div className="grow bg-muted" />
-
+    <div className="flex flex-col md:mb-10">
       <footer>
         <div className="max-w-screen-xl mx-auto">
           {/* Seções do Rodapé */}
-          <div className="py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-x-8 gap-y-10 px-6 xl:px-0 border-b border-b-gray-200">
+          <div className="py-12 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-4 gap-x-1 gap-y-10 px-6 xl:px-0 border-b border-b-gray-200">
             {/* Logo e Descrição */}
             <div className="col-span-full xl:col-span-2">
               <Image
@@ -59,13 +85,15 @@ export const FooterPage = () => {
             {footerSections.map(({ title, links }) => (
               <div key={title}>
                 <h6 className="font-semibold">{title}</h6>
-                <ul className="mt-6 space-y-4">
-                  {links.map(({ title, href }) => (
+                <ul className="mt-0 space-y-4">
+                  {links.map(({ title, href, icon }) => (
+
                     <li key={title}>
                       <Link
                         href={href}
-                        className="text-muted-foreground hover:text-foreground transition-colors"
+                        className="text-muted-foreground transition-colors hover:text-[#E32320]"
                       >
+                        {icon}
                         {title}
                       </Link>
                     </li>
@@ -97,10 +125,10 @@ export const FooterPage = () => {
         </div>
 
         {/* Aviso de Segurança */}
-        <section className="relative overflow-hidden w-[90%] md:w-[90%] mx-auto mb-5 border border-[#E32320] rounded-md bg-gradient-to-r from-[#1a0000] to-[#0a0000] p-5 md:p-10 m-10 ">
+        <section className="relative overflow-hidden md:mb-0 mb-10 w-[90%] md:w-[90%] mx-auto border border-[#E32320] rounded-md bg-gradient-to-r from-[#1a0000] to-[#0a0000] p-5 md:p-10 ">
           {consultoriaData.map(({ title, description }, idx) => (
-            <div key={idx} className="flex flex-col md:flex-row items-start md:items-center gap-4">
-              <h2 className="text-[12px] md:text-sm  font-bold text-[#E32320]">
+            <div key={idx} className=" flex flex-col md:flex-row items-start md:items-center gap-4">
+              <h2 className="text-[12px] md:text-sm font-bold text-[#E32320]">
                 {title}
                 <span className="text-white">{description}</span>
               </h2>
