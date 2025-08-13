@@ -97,10 +97,10 @@ export const FooterPage = () => {
         </div>
 
         {/* Aviso de Segurança */}
-        <section className="relative overflow-hidden md:w-[90%] mx-auto mb-5 border border-[#E32320] rounded-md bg-gradient-to-r from-[#1a0000] to-[#0a0000] p-5 md:p-10">
+        <section className="relative overflow-hidden w-[90%] md:w-[90%] mx-auto mb-5 border border-[#E32320] rounded-md bg-gradient-to-r from-[#1a0000] to-[#0a0000] p-5 md:p-10 m-10 ">
           {consultoriaData.map(({ title, description }, idx) => (
             <div key={idx} className="flex flex-col md:flex-row items-start md:items-center gap-4">
-              <h2 className="text-lg md:text-sm font-bold text-[#E32320]">
+              <h2 className="text-[12px] md:text-sm  font-bold text-[#E32320]">
                 {title}
                 <span className="text-white">{description}</span>
               </h2>
