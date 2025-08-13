@@ -171,8 +171,18 @@ const Gallery = ({
     updateSelection();
     carouselApi.on("select", updateSelection);
 
+    // Iniciar autoplay para a rotação automática do carrossel
+    const autoplayInterval = setInterval(() => {
+      if (carouselApi?.canScrollNext()) {
+        carouselApi.scrollNext();
+      } else {
+        carouselApi?.scrollTo(0); // Volta ao primeiro item quando chegar no último
+      }
+    }, 3000); // 3000ms de intervalo para a rotação
+
     return () => {
       carouselApi.off("select", updateSelection);
+      clearInterval(autoplayInterval); // Limpa o intervalo quando o componente for desmontado
     };
   }, [carouselApi]);
 
@@ -223,7 +233,7 @@ const Gallery = ({
         </div>
       </div>
 
-      <div className="w-full overflow-hidden md:w-auto">
+      <div className="w-full overflow-hidden md:w-[calc(100vw-2rem)]">
         <Carousel
           setApi={setCarouselApi}
           opts={{
@@ -233,20 +243,20 @@ const Gallery = ({
               },
             },
           }}
-          className="relative w-full md:left-[-1rem]"
+          className="relative w-full md:left-[-1rem] transition-all"
         >
-          <CarouselContent className="hide-scrollbar w-full max-w-full md:-mr-4 md:ml-8 2xl:ml-[max(8rem,calc(50vw-700px+1rem))] 2xl:mr-[max(0rem,calc(50vw-900px-1rem))]">
+          <CarouselContent className="hide-scrollbar w-full max-w-full md:px-4">
             {items.map((item) => (
               <CarouselItem
                 key={item.id}
                 className="
-                  ml-8 mt-10 mb-10 md:max-w-[352px] rounded-[24px] border-transparent
-                  bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f]
-                  p-8 text-white shadow-lg shadow-[#E32320]/25
-                  transition-shadow duration-300
-                  hover:shadow-[#E32320]/60 hover:border-[#E32320]
-                  md:hover:shadow-[0_0_40px_rgba(227,35,32,0.6)]
-                "
+            mx-4 my-6 md:max-w-[352px] rounded-[24px] border-transparent
+            bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f]
+            p-8 text-white shadow-lg shadow-[#E32320]/25
+            transition-all duration-300
+            hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320] hover:scale-105
+            md:hover:shadow-[0_0_60px_rgba(227,35,32,0.7)]
+          "
               >
                 <a
                   href={item.url}
