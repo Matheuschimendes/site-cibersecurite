@@ -14,12 +14,12 @@ export default function Tags({
   return (
     <div
       className={twMerge(
-        `inline-flex border ${borderColorClass} text-white px-3 py-1 rounded-full items-center gap-2 uppercase`,
+        `inline-flex border ${borderColorClass} text-white text-xs px-3 py-1 rounded-full items-center gap-2 uppercase `,
         className
       )}
       {...otherProps}
     >
-      <span>&#10038;</span>
+      {/* <span>&#10038;</span> */}
       <span>{children}</span>
     </div>
   );
