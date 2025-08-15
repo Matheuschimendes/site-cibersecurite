@@ -79,6 +79,52 @@ const Gallery = ({
       image:
         "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
     },
+    {
+      id: "item-3",
+      title: "Deep e Dark Web na Prática",
+      summary: "Navegação segura e investigação em ambientes ocultos",
+      paragraph: "Curso Gravado",
+      tags: "Duração: 12 horas",
+      tagsSecond: "Avançado",
+      url: "#",
+
+      image:
+        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+    },
+    {
+      id: "item-4",
+      title: "OPSEC para Investigações",
+      summary: "Segurança operacional em investigações digitais",
+      paragraph: "Curso Ao Vivo",
+      tags: "Duração: 6 horas",
+      tagsSecond: "Intermediário",
+      url: "#",
+      image:
+        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+    },
+    {
+      id: "item-5",
+      title: "Ferramentas e Técnicas de OSINT",
+      summary: "Domínio de ferramentas de inteligência de fontes abertas",
+      paragraph: "Curso Gravado",
+      tags: "Duração: 20 horas",
+      tagsSecond: "Todos os níveis",
+      url: "#",
+      image:
+        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+    },
+    {
+      id: "item-6",
+      title: "Investigações Cibernéticas Avançadas",
+      summary: "Metodologias avançadas de investigação digital",
+      paragraph: "Curso Ao Vivo",
+      tags: "Duração: 24 horas",
+      tagsSecond: "Avanaçado",
+      url: "#",
+      image:
+        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+    },
+
 
   ],
 }: Gallery6Props) => {
