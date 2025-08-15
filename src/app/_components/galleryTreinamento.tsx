@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Award, BookOpen, Check, Lightbulb, Target, Users, Video } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import type { CarouselApi } from "@/components/ui/carousel";
@@ -25,7 +25,7 @@ interface GalleryItem {
   tagsSecond?: string;
   summary: string;
   url: string;
-  image: string;
+  icon?: React.ReactNode;
   listItems?: string[];
 }
 
@@ -59,8 +59,7 @@ const Gallery = ({
         "Takedown de conteúdos e perfis falsos",
         "Proteção de propriedade intelectual",
       ],
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      icon: <BookOpen size={40} />,
     },
     {
       id: "item-2",
@@ -76,8 +75,7 @@ const Gallery = ({
         "Investigação em fóruns clandestinos",
         "Alertas em tempo real de exposições",
       ],
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      icon: <Target size={40} />,
     },
     {
       id: "item-3",
@@ -87,9 +85,7 @@ const Gallery = ({
       tags: "Duração: 12 horas",
       tagsSecond: "Avançado",
       url: "#",
-
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      icon: <Video size={40} />,
     },
     {
       id: "item-4",
@@ -99,8 +95,7 @@ const Gallery = ({
       tags: "Duração: 6 horas",
       tagsSecond: "Intermediário",
       url: "#",
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      icon: <Award size={40} />,
     },
     {
       id: "item-5",
@@ -110,8 +105,7 @@ const Gallery = ({
       tags: "Duração: 20 horas",
       tagsSecond: "Todos os níveis",
       url: "#",
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      icon: <Lightbulb size={40} />,
     },
     {
       id: "item-6",
@@ -121,8 +115,7 @@ const Gallery = ({
       tags: "Duração: 24 horas",
       tagsSecond: "Avanaçado",
       url: "#",
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      icon: <Users size={40} />,
     },
 
 
@@ -159,9 +152,7 @@ const Gallery = ({
   }, [carouselApi]);
 
   return (
-    <section
-      className="md:-mt-10 px-5 flex flex-col items-center justify-center py-24 relative w-full bg-black"
-    >
+    <section className="w-screen h-full flex flex-col items-center justify-center relative bg-gradient-to-br">
       <StarCanvas />
       <div className="container max-w-7xl px-4">
         < div className="mb-12 flex flex-col justify-between md:mb-16 md:flex-row md:items-end" >
@@ -176,6 +167,8 @@ const Gallery = ({
                 {headingSecond}
               </span>
             </h2>
+            {/* Linha decorativa */}
+            <div className="w-24 h-1 bg-gradient-to-r from-[#E32320] to-[#ff574d] rounded-full mb-8"></div>
             <TextReveal className="mt-6 max-w-xl text-gray-300 text-lg leading-relaxed">
               {paragraph}
             </TextReveal>
@@ -205,7 +198,7 @@ const Gallery = ({
         </div>
       </div >
 
-      <div className="w-full overflow-hidden md:w-[calc(100vw-2rem)] md:mb-10">
+      <div className="w-full h-full overflow-hidden md:mb-10">
         <Carousel
           setApi={setCarouselApi}
           opts={{
@@ -215,9 +208,9 @@ const Gallery = ({
               },
             },
           }}
-          className="relative w-full md:left-[-1rem] transition-all"
+          className="relative w-full h-full"
         >
-          <CarouselContent className="hide-scrollbar w-full max-w-full md:px-4">
+          <CarouselContent className="hide-scrollbar w-full h-full">
             {items.map((item) => (
               <CarouselItem
                 key={item.id}
@@ -226,8 +219,7 @@ const Gallery = ({
             bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f]
             p-8 text-white shadow-lg shadow-[#E32320]/25
             transition-all duration-300
-            hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320] hover:scale-105
-            md:hover:shadow-[0_0_60px_rgba(227,35,32,0.7)]
+            hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]]
           "
               >
                 <a
@@ -237,14 +229,7 @@ const Gallery = ({
                   rel="noopener noreferrer"
                 >
                   <div className="mb-5 flex items-center justify-start gap-4">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      className="w-14 h-14 object-contain"
-                      loading="lazy"
-                      width={56}
-                      height={56}
-                    />
+                    {item.icon}
                     <div className="">
                       <h3 className="text-xl font-semibold uppercase tracking-wide text-[#E32320] group-hover:text-[#ff574d] transition-colors duration-300">
                         {item.title}

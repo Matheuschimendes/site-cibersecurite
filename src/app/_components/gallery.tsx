@@ -1,7 +1,21 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  ArrowUpRight,
+  Award,
+  Brain,
+  Check,
+  Eye,
+  Globe,
+  Search,
+  ShieldIcon,
+  TriangleAlert,
+  Users,
+  Zap
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import type { CarouselApi } from "@/components/ui/carousel";
@@ -13,7 +27,6 @@ import {
 import StarCanvas from "./star";
 import { SecaoConsultoria } from "./SessaoConsultoria";
 import { TextReveal } from "@/components/magicui/text-reveal";
-import Image from "next/image";
 
 interface GalleryItem {
   id: string;
@@ -22,7 +35,7 @@ interface GalleryItem {
   paragraph?: string;
   summary: string;
   url: string;
-  image: string;
+  icon?: React.ReactNode;
   listItems?: string[];
 }
 
@@ -51,8 +64,7 @@ const Gallery = ({
         "Takedown de conteúdos e perfis falsos",
         "Proteção de propriedade intelectual",
       ],
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      icon: <ShieldIcon size={40} />,
     },
     {
       id: "item-2",
@@ -65,8 +77,7 @@ const Gallery = ({
         "Investigação em fóruns clandestinos",
         "Alertas em tempo real de exposições",
       ],
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      icon: <Search size={40} />,
     },
     {
       id: "item-3",
@@ -79,8 +90,7 @@ const Gallery = ({
         "Análise de exposição pessoal",
         "Estratégias de mitigação de riscos",
       ],
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      icon: <Eye size={40} />,
     },
     {
       id: "item-4",
@@ -93,8 +103,7 @@ const Gallery = ({
         "Relatórios de inteligência estratégica",
         "Recomendações de mitigação",
       ],
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      icon: <Brain size={40} />,
     },
     {
       id: "item-5",
@@ -107,8 +116,7 @@ const Gallery = ({
         "Análise de ameaças internas",
         "Estratégias de proteção corporativa",
       ],
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      icon: <Users size={40} />,
     },
     {
       id: "item-6",
@@ -121,8 +129,7 @@ const Gallery = ({
         "Rastreamento de ativos digitais",
         "Coleta e preservação de evidências",
       ],
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      icon: <TriangleAlert size={40} />,
     },
     {
       id: "item-7",
@@ -135,8 +142,7 @@ const Gallery = ({
         "Monitoramento de mercados ilegais",
         "Monitoramento de mercados ilegais",
       ],
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      icon: <Globe size={40} />,
     },
     {
       id: "item-8",
@@ -149,8 +155,7 @@ const Gallery = ({
         "Desmonte de operações criminosas",
         "Colaboração com autoridades",
       ],
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      icon: <Zap size={40} />,
     },
   ],
 }: Gallery6Props) => {
@@ -169,30 +174,27 @@ const Gallery = ({
     updateSelection();
     carouselApi.on("select", updateSelection);
 
-    // Iniciar autoplay para a rotação automática do carrossel
     const autoplayInterval = setInterval(() => {
       if (carouselApi?.canScrollNext()) {
         carouselApi.scrollNext();
       } else {
-        carouselApi?.scrollTo(0); // Volta ao primeiro item quando chegar no último
+        carouselApi?.scrollTo(0);
       }
-    }, 3000); // 3000ms de intervalo para a rotação
+    }, 3000);
 
     return () => {
       carouselApi.off("select", updateSelection);
-      clearInterval(autoplayInterval); // Limpa o intervalo quando o componente for desmontado
+      clearInterval(autoplayInterval);
     };
   }, [carouselApi]);
 
   return (
-    <section
-      className="md:-mt-10 px-5 flex flex-col items-center justify-center py-24 relative w-full bg-gradient-to-br"
-    >
+    <section className="w-screen h-full flex flex-col items-center justify-center relative bg-gradient-to-br md:pb-10">
       <StarCanvas />
       <div className="container max-w-7xl px-4">
         <div className="mb-12 flex flex-col justify-between md:mb-16 md:flex-row md:items-end">
           <div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
               {heading}
               <span
                 className="text-transparent bg-clip-text bg-gradient-to-r from-[#E32320] to-[#ff574d]"
@@ -202,6 +204,8 @@ const Gallery = ({
                 {headingSecond}
               </span>
             </h2>
+            {/* Linha decorativa */}
+            <div className="w-24 h-1 bg-gradient-to-r from-[#E32320] to-[#ff574d] rounded-full mb-8"></div>
             <TextReveal className="mt-6 max-w-xl text-gray-300 text-lg leading-relaxed">
               {paragraph}
             </TextReveal>
@@ -231,7 +235,7 @@ const Gallery = ({
         </div>
       </div>
 
-      <div className="w-full overflow-hidden md:w-[calc(100vw-2rem)] md:mb-10">
+      <div className="w-full h-full overflow-hidden md:mb-10">
         <Carousel
           setApi={setCarouselApi}
           opts={{
@@ -241,20 +245,13 @@ const Gallery = ({
               },
             },
           }}
-          className="relative w-full md:left-[-1rem] transition-all"
+          className="relative w-full h-full"
         >
-          <CarouselContent className="hide-scrollbar w-full max-w-full md:px-4">
+          <CarouselContent className="hide-scrollbar w-full h-full">
             {items.map((item) => (
               <CarouselItem
                 key={item.id}
-                className="
-            mx-4 my-6 md:max-w-[352px] rounded-[24px] border-transparent
-            bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f]
-            p-8 text-white shadow-lg shadow-[#E32320]/25
-            transition-all duration-300
-            hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320] hover:scale-105
-            md:hover:shadow-[0_0_60px_rgba(227,35,32,0.7)]
-          "
+                className="flex-none mx-4 my-6 md:max-w-[352px] rounded-[24px] border-transparent bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f] p-8 text-white shadow-lg shadow-[#E32320]/25 transition-all duration-300 hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]"
               >
                 <a
                   href={item.url}
@@ -263,15 +260,8 @@ const Gallery = ({
                   rel="noopener noreferrer"
                 >
                   <div className="mb-5 flex items-center justify-start gap-4">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      className="w-14 h-14 object-contain"
-                      loading="lazy"
-                      width={56}
-                      height={56}
-                    />
-                    <h3 className="text-2xl font-semibold uppercase tracking-wide text-[#E32320] group-hover:text-[#ff574d] transition-colors duration-300">
+                    {item.icon}
+                    <h3 className="text-xl font-semibold uppercase tracking-wide text-[#E32320] group-hover:text-[#ff574d] transition-colors duration-300">
                       {item.title}
                     </h3>
                   </div>
