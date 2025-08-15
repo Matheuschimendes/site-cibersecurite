@@ -1,4 +1,4 @@
-import { Download, Monitor, Smartphone, Tablet } from "lucide-react";
+import { Download, Target, UsersRound, Award } from "lucide-react";
 
 interface Platform {
   title: string;
@@ -45,7 +45,7 @@ const Cards = ({
   },
 }: CardsProps) => {
   // Ícones por índice para manter a ordem Desktop, iOS, Android
-  const icons = [Monitor, Smartphone, Tablet];
+  const icons = [Target, UsersRound, Award];
 
   return (
     <section className="flex justify-center w-full py-20 px-4">

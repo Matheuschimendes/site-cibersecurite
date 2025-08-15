@@ -2,11 +2,13 @@ import { Separator } from "@/components/ui/separator";
 import {
   DribbbleIcon,
   GithubIcon,
+  Icon,
+  Shield,
+  ShieldIcon,
   TwitchIcon,
   TwitterIcon,
 } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 // Dados da seção de consultoria
@@ -76,9 +78,13 @@ export const FooterPage = () => {
               <p className="mt-4 text-muted-foreground">
                 Especialistas em Threat Intelligence e investigações digitais, protegendo empresas contra ameaças cibernéticas com soluções estratégicas e tecnologia de ponta.
               </p>
-              <p className="mt-4 text-muted-foreground">
-                Segurança e confidencialidade garantidas.
-              </p>
+              <div className="mt-10 flex md:flex-row items-center gap-1">
+                <ShieldIcon className="h-6 w-6 md:h-6 md:w-6 text-[#E32320]" />
+                <div>
+                  <span className="text-white">Segurança e confidencialidade garantidas.</span>
+                </div>
+              </div>
+
             </div>
 
             {/* Links dinâmicos */}
@@ -127,10 +133,15 @@ export const FooterPage = () => {
         {/* Aviso de Segurança */}
         <section className="relative overflow-hidden md:mb-0 mb-10 w-[90%] md:w-[90%] mx-auto border border-[#E32320] rounded-md bg-gradient-to-r from-[#1a0000] to-[#0a0000] p-5 md:p-10 ">
           {consultoriaData.map(({ title, description }, idx) => (
-            <div key={idx} className=" flex flex-col md:flex-row items-start md:items-center gap-4">
+            <div key={idx} className=" flex flex-row md:flex-row items-start md:items-center gap-4">
               <h2 className="text-[12px] md:text-sm font-bold text-[#E32320]">
-                {title}
-                <span className="text-white">{description}</span>
+                <div className="flex md:flex-row items-center gap-1">
+                  <ShieldIcon className="h-10 w-10 md:h-6 md:w-6" />
+                  <div>
+                    {title}
+                    <span className="text-white">{description}</span>
+                  </div>
+                </div>
               </h2>
             </div>
           ))}
