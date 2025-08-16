@@ -110,7 +110,7 @@ const InformacoesContato = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-4 pt-3 text-red-500 font-medium text-sm">
-          Emergências <span className="font-bold">24/8</span> para clientes corporativos
+          Emergências <span className="font-bold">24/7</span> para clientes corporativos
         </div>
       </div>
     </div>
