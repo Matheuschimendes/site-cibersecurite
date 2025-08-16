@@ -23,7 +23,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import StarCanvas from "./Star";
+import StarCanvas from "./star";
 import { SessaoConsultoria } from "./SessaoConsultoria";
 import { TextReveal } from "@/components/magicui/text-reveal";
 

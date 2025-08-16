@@ -2,7 +2,7 @@
 
 import { TextReveal } from "@/components/magicui/text-reveal";
 import React from "react";
-import StarCanvas from "../_components/Star";
+import StarCanvas from "../_components/star";
 import { Formulario } from "../_components/Form";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 

@@ -1,4 +1,4 @@
-import Globe from "./_components/Globo";
+import Globe from "./_components/globo";
 import { About } from "./sections/about";
 import { Navbar } from "./sections/navbar";
 import FooterPage from "@/app/sections/footer";

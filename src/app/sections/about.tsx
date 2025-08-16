@@ -3,7 +3,7 @@
 import { TextReveal } from "@/components/magicui/text-reveal";
 import React, { useRef } from "react";
 import { Cards } from "./cards";
-import StarCanvas from "../_components/Star";
+import StarCanvas from "../_components/star";
 import { SessaoConsultoria } from "../_components/SessaoConsultoria";
 
 interface Feature {
