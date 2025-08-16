@@ -4,7 +4,7 @@ import { TextReveal } from "@/components/magicui/text-reveal";
 import React, { useRef } from "react";
 import { Cards } from "./cards";
 import StarCanvas from "../_components/star";
-import { SecaoConsultoria } from "../_components/SessaoConsultoria";
+import { SessaoConsultoria } from "../_components/SessaoConsultoria";
 
 interface Feature {
   id: string;
@@ -144,7 +144,7 @@ const About = ({
         <Cards />
       </div>
 
-      <SecaoConsultoria
+      <SessaoConsultoria
         title={"Nosso Posicionamento"}
         description={
           "A Kryfal se posiciona como referência em inteligência cibernética no mercado B2B, oferecendo soluções estratégicas e operacionais que transformam dados em inteligência acionável, protegendo ativos digitais e fortalecendo a postura de segurança organizacional."

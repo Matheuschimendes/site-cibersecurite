@@ -5,7 +5,6 @@ import {
   ArrowLeft,
   ArrowRight,
   ArrowUpRight,
-  Award,
   Brain,
   Check,
   Eye,
@@ -25,7 +24,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import StarCanvas from "./star";
-import { SecaoConsultoria } from "./SessaoConsultoria";
+import { SessaoConsultoria } from "./SessaoConsultoria";
 import { TextReveal } from "@/components/magicui/text-reveal";
 
 interface GalleryItem {
@@ -175,11 +174,13 @@ const Gallery = ({
     carouselApi.on("select", updateSelection);
 
     const autoplayInterval = setInterval(() => {
-      if (carouselApi?.canScrollNext()) {
-        carouselApi.scrollNext();
-      } else {
-        carouselApi?.scrollTo(0);
-      }
+      if (!carouselApi) return;
+
+      const current = carouselApi.selectedScrollSnap();
+      const total = carouselApi.scrollSnapList().length;
+
+      const nextIndex = (current + 1) % total; // loop infinito
+      carouselApi.scrollTo(nextIndex);
     }, 3000);
 
     return () => {
@@ -189,7 +190,7 @@ const Gallery = ({
   }, [carouselApi]);
 
   return (
-    <section className="w-screen h-full flex flex-col items-center justify-center relative bg-gradient-to-br md:pb-10">
+    <section className="p-5 w-screen h-full flex flex-col items-center justify-center relative bg-gradient-to-br md:pb-10">
       <StarCanvas />
       <div className="container max-w-7xl px-4">
         <div className="mb-12 flex flex-col justify-between md:mb-16 md:flex-row md:items-end">
@@ -239,19 +240,25 @@ const Gallery = ({
         <Carousel
           setApi={setCarouselApi}
           opts={{
+            align: "start",
+            slidesToScroll: 1,
             breakpoints: {
               "(max-width: 768px)": {
-                dragFree: true,
+                dragFree: false,
+                slidesToScroll: 1,
               },
             },
           }}
           className="relative w-full h-full"
         >
-          <CarouselContent className="hide-scrollbar w-full h-full">
+          <CarouselContent className="hide-scrollbar md:w-full md:ml-auto ml-auto mb-20 h-full">
             {items.map((item) => (
               <CarouselItem
                 key={item.id}
-                className="flex-none mx-4 my-6 md:max-w-[352px] rounded-[24px] border-transparent bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f] p-8 text-white shadow-lg shadow-[#E32320]/25 transition-all duration-300 hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]"
+                className="flex-none mx-auto my-6 basis-full m-5 md:basis-auto w-[90%] md:max-w-[352px] 
+                rounded-[24px] border-transparent 
+                bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f] p-8 text-white shadow-lg shadow-[#E32320]/25 
+                transition-all duration-300 hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]"
               >
                 <a
                   href={item.url}
@@ -292,7 +299,7 @@ const Gallery = ({
         </Carousel>
       </div>
 
-      <SecaoConsultoria
+      <SessaoConsultoria
         title={"Precisa de uma Solução Personalizada?"}
         description={
           "Nossos especialistas podem desenvolver estratégias de inteligência sob medida para as necessidades específicas da sua organização."

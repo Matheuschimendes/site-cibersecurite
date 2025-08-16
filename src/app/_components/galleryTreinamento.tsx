@@ -11,7 +11,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import StarCanvas from "./star";
-import { SecaoConsultoria } from "./SessaoConsultoria";
+import { SessaoConsultoria } from "./SessaoConsultoria";
 import { TextReveal } from "@/components/magicui/text-reveal";
 import Image from "next/image";
 import Tags from "./tags";
@@ -152,7 +152,7 @@ const Gallery = ({
   }, [carouselApi]);
 
   return (
-    <section className="w-screen h-full flex flex-col items-center justify-center relative bg-gradient-to-br">
+    <section className="p-5 mt-30 w-screen h-full flex flex-col items-center justify-center relative bg-gradient-to-br">
       <StarCanvas />
       <div className="container max-w-7xl px-4">
         < div className="mb-12 flex flex-col justify-between md:mb-16 md:flex-row md:items-end" >
@@ -208,14 +208,14 @@ const Gallery = ({
               },
             },
           }}
-          className="relative w-full h-full"
+          className="relative w-full h-full m-auto"
         >
-          <CarouselContent className="hide-scrollbar w-full h-full">
+          <CarouselContent className="hide-scrollbar md:w-full m-auto mb-20 h-full">
             {items.map((item) => (
               <CarouselItem
                 key={item.id}
                 className="
-            mx-4 my-6 md:max-w-[352px] rounded-[24px] border-transparent
+            mx-4 my-6 md:max-w-[352px] w-5 rounded-[24px] border-transparent
             bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f]
             p-8 text-white shadow-lg shadow-[#E32320]/25
             transition-all duration-300
@@ -259,7 +259,7 @@ const Gallery = ({
         </Carousel>
       </div>
 
-      <SecaoConsultoria
+      <SessaoConsultoria
         title={"Precisa de uma Solução Personalizada?"}
         description={
           "Nossos especialistas podem desenvolver estratégias de inteligência sob medida para as necessidades específicas da sua organização."

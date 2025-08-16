@@ -1,17 +1,17 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-interface SecaoConsultoriaProps {
+interface SessaoConsultoriaProps {
   title: string;
   description: string;
   descriptionButton?: string;
 }
 
-export const SecaoConsultoria = ({
+export const SessaoConsultoria = ({
   title,
   description,
   descriptionButton = "Consulte Nossos Especialistas",
-}: SecaoConsultoriaProps) => {
+}: SessaoConsultoriaProps) => {
   return (
     <section
       className="
