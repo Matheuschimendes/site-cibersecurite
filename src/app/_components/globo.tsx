@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import StarCanvas from "./star";
+import StarCanvas from "./Star";
 import { TextReveal } from "@/components/magicui/text-reveal";
 
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
