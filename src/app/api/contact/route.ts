@@ -23,7 +23,7 @@ export async function POST(request: Request) {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS, // use "App Password" se MFA estiver ativado
       },
-    });
+    } as SMTPTransport.Options);
 
     await transporter.sendMail({
       from: `"${name}" <${process.env.EMAIL_USER}>`,
