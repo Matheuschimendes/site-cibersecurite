@@ -9,10 +9,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Select, SelectContent, SelectItem, SelectValue, SelectTrigger } from "@/components/ui/select";
+import { toast } from "sonner";
+
 
 // Validação
 const formSchema = z.object({
-  nome: z.string().min(2, "O nome deve ter pelo menos 2 caracteres"),
+  name: z.string().min(2, "O nome deve ter pelo menos 2 caracteres"),
   email: z.string().email("Digite um email válido"),
   empresa: z.string().optional(),
   telefone: z
@@ -30,7 +32,7 @@ export const Formulario = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      nome: "",
+      name: "",
       email: "",
       empresa: "",
       telefone: "",
@@ -46,8 +48,12 @@ export const Formulario = () => {
       body: JSON.stringify(values),
     });
 
-    if (res.ok) alert("Mensagem enviada com sucesso");
-    else alert("Erro ao enviar a mensagem");
+    if (res.ok)
+      toast.success("Mensagem enviada com sucesso!");
+    else if (res.status === 400 || res.status === 500)
+      toast.error("Ocorreu um erro ao enviar a mensagem! Erro: " + res.statusText);
+    else
+      toast.error("Preencha todos os campos corretamente!");
   }
 
   // Função para formatar o telefone
@@ -63,6 +69,7 @@ export const Formulario = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
+
         className="relative group flex flex-col gap-6 p-10 rounded-[20px] border border-transparent
           bg-gradient-to-br from-[#1b1b1b] via-[#121212] to-[#0a0a0a]
           shadow-[0_0_15px_rgba(227,35,32,0.15)] overflow-hidden"
@@ -72,7 +79,7 @@ export const Formulario = () => {
         <div className="grid grid-cols-2 gap-4">
           <FormField
             control={form.control}
-            name="nome"
+            name="name"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Nome *</FormLabel>
@@ -141,22 +148,22 @@ export const Formulario = () => {
                         <SelectValue placeholder="Selecione o assunto" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#2b2b2b] text-white">
-                        <SelectItem value="intelligence" className="data-[highlighted]:bg-red-700 data-[state=checked]:bg-red-800">
+                        <SelectItem value="Threat Intelligence" className="data-[highlighted]:bg-red-700 data-[state=checked]:bg-red-800">
                           Threat Intelligence
                         </SelectItem>
-                        <SelectItem value="protection" className="data-[highlighted]:bg-red-700 data-[state=checked]:bg-red-800">
+                        <SelectItem value="Brand Protection" className="data-[highlighted]:bg-red-700 data-[state=checked]:bg-red-800">
                           Brand Protection
                         </SelectItem>
-                        <SelectItem value="investigacoes" className="data-[highlighted]:bg-red-700 data-[state=checked]:bg-red-800">
+                        <SelectItem value="Investigações Digitais" className="data-[highlighted]:bg-red-700 data-[state=checked]:bg-red-800">
                           Investigações Digitais
                         </SelectItem>
-                        <SelectItem value="treinamentos" className="data-[highlighted]:bg-red-700 data-[state=checked]:bg-red-800">
+                        <SelectItem value="Treinamentos" className="data-[highlighted]:bg-red-700 data-[state=checked]:bg-red-800">
                           Treinamentos
                         </SelectItem>
-                        <SelectItem value="consultoria" className="data-[highlighted]:bg-red-700 data-[state=checked]:bg-red-800">
+                        <SelectItem value="Consultoria" className="data-[highlighted]:bg-red-700 data-[state=checked]:bg-red-800">
                           Consultoria
                         </SelectItem>
-                        <SelectItem value="outros" className="data-[highlighted]:bg-red-700 data-[state=checked]:bg-red-800">
+                        <SelectItem value="Outros" className="data-[highlighted]:bg-red-700 data-[state=checked]:bg-red-800">
                           Outros
                         </SelectItem>
                       </SelectContent>
@@ -190,6 +197,9 @@ export const Formulario = () => {
 
         <p className="text-xs mt-2 text-gray-400 flex items-center gap-1">
           <span>🛡️</span> Suas informações são protegidas por criptografia e tratadas com confidencialidade.
+        </p>
+        <p className="text-xs text-gray-400 flex items-center ">
+          Os campos marcados com * sao obrigatórios.
         </p>
       </form>
     </Form>
