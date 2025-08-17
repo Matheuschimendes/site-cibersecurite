@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import SMTPTransport from "nodemailer/lib/smtp-transport";
 
 export async function POST(request: Request) {
   const { name, email, empresa, telefone, assunto, mensagem } =
@@ -14,17 +15,17 @@ export async function POST(request: Request) {
   }
 
   try {
-    const transport = nodemailer.createTransport({
-      host: "smtp.zoho.com",
-      port: 465,
+    const transporter = nodemailer.createTransport({
+      host: process.env.EMAIL_HOST,
+      port: process.env.EMAIL_PORT,
       secure: true,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS, // use "App Password" se MFA estiver ativado
       },
-    });
+    } as SMTPTransport.Options);
 
-    await transport.sendMail({
+    await transporter.sendMail({
       from: `"${name}" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER, // substitua pelo email de destino real
       subject: assunto || "Sem assunto",
