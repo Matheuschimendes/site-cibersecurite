@@ -21,7 +21,7 @@ export async function POST(request: Request) {
       secure: true,
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS, // use "App Password" se MFA estiver ativado
+        pass: "EexS58LgNpMk", // use "App Password" se MFA estiver ativado
       },
     });
 
