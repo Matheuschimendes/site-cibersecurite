@@ -1,9 +1,14 @@
+import { stat } from "fs";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { toast } from "sonner";
 
 export async function POST(request: Request) {
   const { name, email, empresa, telefone, assunto, mensagem } =
     await request.json();
+  if (!name || !email || !mensagem) {
+    return toast.error("Campos obrigatorios faltando"), { status: 400 };
+  }
 
   try {
     const transport = nodemailer.createTransport({
