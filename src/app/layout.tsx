@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Kanit } from "next/font/google";
 import "./globals.css";
 import StarCanvas from "./_components/star";
+import { Toaster } from "sonner"
 
 const kanit = Kanit({
   subsets: ["latin"],
@@ -32,12 +33,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
         className={`${kanit.className} bg-black text-white antialiased`}
       >
         <StarCanvas />
         {children}
+        <Toaster richColors position="top-right" /> {/* Notificação */}
       </body>
     </html>
   );
