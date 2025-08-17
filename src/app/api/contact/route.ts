@@ -39,7 +39,7 @@ export async function POST(request: Request) {
                   <td style="background-color:#e32320;padding:20px;text-align:center;color:#ffffff;">
                     <p style="margin:0;font-size:12px;font-weight:bold;">KRYFAL</p>
                     <div style="display:flex;justify-content:center;gap:10px;">
-                      <p style="margin:0;font-size:20px;font-weight:bold;">Assunto:</p>
+                      <p style="margin:0;font-size:20px;font-weight:bold;">Assunto: </p>
                       <p style="margin:0;font-size:20px;font-weight:bold;">${
                         assunto || "Tecnologia"
                       }</p>
