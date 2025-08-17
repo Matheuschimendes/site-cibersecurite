@@ -28,8 +28,9 @@ export async function POST(request: Request) {
     // Envia o e-mail para o destinatário
 
     await transporter.sendMail({
-      from: `"${name}" <${process.env.EMAIL_USER}>`,
-      to: email, // substitua pelo email de destino real
+      from: `"${name}" <${process.env.EMAIL_USER}>`, // e-mail autenticado no Zoho
+      replyTo: `"${name}" <${email}>`, // cliente aparece ao clicar em "Responder"
+      to: process.env.EMAIL_USER, // você recebe
       subject: assunto || "Sem assunto",
       text: mensagem,
       html: `
