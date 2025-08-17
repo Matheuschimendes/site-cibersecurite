@@ -29,7 +29,7 @@ export async function POST(request: Request) {
 
     await transporter.sendMail({
       from: `"${name}" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER, // substitua pelo email de destino real
+      to: email, // substitua pelo email de destino real
       subject: assunto || "Sem assunto",
       text: mensagem,
       html: `
