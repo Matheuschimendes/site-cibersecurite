@@ -18,19 +18,18 @@ export async function POST(request: Request) {
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
       port: Number(process.env.EMAIL_PORT),
-      secure: true,
+      secure: true, // Zoho usa SSL/TLS na 465
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD, // , // use "App Password" se MFA estiver ativado
+        pass: process.env.EMAIL_PASSWORD,
       },
-    });
+    } as SMTPTransport.Options);
 
-    // Envia o e-mail para o destinatário
-
+    // Envia o e-mail
     await transporter.sendMail({
-      from: `"${name}" <${process.env.EMAIL_USER}>`, // e-mail autenticado no Zoho
-      replyTo: `"${name}" <${email}>`, // cliente aparece ao clicar em "Responder"
-      to: process.env.EMAIL_USER, // você recebe
+      from: `"KRYFAL" <${process.env.EMAIL_USER}>`, // precisa ser o email autenticado no Zoho
+      replyTo: `"${name}" <${email}>`, // cliente: aparece no "Responder"
+      to: process.env.EMAIL_USER, // sua caixa de entrada
       subject: assunto || "Sem assunto",
       text: mensagem,
       html: `
