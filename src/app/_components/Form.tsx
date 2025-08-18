@@ -76,7 +76,7 @@ export const Formulario = () => {
       >
         <h2><span>🛡️</span> Envie uma mensagem segura</h2>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
             name="name"
@@ -101,7 +101,7 @@ export const Formulario = () => {
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
             name="empresa"
