@@ -70,9 +70,9 @@ export const Formulario = () => {
       <form
         onSubmit={form.handleSubmit(onSubmit)}
 
-        className="relative group flex flex-col gap-6 p-10 rounded-[20px] border border-transparent
+        className="relative group flex flex-col gap-6 md:p-10 p-7 rounded-[20px] border border-transparent
           bg-gradient-to-br from-[#1b1b1b] via-[#121212] to-[#0a0a0a]
-          shadow-[0_0_15px_rgba(227,35,32,0.15)] overflow-hidden"
+          shadow-[0_0_15px_rgba(227,35,32,0.15)] overflow-hidden "
       >
         <h2><span>🛡️</span> Envie uma mensagem segura</h2>
 
