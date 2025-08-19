@@ -1,20 +1,21 @@
 "use client";
 
 import { useRef, Suspense, useEffect, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, invalidate } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as THREE from "three";
 import { random } from "maath";
 import { useInView } from "react-intersection-observer";
 
-const Star = () => {
+const Star = ({ animate }: { animate: boolean }) => {
   const ref = useRef<THREE.Points>(null);
-  const sphere = new Float32Array(random.inSphere(new Float32Array(1500), { radius: 1.2 }));
+  const sphere = new Float32Array(random.inSphere(new Float32Array(800), { radius: 1.2 }));
 
   useFrame((_, delta) => {
-    if (ref.current) {
+    if (animate && ref.current) {
       ref.current.rotation.x -= delta / 10;
       ref.current.rotation.y -= delta / 15;
+      invalidate(); // só renderiza quando houver movimento
     }
   });
 
@@ -34,19 +35,22 @@ const Star = () => {
 };
 
 const StarCanvas = () => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
   const [shouldRender, setShouldRender] = useState(false);
 
   useEffect(() => {
-    if (inView) setShouldRender(true);
+    setShouldRender(inView);
   }, [inView]);
 
   return (
     <div ref={ref} className="w-full h-auto absolute inset-0 z-[-1]">
       {shouldRender && (
-        <Canvas camera={{ position: [0, 0, 1] }}>
+        <Canvas
+          camera={{ position: [0, 0, 1] }}
+          frameloop="demand" // renderiza apenas quando pedimos
+        >
           <Suspense fallback={null}>
-            <Star />
+            <Star animate={inView} />
           </Suspense>
         </Canvas>
       )}
