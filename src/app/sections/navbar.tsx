@@ -23,6 +23,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { set } from "zod";
 
 interface MenuItem {
   title: string;
@@ -102,22 +103,31 @@ const Navbar = ({
     signup: { title: "USA", url: "#" },
   },
 }: Navbar1Props) => {
-  const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(true); // Estado para rastrear quando o usuário rola a página
+  const [lastScrollY, setLastScrollY] = useState(0); // Estado para armazenar a posição de rolagem anterior
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+  useEffect(() => { // Função para verificar quando o usuário rola a página
+    const handleScroll = () => { // Função para verificar quando o usuário rola a página
+      const currentScrollY = window.scrollY; // Obtenha a posição de rolagem atual
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        // Defina o valor de lastScrollY conforme necessário
+        setVisible(false); // Defina o estado de visibilidade para false
+      } else {
+        // Defina o valor de lastScrollY conforme necessário
+        setVisible(true);
+      }
+      setLastScrollY(currentScrollY); // Atualize o estado de rolagem
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
+    window.addEventListener("scroll", handleScroll); // Adicione o evento de rolagem
+    return () => window.removeEventListener("scroll", handleScroll); // Remova o evento de rolagem
+  }, [lastScrollY]); // Adicione lastScrollY como dependência
 
   return (
     <section
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${scrolled
-        ? "bg-black/10 backdrop-blur-md shadow-lg"
-        : "bg-transparent"
-        }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 
+      ${visible ? "translate-y-0" : "-translate-y-full"} 
+      bg-black/10 backdrop-blur-md shadow-lg`}
     >
       <div className="container mx-auto w-full p-5">
         {/* Desktop Menu */}
