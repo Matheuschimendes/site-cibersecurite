@@ -13,8 +13,8 @@ import {
 import StarCanvas from "./star";
 import { SessaoConsultoria } from "./SessaoConsultoria";
 import { TextReveal } from "@/components/magicui/text-reveal";
-import Image from "next/image";
 import Tags from "./tags";
+import Modal from "./modal";
 
 interface GalleryItem {
   id: string;
@@ -124,6 +124,7 @@ const Gallery = ({
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
   useEffect(() => {
     if (!carouselApi) return;
@@ -136,19 +137,19 @@ const Gallery = ({
     updateSelection();
     carouselApi.on("select", updateSelection);
 
-    // Iniciar autoplay para a rotação automática do carrossel
-    const autoplayInterval = setInterval(() => {
-      if (carouselApi?.canScrollNext()) {
-        carouselApi.scrollNext();
-      } else {
-        carouselApi?.scrollTo(0); // Volta ao primeiro item quando chegar no último
-      }
-    }, 3000); // 3000ms de intervalo para a rotação
+    // // Iniciar autoplay para a rotação automática do carrossel
+    // const autoplayInterval = setInterval(() => {
+    //   if (carouselApi?.canScrollNext()) {
+    //     carouselApi.scrollNext();
+    //   } else {
+    //     carouselApi?.scrollTo(0); // Volta ao primeiro item quando chegar no último
+    //   }
+    // }, 3000); // 3000ms de intervalo para a rotação
 
-    return () => {
-      carouselApi.off("select", updateSelection);
-      clearInterval(autoplayInterval); // Limpa o intervalo quando o componente for desmontado
-    };
+    // return () => {
+    //   carouselApi.off("select", updateSelection);
+    //   clearInterval(autoplayInterval); // Limpa o intervalo quando o componente for desmontado
+    // };
   }, [carouselApi]);
 
   return (
@@ -222,11 +223,9 @@ const Gallery = ({
             hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]]
           "
               >
-                <a
-                  href={item.url}
-                  className="flex flex-col h-full group"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <div
+                  onClick={() => setSelectedItem(item)}
+                  className="flex flex-col h-full group cursor-pointer"
                 >
                   <div className="mb-5 flex items-center justify-start gap-4">
                     {item.icon}
@@ -252,7 +251,7 @@ const Gallery = ({
                     Saiba mais
                     <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                   </div>
-                </a>
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>
@@ -264,6 +263,12 @@ const Gallery = ({
         description={
           "Nossos especialistas podem desenvolver estratégias de inteligência sob medida para as necessidades específicas da sua organização."
         }
+      />
+
+      <Modal
+        isOpen={!!selectedItem}
+        onClose={() => setSelectedItem(null)}
+        item={selectedItem || undefined}
       />
     </section >
   );

@@ -26,6 +26,7 @@ import {
 import StarCanvas from "./star";
 import { SessaoConsultoria } from "./SessaoConsultoria";
 import { TextReveal } from "@/components/magicui/text-reveal";
+import Modal from "./modal";
 
 interface GalleryItem {
   id: string;
@@ -161,6 +162,7 @@ const Gallery = ({
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
   useEffect(() => {
     if (!carouselApi) return;
@@ -173,20 +175,20 @@ const Gallery = ({
     updateSelection();
     carouselApi.on("select", updateSelection);
 
-    const autoplayInterval = setInterval(() => {
-      if (!carouselApi) return;
+    // const autoplayInterval = setInterval(() => {
+    //   if (!carouselApi) return;
 
-      const current = carouselApi.selectedScrollSnap();
-      const total = carouselApi.scrollSnapList().length;
+    //   const current = carouselApi.selectedScrollSnap();
+    //   const total = carouselApi.scrollSnapList().length;
 
-      const nextIndex = (current + 1) % total; // loop infinito
-      carouselApi.scrollTo(nextIndex);
-    }, 3000);
+    //   const nextIndex = (current + 1) % total; // loop infinito
+    //   carouselApi.scrollTo(nextIndex);
+    // }, 3000);
 
-    return () => {
-      carouselApi.off("select", updateSelection);
-      clearInterval(autoplayInterval);
-    };
+    // return () => {
+    //   carouselApi.off("select", updateSelection);
+    //   clearInterval(autoplayInterval);
+    // };
   }, [carouselApi]);
 
   return (
@@ -260,11 +262,9 @@ const Gallery = ({
                 bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f] p-8 text-white shadow-lg shadow-[#E32320]/25 
                 transition-all duration-300 hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]"
               >
-                <a
-                  href={item.url}
-                  className="flex flex-col h-full group"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <div
+                  onClick={() => setSelectedItem(item)}
+                  className="flex flex-col h-full group cursor-pointer"
                 >
                   <div className="mb-5 flex items-center justify-start gap-4">
                     {item.icon}
@@ -279,7 +279,7 @@ const Gallery = ({
 
                   {item.listItems && (
                     <ul className="mb-8 space-y-3 text-sm text-gray-400">
-                      {item.listItems.map((listItem, index) => (
+                      {item.listItems.slice(0, 2).map((listItem, index) => (
                         <li key={index} className="flex items-center gap-3">
                           <Check className="w-6 h-6 text-[#E32320]" />
                           <span>{listItem}</span>
@@ -292,7 +292,7 @@ const Gallery = ({
                     Saiba mais
                     <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                   </div>
-                </a>
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>
@@ -304,6 +304,13 @@ const Gallery = ({
         description={
           "Nossos especialistas podem desenvolver estratégias de inteligência sob medida para as necessidades específicas da sua organização."
         }
+      />
+
+      {/* Modal */}
+      <Modal
+        isOpen={!!selectedItem}
+        onClose={() => setSelectedItem(null)}
+        item={selectedItem || undefined}
       />
     </section>
   );
