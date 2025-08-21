@@ -9,7 +9,7 @@ import { useInView } from "react-intersection-observer";
 
 const Star = ({ animate }: { animate: boolean }) => {
   const ref = useRef<THREE.Points>(null);
-  const sphere = new Float32Array(random.inSphere(new Float32Array(800), { radius: 1.2 }));
+  const sphere = new Float32Array(random.inSphere(new Float32Array(200), { radius: 1.2 }));
 
   useFrame((_, delta) => {
     if (animate && ref.current) {
@@ -25,7 +25,7 @@ const Star = ({ animate }: { animate: boolean }) => {
         <PointMaterial
           transparent
           color="#f272c8"
-          size={0.002}
+          size={0.004}
           sizeAttenuation
           depthWrite={false}
         />
