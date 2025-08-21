@@ -425,7 +425,7 @@ export default function Globe() {
             </TextReveal>
 
             <TextReveal className="text-center text-base md:text-lg font-normal text-neutral-400 max-w-2xl mt-4 mx-auto z-10">
-              Protegemossuamarca,investigamosameaçasefortalecemossuadefesacibernéticacominteligênciaestratégicaetecnologiadeponta.  Mapeamos ameaças em ciberespaços complexos para proteger as operações, a reputação e a vantagem competitiva das indústrias mais críticas. deixar esse texto do tamanho do de cima, onde está escrito "Investigações Digitais & Cibersegurança Avançada"
+              Protegemos sua marca, investigamos ameaças e fortalecemos sua defesa cibernética com inteligência estratégica e tecnologiadeponta. Mapeamos ameaças em ciberespaços complexos para proteger as operações, a reputação e a vantagem competitiva das indústrias mais críticas. deixar esse texto do tamanho do de cima, onde está escrito "Investigações Digitais & Cibersegurança Avançada"
 
             </TextReveal>
             <div className="flex items-center justify-center mt-8">
@@ -434,7 +434,7 @@ export default function Globe() {
                 className="z-10 bg-[#E32320] hover:bg-[#b41c1a] text-white font-semibold text-base px-6 py-3 rounded-lg transition-colors"
                 asChild
               >
-                <Link href="/login">Fale com um Especialista</Link>
+                <Link href="/login">Agende uma Análise de Risco</Link>
               </Button>
             </div>
 
@@ -443,7 +443,7 @@ export default function Globe() {
         </div>
         {/* Wrapper com ref para animar com gsap */}
         <div
-          className="md:-mt-290 absolute w-full -bottom-20 md:-bottom-15 h-120 md:h-230"
+          className="md:-mt-290 absolute w-full -bottom-50 md:-bottom-25 h-120 md:h-230"
           id="hero-lightpass" >
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
