@@ -3,7 +3,6 @@
 import { TextReveal } from "@/components/magicui/text-reveal";
 import React, { useRef } from "react";
 import { Cards } from "./cards";
-import StarCanvas from "../_components/star";
 import { SessaoConsultoria } from "../_components/SessaoConsultoria";
 
 interface Feature {
@@ -110,7 +109,6 @@ const About = ({
     <section
       className="-mt-50 md:-mt-70 p-5 py-24 flex flex-col items-center justify-center relative w-full bg-gradient-to-br"
     >
-      <StarCanvas />
       <div className="container max-w-7xl mx-auto">
         {/* Título */}
         <h2 className="text-5xl font-extrabold text-white tracking-tight mb-4 leading-tight">
