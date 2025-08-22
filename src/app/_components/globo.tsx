@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
@@ -419,15 +420,15 @@ export default function Globe() {
             <h1 className="text-center text-3xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
               THREAT <span className="text-[#E32320]">INTELLIGENCE</span>
             </h1>
-            <p className="text-center text-lg md:text-2xl font-medium">Don't <span className=" text-[#E32320]">React. </span> Anticipate </p>
+            <p className="text-center text-lg md:text-2xl font-medium">Don&rsquo;t <span className=" text-[#E32320]">React. </span> Anticipate </p>
             <TextReveal className="text-center text-lg md:text-2xl font-medium text-neutral-300 max-w-2xl mt-4 mx-auto">
               Investigações Digitais & Cibersegurança Avançada
             </TextReveal>
 
-            <TextReveal className="text-center text-base md:text-lg font-normal text-neutral-400 max-w-2xl mt-4 mx-auto z-10">
-              Protegemos sua marca, investigamos ameaças e fortalecemos sua defesa cibernética com inteligência estratégica e tecnologiadeponta. Mapeamos ameaças em ciberespaços complexos para proteger as operações, a reputação e a vantagem competitiva das indústrias mais críticas. deixar esse texto do tamanho do de cima, onde está escrito "Investigações Digitais & Cibersegurança Avançada"
-
+            <TextReveal className="text-center text-lg md:text-2xl font-medium text-neutral-400 max-w-2xl mt-4 mx-auto z-10">
+              Protegemos sua marca, investigamos ameaças e fortalecemos sua defesa cibernética com inteligência estratégica e tecnologia de ponta. Mapeamos ameaças em ciberespaços complexos para proteger as operações, a reputação e a vantagem competitiva das indústrias mais críticas.
             </TextReveal>
+
             <div className="flex items-center justify-center mt-8">
               <Button
                 size="lg"
