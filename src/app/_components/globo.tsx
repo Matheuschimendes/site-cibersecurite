@@ -434,7 +434,7 @@ export default function Globe() {
                 className="z-10 bg-[#E32320] hover:bg-[#b41c1a] text-white font-semibold text-base px-6 py-3 rounded-lg transition-colors"
                 asChild
               >
-                <Link href="/login">Agende uma Análise de Risco</Link>
+                <Link href="/login">Agende uma Análise de Risco </Link>
               </Button>
             </div>
 
