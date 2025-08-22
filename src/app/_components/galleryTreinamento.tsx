@@ -1,10 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Award, BookOpen, Lightbulb, Target, Users, Video } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Award, BookOpen, Check, Lightbulb, Target, Users, Video } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import type { CarouselApi } from "@/components/ui/carousel";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 import StarCanvas from "./star";
 import { SessaoConsultoria } from "./SessaoConsultoria";
 import { TextReveal } from "@/components/magicui/text-reveal";
@@ -108,10 +113,12 @@ const Gallery = ({
       summary: "Metodologias avançadas de investigação digital",
       paragraph: "Curso Ao Vivo",
       tags: "Duração: 24 horas",
-      tagsSecond: "Avançado",
+      tagsSecond: "Avanaçado",
       url: "#",
       icon: <Users size={40} />,
     },
+
+
   ],
 }: Gallery6Props) => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
@@ -130,33 +137,34 @@ const Gallery = ({
     updateSelection();
     carouselApi.on("select", updateSelection);
 
-    // Iniciar autoplay para a rotação automática do carrossel
-    const autoplayInterval = setInterval(() => {
-      if (carouselApi?.canScrollNext()) {
-        carouselApi.scrollNext();
-      } else {
-        carouselApi?.scrollTo(0); // Volta ao primeiro item quando chegar no último
-      }
-    }, 3000); // 3000ms de intervalo para a rotação
+    // // Iniciar autoplay para a rotação automática do carrossel
+    // const autoplayInterval = setInterval(() => {
+    //   if (carouselApi?.canScrollNext()) {
+    //     carouselApi.scrollNext();
+    //   } else {
+    //     carouselApi?.scrollTo(0); // Volta ao primeiro item quando chegar no último
+    //   }
+    // }, 3000); // 3000ms de intervalo para a rotação
 
-    return () => {
-      carouselApi.off("select", updateSelection);
-      clearInterval(autoplayInterval); // Limpa o intervalo quando o componente for desmontado
-    };
+    // return () => {
+    //   carouselApi.off("select", updateSelection);
+    //   clearInterval(autoplayInterval); // Limpa o intervalo quando o componente for desmontado
+    // };
   }, [carouselApi]);
 
   return (
     <section className="p-5 mt-30 w-screen h-full flex flex-col items-center justify-center relative bg-gradient-to-br">
       <StarCanvas />
       <div className="container max-w-7xl px-4">
-        <div className="mb-12 flex flex-col justify-between md:mb-16 md:flex-row md:items-end">
+        < div className="mb-12 flex flex-col justify-between md:mb-16 md:flex-row md:items-end" >
           <div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-black tracking-tight leading-tight">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-blacktracking-tight leading-tight">
               {heading}
               <span
                 className="text-transparent bg-clip-text bg-gradient-to-r from-[#E32320] to-[#ff574d]"
                 style={{ fontWeight: 900 }}
               >
+                {" "}
                 {headingSecond}
               </span>
             </h2>
@@ -189,7 +197,7 @@ const Gallery = ({
             </Button>
           </div>
         </div>
-      </div>
+      </div >
 
       <div className="w-full h-full overflow-hidden md:mb-10">
         <Carousel
@@ -225,7 +233,9 @@ const Gallery = ({
                       <h3 className="text-xl font-semibold uppercase tracking-wide text-[#E32320] group-hover:text-[#ff574d] transition-colors duration-300">
                         {item.title}
                       </h3>
-                      <p>{item.paragraph}</p>
+                      <p>
+                        {item.paragraph}
+                      </p>
                     </div>
                   </div>
 
@@ -260,7 +270,7 @@ const Gallery = ({
         onClose={() => setSelectedItem(null)}
         item={selectedItem || undefined}
       />
-    </section>
+    </section >
   );
 };
 

@@ -125,7 +125,7 @@ const Navbar = ({
 
   return (
     <section
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 
+      className={`fixed top-0 left-0 w-full z-10 transition-all duration-500 
       ${visible ? "translate-y-0" : "-translate-y-full"} 
       bg-black/10 backdrop-blur-md shadow-lg`}
     >

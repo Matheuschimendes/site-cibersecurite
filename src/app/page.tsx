@@ -7,8 +7,6 @@ import { Treinamento } from "./sections/treinamento";
 import { Contato } from "./sections/Contato";
 
 
-
-
 export default function Home() {
   return (
     <div className="">

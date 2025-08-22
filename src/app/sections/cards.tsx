@@ -25,7 +25,6 @@ const Cards = ({
       subtitle: "Precisão",
       description:
         "Análises detalhadas e investigações meticulosas que fornecem insights precisos e acionáveis.",
-      buttonText: "Download",
       url: "#",
     },
     ios: {
