@@ -425,7 +425,7 @@ export default function Globe() {
               Investigações Digitais & Cibersegurança Avançada
             </TextReveal>
 
-            <TextReveal className="text-center text-lg md:text-2xl font-medium text-neutral-400 max-w-2xl mt-4 mx-auto z-10">
+            <TextReveal className="text-center text-lg md:text-1xl font-medium text-neutral-400 max-w-2xl mt-4 mx-auto z-10">
               Protegemos sua marca, investigamos ameaças e fortalecemos sua defesa cibernética com inteligência estratégica e tecnologia de ponta. Mapeamos ameaças em ciberespaços complexos para proteger as operações, a reputação e a vantagem competitiva das indústrias mais críticas.
             </TextReveal>
 
