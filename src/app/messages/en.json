@@ -1,0 +1,39 @@
+{
+  "Navbar": {
+    "menu": {
+      "inicio": "Home",
+      "sobre": "About",
+      "servicos": "Services",
+      "mentorias": "Mentorships",
+      "submenus": {
+        "brand_protection": {
+          "title": "Brand Protection",
+          "description": "Monitor and eliminate threats to your brand across digital environments."
+        },
+        "leak_detection": {
+          "title": "Leak Detection",
+          "description": "Identify data leaks and sensitive information before they cause damage."
+        },
+        "vip_protection": {
+          "title": "VIP Protection",
+          "description": "Ensure digital security for high-risk individuals and executives."
+        },
+        "cyber_risk_insights": {
+          "title": "Cyber Risk Insights",
+          "description": "In-depth analysis to anticipate threats and reduce cyber risks."
+        }
+      }
+    },
+    "languages": {
+      "br": "BR",
+      "us": "US"
+    }
+  },
+  "Home": {
+    "title": "THREAT",
+    "subtitle": "INTELLIGENCE",
+    "title2": "Digital Investigations & Advanced Cybersecurity",
+    "description": "We protect your brand, investigate threats, and strengthen your cyber defenses using strategic intelligence and cutting-edge technology. We map threats across complex cyberspaces to safeguard the operations, reputation, and competitive edge of today’s most critical industries.",
+    "button": "Schedule a Risk Assessment"
+  }
+}

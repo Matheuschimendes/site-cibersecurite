@@ -24,6 +24,9 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { Link } from "../../i18n/navigation";
+import { useTranslations } from "next-intl";
 
 interface MenuItem {
   title: string;
@@ -41,16 +44,6 @@ interface Navbar1Props {
     title: string;
   };
   menu?: MenuItem[];
-  auth?: {
-    login: {
-      title: string;
-      url: string;
-    };
-    signup: {
-      title: string;
-      url: string;
-    };
-  };
 }
 
 const Navbar = ({
@@ -67,61 +60,37 @@ const Navbar = ({
       title: "Serviços",
       url: "#",
       items: [
-        {
-          title: "Brand Protection",
-          // description: "Get all the answers you need right here",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Leak Detection",
-          // description: "We are here to help you with any questions you have",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "VIP Protection",
-          // description: "Check the current status of our services and APIs",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Cyber Risk Insights",
-          // description: "Our terms and conditions for using our services",
-          icon: <Book className="size-5 shrink-0" />,
-          url: "#",
-        },
+        { title: "Brand Protection", icon: <Zap className="size-5 shrink-0" />, url: "#" },
+        { title: "Leak Detection", icon: <Sunset className="size-5 shrink-0" />, url: "#" },
+        { title: "VIP Protection", icon: <Trees className="size-5 shrink-0" />, url: "#" },
+        { title: "Cyber Risk Insights", icon: <Book className="size-5 shrink-0" />, url: "#" },
       ],
     },
-    {
-      title: "Mentorias",
-      url: "#",
-    },
+    { title: "Mentorias", url: "#" },
   ],
-  auth = {
-    login: { title: "BR", url: "#" },
-    signup: { title: "USA", url: "#" },
-  },
 }: Navbar1Props) => {
-  const [visible, setVisible] = useState(true); // Estado para rastrear quando o usuário rola a página
-  const [lastScrollY, setLastScrollY] = useState(0); // Estado para armazenar a posição de rolagem anterior
+  const [visible, setVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-  useEffect(() => { // Função para verificar quando o usuário rola a página
-    const handleScroll = () => { // Função para verificar quando o usuário rola a página
-      const currentScrollY = window.scrollY; // Obtenha a posição de rolagem atual
+  const pathname = usePathname();
+  const currentLocale = pathname.split("/")[1]; // captura "pt" ou "en"
+
+  const t = useTranslations('Navbar');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY && currentScrollY > 80) {
-        // Defina o valor de lastScrollY conforme necessário
-        setVisible(false); // Defina o estado de visibilidade para false
+        setVisible(false);
       } else {
-        // Defina o valor de lastScrollY conforme necessário
         setVisible(true);
       }
-      setLastScrollY(currentScrollY); // Atualize o estado de rolagem
+      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener("scroll", handleScroll); // Adicione o evento de rolagem
-    return () => window.removeEventListener("scroll", handleScroll); // Remova o evento de rolagem
-  }, [lastScrollY]); // Adicione lastScrollY como dependência
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
     <section
@@ -154,13 +123,31 @@ const Navbar = ({
               </NavigationMenu>
             </div>
           </div>
+
+          {/* Idiomas Desktop */}
           <div className="flex gap-2">
-            <Button asChild className="hover:bg-[#E32320] border" size="sm">
-              <a href={auth.login.url}>{auth.login.title}</a>
-            </Button>
-            <Button asChild size="sm">
-              <a href={auth.signup.url}>{auth.signup.title}</a>
-            </Button>
+            <Link href="/" locale="pt">
+              <Button
+                size="sm"
+                className={`border cursor-pointer ${currentLocale === "pt"
+                  ? "bg-[#E32320] text-white"
+                  : "hover:bg-[#E32320] hover:text-white"
+                  }`}
+              >
+                BR
+              </Button>
+            </Link>
+            <Link href="/" locale="en">
+              <Button
+                size="sm"
+                className={`border cursor-pointer ${currentLocale === "en"
+                  ? "bg-[#E32320] text-white"
+                  : "hover:bg-[#E32320] hover:text-white"
+                  }`}
+              >
+                US
+              </Button>
+            </Link>
           </div>
         </nav>
 
@@ -169,11 +156,7 @@ const Navbar = ({
           <div className="flex items-center justify-between">
             {/* Logo */}
             <a href={logo.url} className="flex items-center gap-2">
-              <img
-                src={logo.src}
-                className="max-h-8 dark:invert"
-                alt={logo.alt}
-              />
+              <img src={logo.src} className="max-h-8 dark:invert" alt={logo.alt} />
             </a>
             <Sheet>
               <SheetTrigger asChild className="bg-[#E32320] border">
@@ -185,30 +168,39 @@ const Navbar = ({
                 <SheetHeader>
                   <SheetTitle>
                     <a href={logo.url} className="flex items-center gap-2">
-                      <img
-                        src={logo.src}
-                        className="max-h-8 dark:invert"
-                        alt={logo.alt}
-                      />
+                      <img src={logo.src} className="max-h-8 dark:invert" alt={logo.alt} />
                     </a>
                   </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-6 p-4">
-                  <Accordion
-                    type="single"
-                    collapsible
-                    className="flex w-full flex-col gap-4"
-                  >
+                  <Accordion type="single" collapsible className="flex w-full flex-col gap-4">
                     {menu.map((item) => renderMobileMenuItem(item))}
                   </Accordion>
 
+                  {/* Idiomas Mobile */}
                   <div className="flex flex-col gap-3">
-                    <Button asChild className="hover:bg-white hover:text-[#E32320] border">
-                      <a href={auth.login.url}>{auth.login.title}</a>
-                    </Button>
-                    <Button asChild className="hover:bg-white hover:text-[#E32320] border">
-                      <a href={auth.signup.url}>{auth.signup.title}</a>
-                    </Button>
+                    <Link href="/" locale="pt">
+                      <Button
+                        size="sm"
+                        className={`border cursor-pointer w-full ${currentLocale === "pt"
+                          ? "bg-white text-[#E32320]"
+                          : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
+                          }`}
+                      >
+                        BR
+                      </Button>
+                    </Link>
+                    <Link href="/" locale="en">
+                      <Button
+                        size="sm"
+                        className={`border cursor-pointer w-full ${currentLocale === "en"
+                          ? "bg-white text-[#E32320]"
+                          : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
+                          }`}
+                      >
+                        US
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </SheetContent>
@@ -220,13 +212,14 @@ const Navbar = ({
   );
 };
 
-// Submenu
+// Submenu Desktop
 const renderMenuItem = (item: MenuItem) => {
+
   if (item.items) {
     return (
       <NavigationMenuItem key={item.title}>
-        <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-        <NavigationMenuContent className="bg-[#E32320] text-popover-foreground min-w-[220px]">
+        <NavigationMenuTrigger>{(`${item.title}`)}</NavigationMenuTrigger>
+        <NavigationMenuContent className="bg-[#E32320] min-w-[220px]">
           {item.items.map((subItem) => (
             <NavigationMenuLink
               asChild
@@ -245,7 +238,7 @@ const renderMenuItem = (item: MenuItem) => {
     <NavigationMenuItem key={item.title}>
       <NavigationMenuLink
         href={item.url}
-        className="bg-transparent hover:bg-muted hover:text-accent-foreground group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors"
+        className="bg-transparent hover:bg-muted group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors"
       >
         {item.title}
       </NavigationMenuLink>
@@ -253,7 +246,7 @@ const renderMenuItem = (item: MenuItem) => {
   );
 };
 
-// Mobile
+// Submenu Mobile
 const renderMobileMenuItem = (item: MenuItem) => {
   if (item.items) {
     return (
@@ -277,23 +270,19 @@ const renderMobileMenuItem = (item: MenuItem) => {
   );
 };
 
-const SubMenuLink = ({ item }: { item: MenuItem }) => {
-  return (
-    <a
-      className="hover:bg-white hover:text-[#E32320] flex select-none flex-row gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors"
-      href={item.url}
-    >
-      <div className="text-foreground">{item.icon}</div>
-      <div>
-        <div className="text-sm font-semibold">{item.title}</div>
-        {item.description && (
-          <p className="text-muted-foreground text-sm leading-snug">
-            {item.description}
-          </p>
-        )}
-      </div>
-    </a>
-  );
-};
+const SubMenuLink = ({ item }: { item: MenuItem }) => (
+  <a
+    className="hover:bg-white hover:text-[#E32320] flex select-none flex-row gap-4 rounded-md p-3 transition-colors"
+    href={item.url}
+  >
+    <div>{item.icon}</div>
+    <div>
+      <div className="text-sm font-semibold">{item.title}</div>
+      {item.description && (
+        <p className="text-sm text-muted-foreground leading-snug">{item.description}</p>
+      )}
+    </div>
+  </a>
+);
 
 export { Navbar };

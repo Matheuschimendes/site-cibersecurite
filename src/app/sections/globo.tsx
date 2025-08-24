@@ -5,13 +5,16 @@ import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { TextReveal } from "@/components/magicui/text-reveal";
+import { useTranslations } from 'next-intl';
+import { title } from "process";
+import { sub } from "maath/dist/declarations/src/vector2";
 
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
   ssr: false,
 });
 
 export default function Globe() {
-
+  const t = useTranslations('Home');
 
   const globeConfig = {
     pointSize: 4, //alterar tamanho dos pontos
@@ -418,15 +421,15 @@ export default function Globe() {
             className="div"
           >
             <h1 className="text-center text-3xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
-              THREAT <span className="text-[#E32320]">INTELLIGENCE</span>
+              {t('title')} <span className="text-[#E32320]">{t('subtitle')}</span>
             </h1>
             <p className="text-center text-lg md:text-2xl font-medium">Don&rsquo;t <span className=" text-[#E32320]">React. </span> Anticipate </p>
             <TextReveal className="text-center text-lg md:text-2xl font-medium text-neutral-300 max-w-2xl mt-4 mx-auto">
-              Investigações Digitais & Cibersegurança Avançada
+              {t('title2')}
             </TextReveal>
 
             <TextReveal className="text-center text-lg md:text-1xl font-medium text-neutral-400 max-w-2xl mt-4 mx-auto z-10">
-              Protegemos sua marca, investigamos ameaças e fortalecemos sua defesa cibernética com inteligência estratégica e tecnologia de ponta. Mapeamos ameaças em ciberespaços complexos para proteger as operações, a reputação e a vantagem competitiva das indústrias mais críticas.
+              {t('description')}
             </TextReveal>
 
             <div className="flex items-center justify-center mt-8">
@@ -435,7 +438,7 @@ export default function Globe() {
                 className="z-10 bg-[#E32320] hover:bg-[#b41c1a] text-white font-semibold text-base px-6 py-3 rounded-lg transition-colors"
                 asChild
               >
-                <Link href="/login" className="hover:bg-white hover:text-[#E32320]">Agende uma Análise de Risco </Link>
+                <Link href="/login" className="hover:bg-white hover:text-[#E32320]">{t('button')}</Link>
               </Button>
             </div>
 

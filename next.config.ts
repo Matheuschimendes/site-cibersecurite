@@ -1,4 +1,8 @@
 import type { NextConfig } from "next";
+import next from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   webpack(config) {
@@ -13,4 +17,4 @@ const nextConfig: NextConfig = {
   // Você pode adicionar outras opções de configuração aqui, se necessário
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
