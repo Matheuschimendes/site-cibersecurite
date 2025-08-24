@@ -18,6 +18,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
   return {
     locale, // <-- obrigatório no retorno
-    messages: (await import(`../app/messages/${locale}.json`)).default,
+    messages: (await import(`../messages/${locale}.json`)).default,
   };
 });

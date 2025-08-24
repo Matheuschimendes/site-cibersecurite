@@ -28,7 +28,7 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
   // Usa locale apenas se for suportado
   const { locale: rawLocale } = await params;
@@ -38,12 +38,16 @@ export default async function RootLayout({
 
   let messages = {};
   try {
-    messages = (await import(`../../app/messages/${locale}.json`)).default;
+    // Importa os arquivos de mensagens
+    messages = (await import(`../../messages${locale}.json`)).default;
   } catch (err) {
+    // Caso o locale nao seja suportado
     if (process.env.NODE_ENV === "development") {
+      // Mostra um aviso no console
       console.warn(`Locale "${locale}" não encontrado, usando "en".`);
     }
-    messages = (await import(`../../app/messages/en.json`)).default;
+    // Caso o locale nao seja suportado
+    messages = (await import(`../../messages/en.json`)).default;
   }
 
   return (
