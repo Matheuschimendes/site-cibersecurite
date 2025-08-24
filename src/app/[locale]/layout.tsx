@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Kanit } from "next/font/google";
-import "./globals.css";
+import "../../app/globals.css";
 import StarCanvas from "../_components/star";
 import { Toaster } from "sonner";
 import { NextIntlClientProvider } from "next-intl";
