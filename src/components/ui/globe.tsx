@@ -106,17 +106,11 @@ export function Globe({ globeConfig, data }: WorldProps) {
         shininess: number;
       };
 
-    globeMaterial.color = new Color(globeConfig.globeColor || defaultProps.globeColor);
-    globeMaterial.emissive = new Color(globeConfig.emissive || defaultProps.emissive);
-    globeMaterial.emissiveIntensity = globeConfig.emissiveIntensity ?? defaultProps.emissiveIntensity;
-    globeMaterial.shininess = globeConfig.shininess ?? defaultProps.shininess;
-  }, [
-    isInitialized,
-    globeConfig.globeColor,
-    globeConfig.emissive,
-    globeConfig.emissiveIntensity,
-    globeConfig.shininess,
-  ]);
+    globeMaterial.color = new Color(defaultProps.globeColor);
+    globeMaterial.emissive = new Color(defaultProps.emissive);
+    globeMaterial.emissiveIntensity = defaultProps.emissiveIntensity;
+    globeMaterial.shininess = defaultProps.shininess;
+  }, [isInitialized, defaultProps.globeColor, defaultProps.emissive, defaultProps.emissiveIntensity, defaultProps.shininess]);
 
   // Atualiza dados e visual do globo
   useEffect(() => {

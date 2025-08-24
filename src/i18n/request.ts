@@ -8,16 +8,19 @@ const locales = languages;
 
 export default getRequestConfig(async ({ requestLocale }) => {
   const locale = await requestLocale;
-  const requested = hasLocale(routing.locales, locale)
+
+  // Define o locale que será usado, com fallback
+  const localeToUse = hasLocale(routing.locales, locale)
     ? locale
     : routing.defaultLocale;
 
+  // Se o locale não for válido, retorna 404
   if (!locale || !locales.includes(locale)) {
     notFound();
   }
 
   return {
-    locale, // <-- obrigatório no retorno
-    messages: (await import(`../messages/${locale}.json`)).default,
+    locale: localeToUse, // obrigatório
+    messages: (await import(`../messages/${localeToUse}.json`)).default,
   };
 });
