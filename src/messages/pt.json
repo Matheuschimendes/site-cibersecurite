@@ -31,8 +31,8 @@
     "button": "Agende uma Análise de Risco"
   },
   "About": {
-    "title": "Sobre Nós",
-    "description": "Somos especialistas em cibersegurança e inteligência digital, focados em proteger os ativos mais valiosos da sua organização. Atuamos com ética, sigilo e tecnologia de ponta para enfrentar os desafios mais complexos do mundo digital.",
-    "button": "Saiba Mais"
+    "title": "Sobre a",
+    "subtitle": "Kryfal",
+    "description": "Especialistas em Threat Intelligence e investigações digitais, protegendo empresas contra ameaças cibernéticas avançadas. A Kryfal nasceu de uma constatação: os setores que formam a espinha dorsal da economia são os mais negligenciados em inteligência cibernética.Enquanto o mercado foca em ameaças genéricas, nós mergulhamos nos ecossistemas específicos do Agronegócio, Portos, Aeroespacial e da nova economia Web3, entregando inteligência que gestores podem usar para tomar decisões estratégicas e proteger seus ativos mais valiosos."
   }
 }

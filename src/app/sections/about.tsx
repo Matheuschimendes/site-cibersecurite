@@ -4,6 +4,7 @@ import { TextReveal } from "@/components/magicui/text-reveal";
 import React, { useRef } from "react";
 import { Cards } from "./cards";
 import { SessaoConsultoria } from "../_components/SessaoConsultoria";
+import { useTranslations } from "next-intl";
 
 interface Feature {
   id: string;
@@ -21,6 +22,8 @@ interface DescriptionProps {
 }
 
 const CardWithLight = ({ feature }: { feature: Feature }) => {
+
+  const t = useTranslations("About");
   const cardRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {

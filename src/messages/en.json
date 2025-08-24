@@ -23,10 +23,6 @@
           "description": "In-depth analysis to anticipate threats and reduce cyber risks."
         }
       }
-    },
-    "languages": {
-      "br": "BR",
-      "us": "US"
     }
   },
   "Home": {
@@ -35,5 +31,10 @@
     "title2": "Digital Investigations & Advanced Cybersecurity",
     "description": "We protect your brand, investigate threats, and strengthen your cyber defenses using strategic intelligence and cutting-edge technology. We map threats across complex cyberspaces to safeguard the operations, reputation, and competitive edge of today’s most critical industries.",
     "button": "Schedule a Risk Assessment"
+  },
+  "About": {
+    "title": "About",
+    "subtitle": "Kryfal",
+    "description": "Specialists in threat intelligence and digital investigations, protecting companies against advanced cyber threats. Kryfal was born from a realization: the sectors that form the backbone of the economy are the most neglected in cyber intelligence. While the market focuses on generic threats, we delve into the specific ecosystems of agribusiness, ports, aerospace, and the new Web3 economy, delivering intelligence that managers can use to make strategic decisions and protect their most valuable assets."
   }
 }

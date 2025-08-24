@@ -39,7 +39,8 @@ export default async function RootLayout({
   let messages = {};
   try {
     // Importa os arquivos de mensagens
-    messages = (await import(`../../messages${locale}.json`)).default;
+    messages = (await import(`../../messages/${locale}.json`)).default;
+
   } catch (err) {
     // Caso o locale nao seja suportado
     if (process.env.NODE_ENV === "development") {
@@ -48,6 +49,7 @@ export default async function RootLayout({
     }
     // Caso o locale nao seja suportado
     messages = (await import(`../../messages/en.json`)).default;
+
   }
 
   return (
