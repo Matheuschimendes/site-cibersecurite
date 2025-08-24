@@ -28,11 +28,12 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale?: string };
+  params: Promise<{ locale: string }>;
 }) {
   // Usa locale apenas se for suportado
-  const locale = SUPPORTED_LOCALES.includes(params?.locale || "")
-    ? (params!.locale as string)
+  const { locale: rawLocale } = await params;
+  const locale = SUPPORTED_LOCALES.includes(rawLocale)
+    ? (rawLocale as string)
     : "en";
 
   let messages = {};
