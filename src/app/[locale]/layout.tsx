@@ -31,10 +31,10 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }) {
   // Usa locale apenas se for suportado
-  const { locale: rawLocale } = await params;
+  const { locale: rawLocale } = await params; //
   const locale = SUPPORTED_LOCALES.includes(rawLocale)
     ? (rawLocale as string)
-    : "en";
+    : "pt";
 
   let messages = {};
   try {
