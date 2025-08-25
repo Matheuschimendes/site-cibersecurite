@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 // Locales suportados
-const SUPPORTED_LOCALES = ["en", "pt"];
+const SUPPORTED_LOCALES = ["pt", "en"];
 
 // Layout em /[locale]/layout.tsx
 export default async function RootLayout({
@@ -53,7 +53,7 @@ export default async function RootLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
-        <Toaster richColors position="top-right" />
+        <Toaster richColors position="bottom-right" />
       </body>
     </html>
   );
