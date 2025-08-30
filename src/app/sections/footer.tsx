@@ -1,65 +1,58 @@
+"use client";
+
 import { Separator } from "@/components/ui/separator";
 import {
+  Book,
+  ChartColumnIncreasing,
   DribbbleIcon,
   GithubIcon,
-  Icon,
-  Shield,
+  Mail,
+  MapPin,
+  Phone,
   ShieldIcon,
+  Sunset,
+  Trees,
   TwitchIcon,
   TwitterIcon,
+  Zap,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-
-// Dados da seção de consultoria
-const consultoriaData = [{
-  title: "Aviso de Segurança: ",
-  description: "Todas as comunicações são criptografadas e tratadas com máxima confidencialidade. Nossos serviços seguem os mais altos padrões de segurança da informação.",
-}];
-
-// Links do rodapé
-const footerSections = [
-  {
-    title: "Serviços",
-    links: [
-      { title: "Threat Intelligence", href: "#" },
-      { title: "Brand Protection", href: "#" },
-      { title: "Investigações Digitais", href: "#" },
-      { title: "VIP Protection", href: "#" },
-      { title: "Treinamentos", href: "#" },
-    ],
-  },
-  {
-    title: "Contatos",
-    links: [
-      {
-        title: "comercial@kryfal.com",
-        href: "#",
-        icon: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            className="w-5 h-5"
-          >
-            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-          </svg>
-        )
-      },
-      { title: "contato@kryfal.com", href: "#" },
-
-      {
-        title: "+55 (11) 9999-9999",
-        href: "#",
-      },
-      { title: "+55 (11) 8888-8888", href: "#" },
-      { title: "São Paulo, Brasil - Atendimento Nacional", href: "#" },
-    ],
-  },
-];
+import { useTranslations } from "next-intl";
 
 export const FooterPage = () => {
+  const t = useTranslations("Footer");
+
+  // Dados da seção de consultoria
+  const consultoriaData = [{
+    title: t("securityNotice.title"),
+    description: t("securityNotice.description"),
+  }];
+
+  // Links do rodapé
+  const footerSections = [
+    {
+      title: t("sections.services"),
+      links: [
+        { title: t("services.threatIntelligence"), href: "#", icon: <Zap className="size-5 shrink-0" />, },
+        { title: t("services.brandProtection"), href: "#", icon: <Sunset className="size-5 shrink-0" />, },
+        { title: t("services.digitalInvestigations"), href: "#", icon: <Trees className="size-5 shrink-0" />, },
+        { title: t("services.vipProtection"), href: "#", icon: <Book className="size-5 shrink-0" />, },
+        { title: t("services.trainings"), href: "#", icon: <ChartColumnIncreasing className="size-5 shrink-0" /> },
+      ],
+    },
+    {
+      title: t("sections.contacts"),
+      links: [
+        { title: "comercial@kryfal.com", href: "mailto:comercial@kryfal.com", icon: <Mail className="size-5 shrink-0" /> },
+        { title: "contato@kryfal.com", href: "mailto:contato@kryfal.com", icon: <Mail className="size-5 shrink-0" /> },
+        { title: "+55 (11) 9999-9999", href: "tel:+551199999999", icon: <Phone className="size-5 shrink-0" /> },
+        { title: "+55 (11) 8888-8888", href: "tel:+551188888888", icon: <Phone className="size-5 shrink-0" /> },
+        { title: t("address"), href: "#", icon: <MapPin className="size-5 shrink-0" /> },
+      ],
+    },
+  ];
+
   return (
     <div className="flex flex-col md:mb-10">
       <footer>
@@ -76,30 +69,28 @@ export const FooterPage = () => {
                 priority={false}
               />
               <p className="mt-4 text-muted-foreground">
-                Especialistas em Threat Intelligence e investigações digitais, protegendo empresas contra ameaças cibernéticas com soluções estratégicas e tecnologia de ponta.
+                {t("description")}
               </p>
               <div className="mt-10 flex md:flex-row items-center gap-1">
                 <ShieldIcon className="h-6 w-6 md:h-6 md:w-6 text-[#E32320]" />
                 <div>
-                  <span className="text-white">Segurança e confidencialidade garantidas.</span>
+                  <span className="text-white">{t("guarantee")}</span>
                 </div>
               </div>
-
             </div>
 
             {/* Links dinâmicos */}
             {footerSections.map(({ title, links }) => (
               <div key={title}>
                 <h6 className="font-semibold">{title}</h6>
-                <ul className="mt-0 space-y-4">
+                <ul className="mt-5 space-y-4">
                   {links.map(({ title, href, icon }) => (
-
-                    <li key={title}>
+                    <li key={title} className="flex text-muted-foreground transition-colors hover:text-[#E32320] items-center">
+                      {icon}
                       <Link
                         href={href}
-                        className="text-muted-foreground transition-colors hover:text-[#E32320]"
+                        className="text-muted-foreground transition-colors hover:text-[#E32320] ml-2 items-center"
                       >
-                        {icon}
                         {title}
                       </Link>
                     </li>
@@ -118,14 +109,14 @@ export const FooterPage = () => {
               <Link href="/" target="_blank" className="hover:underline">
                 Kryfal
               </Link>
-              . Todos os direitos reservados.
+              . {t("rights")}
             </span>
 
-            <div className="flex items-center gap-5 text-muted-foreground">
-              <Link href="#" target="_blank"><TwitterIcon className="h-5 w-5" /></Link>
-              <Link href="#" target="_blank"><DribbbleIcon className="h-5 w-5" /></Link>
-              <Link href="#" target="_blank"><TwitchIcon className="h-5 w-5" /></Link>
-              <Link href="#" target="_blank"><GithubIcon className="h-5 w-5" /></Link>
+            <div className="flex items-center gap-5 text-muted-foreground ">
+              <Link href="#" target="_blank"><TwitterIcon className="h-5 w-5 hover:text-[#E32320]" /></Link>
+              <Link href="#" target="_blank"><DribbbleIcon className="h-5 w-5 hover:text-[#E32320]" /></Link>
+              <Link href="#" target="_blank"><TwitchIcon className="h-5 w-5 hover:text-[#E32320]" /></Link>
+              <Link href="#" target="_blank"><GithubIcon className="h-5 w-5 hover:text-[#E32320]" /></Link>
             </div>
           </div>
         </div>

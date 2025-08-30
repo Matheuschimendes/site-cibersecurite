@@ -322,5 +322,26 @@
       "subject": "Selecione um assunto válido",
       "message": "A mensagem deve ter pelo menos 2 caracteres"
     }
+  },
+  "Footer": {
+    "description": "Especialistas em Threat Intelligence e investigações digitais, protegendo empresas contra ameaças cibernéticas com soluções estratégicas e tecnologia de ponta.",
+    "guarantee": "Segurança e confidencialidade garantidas.",
+    "rights": "Todos os direitos reservados.",
+    "address": "São Paulo, Brasil - Atendimento Nacional",
+    "sections": {
+      "services": "Serviços",
+      "contacts": "Contatos"
+    },
+    "services": {
+      "threatIntelligence": "Threat Intelligence",
+      "brandProtection": "Brand Protection",
+      "digitalInvestigations": "Investigações Digitais",
+      "vipProtection": "VIP Protection",
+      "trainings": "Treinamentos"
+    },
+    "securityNotice": {
+      "title": "Aviso de Segurança: ",
+      "description": "Todas as comunicações são criptografadas e tratadas com máxima confidencialidade. Nossos serviços seguem os mais altos padrões de segurança da informação."
+    }
   }
 }

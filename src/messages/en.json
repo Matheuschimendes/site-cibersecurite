@@ -11,7 +11,7 @@
       },
       "leak_detection": {
         "title": "Leak Detection",
-        "description": "Identify data leaks and sensitive information before they cause harm."
+        "description": "Identify data leaks and sensitive information before they cause damage."
       },
       "vip_protection": {
         "title": "VIP Protection",
@@ -19,7 +19,7 @@
       },
       "cyber_risk_insights": {
         "title": "Cyber Risk Insights",
-        "description": "In-depth analyses to anticipate threats and reduce risks."
+        "description": "In-depth analysis to anticipate threats and reduce risks."
       }
     }
   },
@@ -27,13 +27,13 @@
     "title": "THREAT",
     "subtitle": "INTELLIGENCE",
     "title2": "Digital Investigations & Advanced Cybersecurity",
-    "description": "We protect your brand, investigate threats, and strengthen your cyber defense with strategic intelligence and cutting-edge technology. We map threats in complex cyberspaces to safeguard operations, reputation, and the competitive advantage of critical industries.",
+    "description": "We protect your brand, investigate threats, and strengthen your cyber defense with strategic intelligence and cutting-edge technology. We map threats in complex cyberspaces to safeguard operations, reputation, and competitive advantage of the most critical industries.",
     "button": "Schedule a Risk Assessment"
   },
   "About": {
     "title": "About",
     "subtitle": "Kryfal",
-    "description": "Experts in Threat Intelligence and digital investigations, protecting companies against advanced cyber threats. Kryfal was born from the observation that the sectors forming the backbone of the economy are the most neglected in cyber intelligence. While the market focuses on generic threats, we dive into the specific ecosystems of Agribusiness, Ports, Aerospace, and the new Web3 economy, delivering intelligence managers can use to make strategic decisions and protect their most valuable assets."
+    "description": "Experts in Threat Intelligence and digital investigations, protecting companies against advanced cyber threats. Kryfal was born from a realization: the sectors that form the backbone of the economy are the most neglected in cyber intelligence. While the market focuses on generic threats, we dive deep into the specific ecosystems of Agribusiness, Ports, Aerospace, and the new Web3 economy, delivering intelligence that managers can use to make strategic decisions and protect their most valuable assets."
   },
   "Cards": {
     "card1": {
@@ -51,20 +51,20 @@
   },
   "Posicionamento": {
     "title": "Our Positioning",
-    "description": "Effective threat intelligence does not exist without a deep understanding of the business. Kryfal positions itself at the intersection of cyber expertise and the operational reality of the most critical sectors. Instead of offering generic solutions, we dive into your value chain to understand who the threat actors are, how they think, and how they operate to compromise your business continuity.",
+    "description": "There is no effective threat intelligence without a deep understanding of the business. That’s why Kryfal positions itself at the intersection between cyber expertise and the operational reality of the most critical sectors. Instead of offering generic solutions, we dive into your value chain to understand who the threat actors are, how they think, and how they act in ways that truly compromise your business continuity.",
     "button": "Schedule a Risk Assessment"
   },
   "galLery": {
     "title": "Intelligence",
     "subtitle": "Services",
-    "description": "Complete threat intelligence and digital investigation solutions to protect your organization.",
+    "description": "Comprehensive threat intelligence and digital investigation solutions to protect your organization.",
     "learn_more": "Learn more",
     "previous_slide": "Previous Slide",
     "next_slide": "Next Slide",
     "items": {
       "brand_protection": {
         "title": "Brand Protection",
-        "description": "Monitoring and responding to misuse of your brand.",
+        "description": "Monitoring and response to misuse of your brand.",
         "listItems": [
           "Continuous brand violation monitoring",
           "Detection of malicious domains and phishing",
@@ -75,12 +75,12 @@
       },
       "leak_detection": {
         "title": "Leak Detection",
-        "description": "Identify data leaks and sensitive information before they cause harm.",
+        "description": "Identify data leaks and sensitive information before they cause damage.",
         "listItems": [
           "Continuous brand violation monitoring",
-          "Analysis of compromised credentials",
+          "Compromised credential analysis",
           "Investigation in underground forums",
-          "Real-time alerts on exposures"
+          "Real-time exposure alerts"
         ],
         "button": "Schedule a Risk Assessment"
       },
@@ -89,30 +89,30 @@
         "description": "Ensure digital security for executives and high-risk individuals.",
         "listItems": [
           "Continuous brand violation monitoring",
-          "Analysis of compromised credentials",
+          "Compromised credential analysis",
           "Investigation in underground forums",
-          "Real-time alerts on exposures"
+          "Real-time exposure alerts"
         ],
         "button": "Schedule a Risk Assessment"
       },
       "cyber_risk_insights": {
         "title": "Cyber Risk Insights",
-        "description": "In-depth analyses to anticipate threats and reduce risks.",
+        "description": "In-depth analysis to anticipate threats and reduce risks.",
         "listItems": [
           "Continuous brand violation monitoring",
-          "Analysis of compromised credentials",
+          "Compromised credential analysis",
           "Investigation in underground forums",
-          "Real-time alerts on exposures"
+          "Real-time exposure alerts"
         ],
         "button": "Schedule a Risk Assessment"
       },
       "corporate_counterintelligence": {
         "title": "Corporate Counterintelligence",
-        "description": "Protect your company against espionage and internal threats.",
+        "description": "Protect your company against espionage and insider threats.",
         "listItems": [
           "Corporate espionage detection",
           "Internal risk analysis",
-          "Mapping hostile actors",
+          "Hostile actor mapping",
           "Strategic mitigation plans"
         ],
         "button": "Schedule a Risk Assessment"
@@ -121,30 +121,30 @@
         "title": "Digital Investigations",
         "description": "Tracking and analysis of digital crimes.",
         "listItems": [
-          "Online fraud investigations",
-          "Cyber attack tracking",
+          "Online fraud investigation",
+          "Cyberattack tracing",
           "Digital evidence analysis",
-          "Legal support"
+          "Legal process support"
         ],
         "button": "Schedule a Risk Assessment"
       },
       "threat_analysis": {
         "title": "Threat Analysis",
-        "description": "Anticipate malicious actors' movements.",
+        "description": "Anticipate malicious actors’ moves.",
         "listItems": [
-          "Attack trend monitoring",
-          "Profiles of malicious actors",
+          "Monitoring of attack trends",
+          "Malicious actor profiles",
           "Actionable intelligence reports",
           "Alerts on new vulnerabilities"
         ],
         "button": "Schedule a Risk Assessment"
       },
       "takedown_disassembly": {
-        "title": "Takedown & Disassembly",
-        "description": "Strategic actions to remove digital threats.",
+        "title": "Takedown & Disruption",
+        "description": "Strategic actions for removing digital threats.",
         "listItems": [
-          "Take down fraudulent domains",
-          "Remove illegal content",
+          "Shutdown of fraudulent domains",
+          "Removal of illicit content",
           "Actions against fake profiles",
           "Collaboration with authorities"
         ],
@@ -153,13 +153,13 @@
     }
   },
   "Personalizada": {
-    "title": "Need a Custom Solution?",
-    "description": "Our specialists can develop tailored intelligence strategies for your organization's specific needs.",
+    "title": "Need a Customized Solution?",
+    "description": "Our experts can develop tailored intelligence strategies for your organization’s specific needs.",
     "button": "Schedule a Risk Assessment"
   },
   "mentorias": {
     "title": "Mentorships and",
-    "subtitle": "Training",
+    "subtitle": "Trainings",
     "description": "Specialized training in Threat Intelligence, OSINT, and cyber investigations.",
     "learn_more": "Learn more",
     "items": {
@@ -169,12 +169,12 @@
         "paragraph": "Recorded Course",
         "tags": "Duration: 8 hours",
         "tagsSecond": "Beginner",
-        "description": "Essential fundamentals of threat intelligence",
+        "description": "Essential threat intelligence fundamentals",
         "url": "#",
         "listItems": [
           "Continuous brand violation monitoring",
           "Detection of malicious domains and phishing",
-          "Takedown of content and fake profiles",
+          "Takedown of fake content and profiles",
           "Intellectual property protection"
         ],
         "icon": "BookOpen"
@@ -189,7 +189,7 @@
         "url": "#",
         "listItems": [
           "Continuous brand violation monitoring",
-          "Analysis of compromised credentials",
+          "Compromised credential analysis",
           "Investigation in underground forums",
           "Real-time exposure alerts"
         ],
@@ -197,7 +197,7 @@
       },
       "dark_web": {
         "id": "item-3",
-        "title": "Deep & Dark Web in Practice",
+        "title": "Deep and Dark Web in Practice",
         "paragraph": "Recorded Course",
         "tags": "Duration: 12 hours",
         "tagsSecond": "Advanced",
@@ -223,7 +223,7 @@
         "paragraph": "Recorded Course",
         "tags": "Duration: 20 hours",
         "tagsSecond": "All levels",
-        "description": "Mastery of open-source intelligence tools",
+        "description": "Mastering open-source intelligence tools",
         "url": "#",
         "listItems": [],
         "icon": "Lightbulb"
@@ -234,7 +234,7 @@
         "paragraph": "Live Course",
         "tags": "Duration: 24 hours",
         "tagsSecond": "Advanced",
-        "description": "Advanced digital investigation methodologies",
+        "description": "Advanced methodologies for digital investigations",
         "url": "#",
         "listItems": [],
         "icon": "Users"
@@ -242,13 +242,13 @@
     }
   },
   "Personalizada2": {
-    "title": "Need a Solution",
-    "description": "Our specialists can develop tailored intelligence strategies for your organization's specific needs.",
+    "title": "Need a Custom Solution",
+    "description": "Our experts can develop tailored intelligence strategies for your organization’s specific needs.",
     "button": "Risk Assessment"
   },
   "Contato": {
     "title": "Get in",
-    "subtitle": "Contact",
+    "subtitle": "Touch",
     "description": "Our team is available to answer questions and provide personalized support.",
     "email": {
       "title": "Email",
@@ -263,7 +263,7 @@
     "location": {
       "title": "Location",
       "city": "São Paulo, Brazil",
-      "service": "National and International Service"
+      "service": "National and International Support"
     },
     "hours": {
       "title": "Business Hours",
@@ -287,7 +287,7 @@
     "fields": {
       "name": "Name *",
       "email": "Email *",
-      "company": "Company *",
+      "company": "Company",
       "phone": "Phone",
       "subject": "Subject *",
       "message": "Message *"
@@ -309,8 +309,8 @@
       "Outros": "Others"
     },
     "send": "Send message",
-    "security": "Your information is encrypted and handled with confidentiality.",
-    "required": "Fields marked with * are mandatory.",
+    "security": "Your information is encrypted and treated with confidentiality.",
+    "required": "Fields marked with * are required.",
     "success": "Message sent successfully!",
     "error": "An error occurred while sending the message! Error: {status}",
     "validation": "Please fill in all fields correctly!",
@@ -321,6 +321,27 @@
       "phone": "Invalid phone. Expected format: (99) 99999-9999",
       "subject": "Select a valid subject",
       "message": "Message must be at least 2 characters"
+    }
+  },
+  "Footer": {
+    "description": "Experts in Threat Intelligence and digital investigations, protecting companies against cyber threats with strategic solutions and cutting-edge technology.",
+    "guarantee": "Guaranteed security and confidentiality.",
+    "rights": "All rights reserved.",
+    "address": "São Paulo, Brazil - National Support",
+    "sections": {
+      "services": "Services",
+      "contacts": "Contacts"
+    },
+    "services": {
+      "threatIntelligence": "Threat Intelligence",
+      "brandProtection": "Brand Protection",
+      "digitalInvestigations": "Digital Investigations",
+      "vipProtection": "VIP Protection",
+      "trainings": "Trainings"
+    },
+    "securityNotice": {
+      "title": "Security Notice:",
+      "description": "All communications are encrypted and handled with the utmost confidentiality. Our services follow the highest information security standards."
     }
   }
 }
