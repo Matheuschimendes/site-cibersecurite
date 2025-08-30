@@ -22,8 +22,6 @@ interface DescriptionProps {
 }
 
 const CardWithLight = ({ feature }: { feature: Feature }) => {
-
-  // const t = useTranslations("");
   const cardRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
