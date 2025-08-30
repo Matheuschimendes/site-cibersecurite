@@ -205,7 +205,7 @@ const Navbar = ({ logo }: NavbarProps) => {
                 className={`border ${currentLocale === "pt" ? "bg-[#E32320] text-white" : "hover:bg-[#E32320] hover:text-white"
                   }`}
               >
-                BR
+                PT
               </Button>
             </Link>
             <Link href="/" locale="en">
@@ -214,7 +214,7 @@ const Navbar = ({ logo }: NavbarProps) => {
                 className={`border ${currentLocale === "en" ? "bg-[#E32320] text-white" : "hover:bg-[#E32320] hover:text-white"
                   }`}
               >
-                US
+                EN
               </Button>
             </Link>
           </div>
@@ -250,8 +250,8 @@ const Navbar = ({ logo }: NavbarProps) => {
                       <Button
                         size="sm"
                         className={`border w-full ${currentLocale === "pt"
-                            ? "bg-white text-[#E32320]"
-                            : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
+                          ? "bg-white text-[#E32320]"
+                          : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
                           }`}
                       >
                         BR
@@ -261,8 +261,8 @@ const Navbar = ({ logo }: NavbarProps) => {
                       <Button
                         size="sm"
                         className={`border w-full ${currentLocale === "en"
-                            ? "bg-white text-[#E32320]"
-                            : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
+                          ? "bg-white text-[#E32320]"
+                          : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
                           }`}
                       >
                         US
