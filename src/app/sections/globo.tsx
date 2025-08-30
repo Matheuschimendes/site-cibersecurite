@@ -419,9 +419,9 @@ export default function Globe() {
             className="div"
           >
             <h1 className="text-center text-3xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
-              {t('title')} <span className="text-[#E32320]">{t('subtitle')}</span>
+              {t('title')} <span className="text-[#E32320]">{t('subtitle')}</span><span className="text-white">{t('subtitle2')}</span>
             </h1>
-            <p className="text-center text-lg md:text-2xl font-medium">Don&rsquo;t <span className=" text-[#E32320]">React. </span> Anticipate </p>
+            {/* <p className="text-center text-lg md:text-2xl font-medium">Don&rsquo;t <span className=" text-[#E32320]">React. </span> Anticipate </p> */}
             <TextReveal className="text-center text-lg md:text-2xl font-medium text-neutral-300 max-w-2xl mt-4 mx-auto">
               {t('title2')}
             </TextReveal>
