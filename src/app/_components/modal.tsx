@@ -18,10 +18,10 @@ interface ModalProps {
 }
 
 const Modal = ({ isOpen, onClose, item }: ModalProps) => {
-  if (!isOpen || !item) return null;
-
-  const namespace = item.namespace || "galLery";
+  const namespace = item?.namespace || "galLery";
   const t = useTranslations(namespace);
+
+  if (!isOpen || !item) return null;
 
   // pega lista direto do JSON de traduções
   const listItems = t.raw(`items.${item.key}.listItems`) as string[] | undefined;

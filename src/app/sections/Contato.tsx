@@ -7,45 +7,6 @@ import { Formulario } from "../_components/Form";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-interface Feature {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  subDescription: string;
-}
-
-interface DescriptionProps {
-  heading?: string;
-  headingSecond?: string;
-  description?: string;
-  features?: Feature[];
-}
-
-const CardWithLight = ({ feature }: { feature: Feature }) => {
-  const t = useTranslations("Contato");
-  return (
-    <div className="relative group flex flex-col gap-6 p-10 rounded-[20px] border border-transparent">
-      <div className="pointer-events-none absolute inset-0 z-0 rounded-[20px]" />
-
-      <div className="relative z-10 ">
-        <div className="text-xs uppercase tracking-widest text-[#E32320] font-extrabold font-mono mb-1">
-          {t("title")}
-        </div>
-
-        <h3 className="text-3xl font-extrabold text-white leading-snug mb-3">
-          {t("subtitle")}
-        </h3>
-
-        <div className="text-gray-300 text-base leading-relaxed space-y-4">
-          <p>{t("description")}</p>
-          <p>{feature.subDescription}</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const InformacoesContato = () => {
   const t = useTranslations("Contato");
 
@@ -117,11 +78,7 @@ const InformacoesContato = () => {
   );
 };
 
-const Contato = ({
-  heading,
-  headingSecond,
-  description
-}: DescriptionProps) => {
+const Contato = () => {
   const t = useTranslations("Contato");
 
   return (
