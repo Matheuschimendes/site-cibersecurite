@@ -36,7 +36,7 @@ interface MenuItem {
   items?: MenuItem[];
 }
 
-interface Navbar1Props {
+interface NavbarProps {
   logo?: {
     url: string;
     src: string;
@@ -45,14 +45,13 @@ interface Navbar1Props {
   };
 }
 
-const Navbar = ({ logo }: Navbar1Props) => {
+const Navbar = ({ logo }: NavbarProps) => {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const pathname = usePathname();
-  const currentLocale = pathname.split("/")[1]; // captura "pt" ou "en"
+  const currentLocale = pathname.split("/")[1];
   const t = useTranslations("Navbar");
 
-  // Menu traduzido
   const menu: MenuItem[] = [
     { title: t("inicio"), url: "/" },
     { title: t("sobre"), url: "/about" },
@@ -104,7 +103,6 @@ const Navbar = ({ logo }: Navbar1Props) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // Renderiza submenu Desktop
   const renderMenuItem = (item: MenuItem) => {
     if (item.items) {
       return (
@@ -136,7 +134,6 @@ const Navbar = ({ logo }: Navbar1Props) => {
     );
   };
 
-  // Renderiza submenu Mobile
   const renderMobileMenuItem = (item: MenuItem) => {
     if (item.items) {
       return (
@@ -153,14 +150,14 @@ const Navbar = ({ logo }: Navbar1Props) => {
       );
     }
     return (
-      <a key={item.title} href={item.url} className="text-md font-semibold">
+      <Link key={item.title} href={item.url} className="text-md font-semibold">
         {item.title}
-      </a>
+      </Link>
     );
   };
 
   const SubMenuLink = ({ item }: { item: MenuItem }) => (
-    <a
+    <Link
       className="hover:bg-white hover:text-[#E32320] flex select-none flex-row gap-4 rounded-md p-3 transition-colors"
       href={item.url}
     >
@@ -171,7 +168,7 @@ const Navbar = ({ logo }: Navbar1Props) => {
           <p className="text-sm text-muted-foreground leading-snug">{item.description}</p>
         )}
       </div>
-    </a>
+    </Link>
   );
 
   return (
@@ -184,9 +181,15 @@ const Navbar = ({ logo }: Navbar1Props) => {
         {/* Desktop Menu */}
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-6">
-            <a href="/">
-              <Image src="/Logo Horizontal.png" className="max-h-8 dark:invert" alt="logo" width={100} height={100} />
-            </a>
+            <Link href="/">
+              <Image
+                src={logo?.src || "/Logo Horizontal.png"}
+                className="max-h-8 dark:invert"
+                alt={logo?.alt || "logo"}
+                width={100}
+                height={100}
+              />
+            </Link>
             <NavigationMenu>
               <NavigationMenuList>
                 {menu.map((item) => renderMenuItem(item))}
@@ -197,10 +200,22 @@ const Navbar = ({ logo }: Navbar1Props) => {
           {/* Idiomas Desktop */}
           <div className="flex gap-2">
             <Link href="/" locale="pt">
-              <Button size="sm" className={`border ${currentLocale === "pt" ? "bg-[#E32320] text-white" : "hover:bg-[#E32320] hover:text-white"}`}>BR</Button>
+              <Button
+                size="sm"
+                className={`border ${currentLocale === "pt" ? "bg-[#E32320] text-white" : "hover:bg-[#E32320] hover:text-white"
+                  }`}
+              >
+                BR
+              </Button>
             </Link>
             <Link href="/" locale="en">
-              <Button size="sm" className={`border ${currentLocale === "en" ? "bg-[#E32320] text-white" : "hover:bg-[#E32320] hover:text-white"}`}>US</Button>
+              <Button
+                size="sm"
+                className={`border ${currentLocale === "en" ? "bg-[#E32320] text-white" : "hover:bg-[#E32320] hover:text-white"
+                  }`}
+              >
+                US
+              </Button>
             </Link>
           </div>
         </nav>
@@ -208,17 +223,21 @@ const Navbar = ({ logo }: Navbar1Props) => {
         {/* Mobile Menu */}
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
-            <a href="/">
-              <img src="/Logo Horizontal.png" className="max-h-8 dark:invert" alt="logo" />
-            </a>
+            <Link href="/">
+              <Image src={logo?.src || "/Logo Horizontal.png"} className="max-h-8 dark:invert" alt={logo?.alt || "logo"} width={100} height={100} />
+            </Link>
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon"><Menu className="size-4" /></Button>
+                <Button variant="outline" size="icon">
+                  <Menu className="size-4" />
+                </Button>
               </SheetTrigger>
               <SheetContent className="overflow-y-auto bg-[#E32320]">
                 <SheetHeader>
                   <SheetTitle>
-                    <a href="/"><img src="/Logo Horizontal.png" className="max-h-8 dark:invert" alt="logo" /></a>
+                    <Link href="/">
+                      <Image src={logo?.src || "/Logo Horizontal.png"} className="max-h-8 dark:invert" alt={logo?.alt || "logo"} width={100} height={100} />
+                    </Link>
                   </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-6 p-4">
@@ -227,8 +246,28 @@ const Navbar = ({ logo }: Navbar1Props) => {
                   </Accordion>
                   {/* Idiomas Mobile */}
                   <div className="flex flex-col gap-3">
-                    <Link href="/" locale="pt"><Button size="sm" className={`border w-full ${currentLocale === "pt" ? "bg-white text-[#E32320]" : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"}`}>BR</Button></Link>
-                    <Link href="/" locale="en"><Button size="sm" className={`border w-full ${currentLocale === "en" ? "bg-white text-[#E32320]" : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"}`}>US</Button></Link>
+                    <Link href="/" locale="pt">
+                      <Button
+                        size="sm"
+                        className={`border w-full ${currentLocale === "pt"
+                            ? "bg-white text-[#E32320]"
+                            : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
+                          }`}
+                      >
+                        BR
+                      </Button>
+                    </Link>
+                    <Link href="/" locale="en">
+                      <Button
+                        size="sm"
+                        className={`border w-full ${currentLocale === "en"
+                            ? "bg-white text-[#E32320]"
+                            : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
+                          }`}
+                      >
+                        US
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </SheetContent>
