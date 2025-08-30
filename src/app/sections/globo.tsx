@@ -6,8 +6,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { TextReveal } from "@/components/magicui/text-reveal";
 import { useTranslations } from 'next-intl';
-import { title } from "process";
-import { sub } from "maath/dist/declarations/src/vector2";
 
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
   ssr: false,

@@ -14,10 +14,7 @@ interface Feature {
   subDescription: string;
 }
 
-interface DescriptionProps {
-  heading?: string;
-  headingSecond?: string;
-  description?: string;
+interface AboutProps {
   features?: Feature[];
 }
 
@@ -63,10 +60,6 @@ const CardWithLight = ({ feature }: { feature: Feature }) => {
 
       {/* Conteúdo */}
       <div className="relative z-10">
-        <div className="text-xs uppercase tracking-widest text-[#E32320] font-extrabold font-mono mb-1">
-          {feature.subtitle}
-        </div>
-
         <h3 className="text-3xl font-extrabold text-white leading-snug mb-3">
           {feature.title}
         </h3>
@@ -80,45 +73,21 @@ const CardWithLight = ({ feature }: { feature: Feature }) => {
   );
 };
 
-const About = ({
-  heading = "Sobre a",
-  headingSecond = "Kryfal",
-  description =
-  "Especialistas em Threat Intelligence e investigações digitais, protegendo empresas contra ameaças cibernéticas avançadas. A Kryfal nasceu de uma constatação: os setores que formam a espinha dorsal da economia são os mais negligenciados em inteligência cibernética. Enquanto o mercado foca em ameaças genéricas, nós mergulhamos nos ecossistemas específicos do Agronegócio, Portos, Aeroespacial e da nova economia Web3, entregando inteligência que gestores podem usar para tomar decisões estratégicas e proteger seus ativos mais valiosos",
-  features = [
-    // {
-    //   id: "feature-1",
-    //   title: "Nossa História",
-    //   subtitle: "História",
-    //   description:
-    //     "A Kryfal nasceu da necessidade crescente de empresas terem acesso a inteligência cibernética de alta qualidade. Fundada por especialistas com vasta experiência em investigações digitais e análise de ameaças, nossa empresa se posiciona na vanguarda da proteção cibernética corporativa.",
-    //   subDescription:
-    //     "Combinamos técnicas avançadas de OSINT, análise de Deep e Dark Web, e metodologias investigativas para oferecer soluções completas de inteligência e proteção digital.",
-    // },
-    // {
-    //   id: "feature-2",
-    //   title: "Nossa Missão",
-    //   subtitle: "Missão",
-    //   description:
-    //     "Capacitar organizações com inteligência cibernética estratégica, investigações digitais precisas e soluções de proteção que antecipam e neutralizam ameaças antes que causem danos.",
-    //   subDescription:
-    //     "Nosso compromisso é ser o parceiro de confiança na jornada de transformação digital segura, oferecendo expertise técnica e visão estratégica para enfrentar os desafios do cenário cibernético atual.",
-    // },
-  ],
-}: DescriptionProps) => {
+const About = ({ features = [] }: AboutProps) => {
+  const t = useTranslations("About");
+  const tConsultoria = useTranslations("Posicionamento");
+
   return (
-    <section
-      className="-mt-20 md:-mt-70 p-5 py-24 flex flex-col items-center justify-center relative w-full bg-gradient-to-br"
-    >
+    <section className="-mt-20 md:-mt-70 p-5 py-24 flex flex-col items-center justify-center relative w-full bg-gradient-to-br">
       <div className="container max-w-7xl mx-auto">
         {/* Título */}
         <h2 className="text-5xl font-extrabold text-white tracking-tight mb-4 leading-tight">
-          {heading}{" "}
+          {t("title")}{" "}
           <span
             className="bg-gradient-to-r from-[#E32320] to-[#ff574d] bg-clip-text text-transparent"
             style={{ fontWeight: 900 }}
           >
-            {headingSecond}
+            {t("subtitle")}
           </span>
         </h2>
 
@@ -126,8 +95,8 @@ const About = ({
         <div className="w-24 h-1 bg-gradient-to-r from-[#E32320] to-[#ff574d] rounded-full mb-8"></div>
 
         {/* Descrição com efeito */}
-        <TextReveal className="text-xl md:text-2xl font-light text-gray-300 leading-relaxed max-w-3xl ">
-          {description}
+        <TextReveal className="text-xl md:text-2xl font-light text-gray-300 leading-relaxed max-w-3xl">
+          {t("description")}
         </TextReveal>
 
         {/* Grid de Cards */}
@@ -139,15 +108,14 @@ const About = ({
       </div>
 
       {/* Cards adicionais */}
-      <div className="">
+      <div>
         <Cards />
       </div>
 
       <SessaoConsultoria
-        title={"Nosso Posicionamento"}
-        description={
-          "Não existe inteligência de ameaças eficaz sem um profundo conhecimento do negócio. Por isso, a Kryfal se posiciona na interseção entre a expertise cibernética e a realidade operacional dos setores mais críticos. Em vez de oferecer soluções genéricas, mergulhamos na sua cadeia de valor para entender quem são, como pensam e como agem os atores de ameaças que realmente comprometem a continuidade do seu negócio"
-        }
+        title={tConsultoria("title")}
+        description={tConsultoria("description")}
+        descriptionButton={tConsultoria("button")}
       />
     </section>
   );

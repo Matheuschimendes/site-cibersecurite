@@ -31,8 +31,296 @@
     "button": "Agende uma Análise de Risco"
   },
   "About": {
-    "title": "Sobre a",
+    "title": "Sobre",
     "subtitle": "Kryfal",
-    "description": "Especialistas em Threat Intelligence e investigações digitais, protegendo empresas contra ameaças cibernéticas avançadas. A Kryfal nasceu de uma constatação: os setores que formam a espinha dorsal da economia são os mais negligenciados em inteligência cibernética.Enquanto o mercado foca em ameaças genéricas, nós mergulhamos nos ecossistemas específicos do Agronegócio, Portos, Aeroespacial e da nova economia Web3, entregando inteligência que gestores podem usar para tomar decisões estratégicas e proteger seus ativos mais valiosos."
+    "description": "Especialistas em Threat Intelligence e investigações digitais, protegendo empresas contra ameaças cibernéticas avançadas. A Kryfal nasceu de uma constatação: os setores que formam a espinha dorsal da economia são os mais negligenciados em inteligência cibernética. Enquanto o mercado foca em ameaças genéricas, nós mergulhamos nos ecossistemas específicos do Agronegócio, Portos, Aeroespacial e da nova economia Web3, entregando inteligência que gestores podem usar para tomar decisões estratégicas e proteger seus ativos mais valiosos."
+  },
+  "Cards": {
+    "card1": {
+      "title": "Precisão",
+      "description": "Análises detalhadas e investigações meticulosas que fornecem insights precisos e acionáveis."
+    },
+    "card2": {
+      "title": "Expertise",
+      "description": "Equipe especializada com certificações e experiência comprovada em cibersegurança e investigações."
+    },
+    "card3": {
+      "title": "Excelência",
+      "description": "Compromisso com a qualidade e inovação constante em metodologias e tecnologias de proteção."
+    }
+  },
+  "Posicionamento": {
+    "title": "Nosso Posicionamento",
+    "description": "Não existe inteligência de ameaças eficaz sem um profundo conhecimento do negócio. Por isso, a Kryfal se posiciona na interseção entre a expertise cibernética e a realidade operacional dos setores mais críticos. Em vez de oferecer soluções genéricas, mergulhamos na sua cadeia de valor para entender quem são, como pensam e como agem os atores de ameaças que realmente comprometem a continuidade do seu negócio.",
+    "button": "Agende uma Análise de Risco"
+  },
+  "galLery": {
+    "title": "Inteligência",
+    "subtitle": "Serviços",
+    "description": "Soluções completas de threat intelligence e investigações digitais para proteger sua organização.",
+    "learn_more": "Saiba mais",
+    "previous_slide": "Slide Anterior",
+    "next_slide": "Próximo Slide",
+    "items": {
+      "brand_protection": {
+        "title": "Proteção de Marca",
+        "description": "Monitoramento e resposta a usos indevidos da sua marca.",
+        "listItems": [
+          "Monitoramento contínuo de violações de marca",
+          "Detecção de domínios maliciosos e phishing",
+          "Remoção de perfis e conteúdos falsos",
+          "Proteção da propriedade intelectual"
+        ],
+        "button": "Agende uma Análise de Risco"
+      },
+      "leak_detection": {
+        "title": "Detecção de Vazamentos",
+        "description": "Identifique vazamentos de dados e informações sensíveis antes que causem danos.",
+        "listItems": [
+          "Monitoramento contínuo de violações de marca",
+          "Análise de credenciais comprometidas",
+          "Investigação em fóruns clandestinos",
+          "Alertas em tempo real sobre exposições"
+        ],
+        "button": "Agende uma Análise de Risco"
+      },
+      "vip_protection": {
+        "title": "Proteção VIP",
+        "description": "Garanta segurança digital para executivos e pessoas de alto risco.",
+        "listItems": [
+          "Monitoramento contínuo de violações de marca",
+          "Análise de credenciais comprometidas",
+          "Investigação em fóruns clandestinos",
+          "Alertas em tempo real sobre exposições"
+        ],
+        "button": "Agende uma Análise de Risco"
+      },
+      "cyber_risk_insights": {
+        "title": "Insights de Risco Cibernético",
+        "description": "Análises aprofundadas para antecipar ameaças e reduzir riscos.",
+        "listItems": [
+          "Monitoramento contínuo de violações de marca",
+          "Análise de credenciais comprometidas",
+          "Investigação em fóruns clandestinos",
+          "Alertas em tempo real sobre exposições"
+        ],
+        "button": "Agende uma Análise de Risco"
+      },
+      "corporate_counterintelligence": {
+        "title": "Contrainteligência Corporativa",
+        "description": "Proteja sua empresa contra espionagem e ameaças internas.",
+        "listItems": [
+          "Detecção de espionagem corporativa",
+          "Análise de riscos internos",
+          "Mapeamento de atores hostis",
+          "Planos de mitigação estratégica"
+        ],
+        "button": "Agende uma Análise de Risco"
+      },
+      "digital_investigations": {
+        "title": "Investigações Digitais",
+        "description": "Rastreamento e análise de crimes digitais.",
+        "listItems": [
+          "Investigação de fraudes online",
+          "Rastreamento de ataques cibernéticos",
+          "Análise de provas digitais",
+          "Suporte a processos legais"
+        ],
+        "button": "Agende uma Análise de Risco"
+      },
+      "threat_analysis": {
+        "title": "Análise de Ameaças",
+        "description": "Antecipe movimentos de atores maliciosos.",
+        "listItems": [
+          "Monitoramento de tendências de ataque",
+          "Perfis de atores maliciosos",
+          "Relatórios de inteligência acionável",
+          "Alerta sobre novas vulnerabilidades"
+        ],
+        "button": "Agende uma Análise de Risco"
+      },
+      "takedown_disassembly": {
+        "title": "Takedown & Desmonte",
+        "description": "Ações estratégicas para remoção de ameaças digitais.",
+        "listItems": [
+          "Derrubada de domínios fraudulentos",
+          "Remoção de conteúdos ilícitos",
+          "Ações contra perfis falsos",
+          "Colaboração com autoridades"
+        ],
+        "button": "Agende uma Análise de Risco"
+      }
+    }
+  },
+  "Personalizada": {
+    "title": "Precisa de uma Solução Personalizada?",
+    "description": "Nossos especialistas podem desenvolver estratégias de inteligência sob medida para as necessidades específicas da sua organização.",
+    "button": "Agende uma Análise de Risco"
+  },
+  "mentorias": {
+    "title": "Mentorias e",
+    "subtitle": "Treinamentos",
+    "description": "Capacitação especializada em Threat Intelligence, OSINT e investigações cibernéticas.",
+    "learn_more": "Saiba mais",
+    "items": {
+      "threat_intelligence": {
+        "id": "item-1",
+        "title": "Introdução à Threat Intelligence",
+        "paragraph": "Curso Gravado",
+        "tags": "Duração: 8 horas",
+        "tagsSecond": "Iniciante",
+        "description": "Fundamentos essenciais de inteligência de ameaças",
+        "url": "#",
+        "listItems": [
+          "Monitoramento contínuo de violações de marca",
+          "Detecção de domínios maliciosos e phishing",
+          "Takedown de conteúdos e perfis falsos",
+          "Proteção de propriedade intelectual"
+        ],
+        "icon": "BookOpen"
+      },
+      "threat_operational": {
+        "id": "item-2",
+        "title": "Threat Intelligence Operacional",
+        "paragraph": "Curso Ao Vivo",
+        "tags": "Duração: 16 horas",
+        "tagsSecond": "Intermediário",
+        "description": "Aplicação prática de CTI em operações de segurança",
+        "url": "#",
+        "listItems": [
+          "Monitoramento contínuo de violações de marca",
+          "Análise de credenciais comprometidas",
+          "Investigação em fóruns clandestinos",
+          "Alertas em tempo real de exposições"
+        ],
+        "icon": "Target"
+      },
+      "dark_web": {
+        "id": "item-3",
+        "title": "Deep e Dark Web na Prática",
+        "paragraph": "Curso Gravado",
+        "tags": "Duração: 12 horas",
+        "tagsSecond": "Avançado",
+        "description": "Navegação segura e investigação em ambientes ocultos",
+        "url": "#",
+        "listItems": [],
+        "icon": "Video"
+      },
+      "opsec": {
+        "id": "item-4",
+        "title": "OPSEC para Investigações",
+        "paragraph": "Curso Ao Vivo",
+        "tags": "Duração: 6 horas",
+        "tagsSecond": "Intermediário",
+        "description": "Segurança operacional em investigações digitais",
+        "url": "#",
+        "listItems": [],
+        "icon": "Award"
+      },
+      "open_source_intelligence": {
+        "id": "item-5",
+        "title": "Ferramentas e Técnicas de OSINT",
+        "paragraph": "Curso Gravado",
+        "tags": "Duração: 20 horas",
+        "tagsSecond": "Todos os níveis",
+        "description": "Domínio de ferramentas de inteligência de fontes abertas",
+        "url": "#",
+        "listItems": [],
+        "icon": "Lightbulb"
+      },
+      "advanced_investigations": {
+        "id": "item-6",
+        "title": "Investigações Cibernéticas Avançadas",
+        "paragraph": "Curso Ao Vivo",
+        "tags": "Duração: 24 horas",
+        "tagsSecond": "Avançado",
+        "description": "Metodologias avançadas de investigação digital",
+        "url": "#",
+        "listItems": [],
+        "icon": "Users"
+      }
+    }
+  },
+  "Personalizada2": {
+    "title": "Precisa de uma Solução",
+    "description": "Nossos especialistas podem desenvolver estratégias de inteligência sob medida para as necessidades específicas da sua organização.",
+    "button": "Análise de Risco"
+  },
+  "Contato": {
+    "title": "Entre em",
+    "subtitle": "Contato",
+    "description": "Nossa equipe está disponível para responder dúvidas e oferecer suporte personalizado.",
+    "email": {
+      "title": "Email",
+      "primary": "contato@kryfal.com",
+      "secondary": "comercial@kryfal.com"
+    },
+    "phone": {
+      "title": "Telefone",
+      "primary": "+55 (11) 9999-9999",
+      "secondary": "+55 (11) 8888-8888"
+    },
+    "location": {
+      "title": "Localização",
+      "city": "São Paulo, Brasil",
+      "service": "Atendimento Nacional e Internacional"
+    },
+    "hours": {
+      "title": "Horário de Atendimento",
+      "weekdays": {
+        "label": "Segunda - Sexta:",
+        "time": "08:00 - 18:00"
+      },
+      "saturday": {
+        "label": "Sábado:",
+        "time": "09:00 - 14:00"
+      },
+      "sunday": {
+        "label": "Domingo:",
+        "time": "Fechado"
+      },
+      "emergency": "Emergências 24/7 para clientes corporativos"
+    }
+  },
+  "Form": {
+    "heading": "Envie uma mensagem segura",
+    "fields": {
+      "name": "Nome *",
+      "email": "Email *",
+      "company": "Empresa",
+      "phone": "Telefone",
+      "subject": "Assunto *",
+      "message": "Mensagem *"
+    },
+    "placeholders": {
+      "name": "Seu nome completo",
+      "email": "seu@email.com",
+      "company": "Nome da empresa",
+      "phone": "(11) 99999-9999",
+      "subject": "Selecione o assunto",
+      "message": "Digite sua mensagem"
+    },
+    "subjects": {
+      "Threat Intelligence": "Threat Intelligence",
+      "Brand Protection": "Proteção de Marca",
+      "Investigações Digitais": "Investigações Digitais",
+      "Treinamentos": "Treinamentos",
+      "Consultoria": "Consultoria",
+      "Outros": "Outros"
+    },
+    "send": "Enviar mensagem",
+    "security": "Suas informações são protegidas por criptografia e tratadas com confidencialidade.",
+    "required": "Os campos marcados com * são obrigatórios.",
+    "success": "Mensagem enviada com sucesso!",
+    "error": "Ocorreu um erro ao enviar a mensagem! Erro: {status}",
+    "validation": "Preencha todos os campos corretamente!",
+    "errors": {
+      "name": "O nome deve ter pelo menos 2 caracteres",
+      "company": "O nome da empresa é obrigatório",
+      "email": "Digite um email válido",
+      "phone": "Telefone inválido. Formato esperado: (99) 99999-9999",
+      "subject": "Selecione um assunto válido",
+      "message": "A mensagem deve ter pelo menos 2 caracteres"
+    }
   }
 }

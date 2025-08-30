@@ -2,16 +2,13 @@
 
 import { Check, X } from "lucide-react";
 import { ReactNode } from "react";
+import { useTranslations } from "next-intl";
 
 interface GalleryItem {
   id: string;
-  title: string;
-  headingSecond?: string;
-  paragraph?: string;
-  summary: string;
-  url: string;
+  key: string; // chave de tradução
   icon?: ReactNode;
-  listItems?: string[];
+  namespace?: "galLery" | "mentorias"; // namespace das traduções
 }
 
 interface ModalProps {
@@ -22,6 +19,12 @@ interface ModalProps {
 
 const Modal = ({ isOpen, onClose, item }: ModalProps) => {
   if (!isOpen || !item) return null;
+
+  const namespace = item.namespace || "galLery";
+  const t = useTranslations(namespace);
+
+  // pega lista direto do JSON de traduções
+  const listItems = t.raw(`items.${item.key}.listItems`) as string[] | undefined;
 
   return (
     <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
@@ -34,16 +37,23 @@ const Modal = ({ isOpen, onClose, item }: ModalProps) => {
           <X size={24} />
         </button>
 
+        {/* Cabeçalho */}
         <div className="flex items-center gap-4 mb-6">
           {item.icon}
-          <h2 className="text-2xl font-bold text-[#E32320]">{item.title}</h2>
+          <h2 className="text-2xl font-bold text-[#E32320]">
+            {t(`items.${item.key}.title`)}
+          </h2>
         </div>
 
-        <p className="text-gray-300 mb-6">{item.summary}</p>
+        {/* Descrição */}
+        <p className="text-gray-300 mb-6">
+          {t(`items.${item.key}.description`)}
+        </p>
 
-        {item.listItems && (
+        {/* Lista de itens */}
+        {Array.isArray(listItems) && listItems.length > 0 && (
           <ul className="space-y-3 text-sm text-gray-400">
-            {item.listItems.map((listItem, index) => (
+            {listItems.map((listItem, index) => (
               <li key={index} className="flex items-center gap-3">
                 <Check className="w-5 h-5 text-[#E32320]" />
                 <span>{listItem}</span>
