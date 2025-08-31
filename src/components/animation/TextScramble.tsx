@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cn } from "@/lib/utils";
-import { animatePageIn } from "../../utils/animations"; // seu util de animação de carregamento
 
 gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
 
@@ -44,21 +43,14 @@ export function TextScramble({
       });
     };
 
-    // Aguarda o carregamento completo da página e a animação de entrada
-    const init = async () => {
-      if (document.readyState !== "complete") {
-        await new Promise((resolve) =>
-          window.addEventListener("load", resolve, { once: true })
-        );
-      }
-
-      // Espera animatePageIn terminar (assumindo que é uma Promise)
-      if (animatePageIn) await animatePageIn();
-
+    // Se a página já estiver carregada, inicia imediatamente
+    if (document.readyState === "complete") {
       startAnimation();
-    };
-
-    init();
+    } else {
+      // Aguarda o carregamento total da página
+      window.addEventListener("load", startAnimation);
+      return () => window.removeEventListener("load", startAnimation);
+    }
   }, [children, duration, chars]);
 
   return (
