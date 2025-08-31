@@ -84,7 +84,7 @@ const Gallery = ({
       <div className="container max-w-7xl px-4">
         <div className="mb-12 flex flex-col justify-between md:mb-16 md:flex-row md:items-end">
           <div>
-            <h1 className="text-5xl font-extrabold tracking-tight mb-4 leading-tight inline-flex">
+            <h1 className="text-5xl flex-col font-extrabold tracking-tight mb-4 leading-tight inline-flex">
               {/* Título normal */}
               <TextScramble className="text-white mr-4">
                 {t("title")}
