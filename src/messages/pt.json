@@ -334,10 +334,10 @@
       "contacts": "Contatos"
     },
     "services": {
-      "threatIntelligence": "Threat Intelligence",
-      "brandProtection": "Brand Protection",
-      "digitalInvestigations": "Investigações Digitais",
-      "vipProtection": "VIP Protection",
+      "brandProtection": "Proteção de Marca",
+      "leakDetection": "Detecção de Vazamentos",
+      "vipProtection": "Proteção VIP",
+      "cyberRiskInsights": "Insights de Risco Cibernético",
       "trainings": "Treinamentos"
     },
     "securityNotice": {

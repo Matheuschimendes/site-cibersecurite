@@ -34,10 +34,10 @@ export const FooterPage = () => {
     {
       title: t("sections.services"),
       links: [
-        { title: t("services.threatIntelligence"), href: "#", icon: <Zap className="size-5 shrink-0" />, },
-        { title: t("services.brandProtection"), href: "#", icon: <Sunset className="size-5 shrink-0" />, },
-        { title: t("services.digitalInvestigations"), href: "#", icon: <Trees className="size-5 shrink-0" />, },
-        { title: t("services.vipProtection"), href: "#", icon: <Book className="size-5 shrink-0" />, },
+        { title: t("services.brandProtection"), href: "#", icon: <Zap className="size-5 shrink-0" />, },
+        { title: t("services.leakDetection"), href: "#", icon: <Sunset className="size-5 shrink-0" />, },
+        { title: t("services.vipProtection"), href: "#", icon: <Trees className="size-5 shrink-0" />, },
+        { title: t("services.cyberRiskInsights"), href: "#", icon: <Book className="size-5 shrink-0" />, },
         { title: t("services.trainings"), href: "#", icon: <ChartColumnIncreasing className="size-5 shrink-0" /> },
       ],
     },
