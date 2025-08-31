@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { HoverScrambleButton } from "@/components/animation/HoverScrambleButton";
 
 interface SessaoConsultoriaProps {
   title?: string;
@@ -33,14 +34,16 @@ export const SessaoConsultoria = ({
         <p className="text-gray-400 max-w-2xl mx-auto mb-6">
           {description ?? t("description")}
         </p>
-        <Button
-          className="bg-[#E32320] hover:bg-white hover:text-[#E32320] text-white font-semibold px-6 py-3 rounded transition cursor-pointer"
-          asChild
-        >
-          <Link href="/contact">
-            {descriptionButton ?? t("button")}
-          </Link>
-        </Button>
+        <Link href="/contact">
+          <Button
+            className="bg-[#E32320] hover:bg-white hover:text-[#E32320] text-white font-semibold px-6 py-3 rounded transition cursor-pointer"
+            asChild
+          >
+            <HoverScrambleButton
+              text={t("button")}
+            />
+          </Button>
+        </Link>
       </div>
     </section>
   );

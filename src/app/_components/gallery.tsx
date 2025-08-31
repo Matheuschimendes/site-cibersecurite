@@ -25,7 +25,7 @@ import {
 } from "@/components/ui/carousel";
 import StarCanvas from "./star";
 import { SessaoConsultoria } from "./SessaoConsultoria";
-import { TextReveal } from "@/components/magicui/text-reveal";
+import { TextScramble } from "@/components/animation/TextScramble";
 import Modal from "./modal";
 import { useTranslations } from "next-intl";
 
@@ -84,20 +84,25 @@ const Gallery = ({
       <div className="container max-w-7xl px-4">
         <div className="mb-12 flex flex-col justify-between md:mb-16 md:flex-row md:items-end">
           <div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-              {heading || t("subtitle")}
-              <span
-                className="text-transparent bg-clip-text bg-gradient-to-r from-[#E32320] to-[#ff574d]"
-                style={{ fontWeight: 900 }}
+            <h1 className="text-5xl font-extrabold tracking-tight mb-4 leading-tight inline-flex">
+              {/* Título normal */}
+              <TextScramble className="text-white mr-4">
+                {t("title")}
+              </TextScramble>
+
+              {/* Subtítulo com gradiente */}
+              <TextScramble
+                className="bg-gradient-to-r from-[#E32320] to-[#ff574d] bg-clip-text text-transparent font-extrabold"
+                duration={2.5}
               >
-                {" "}
-                {headingSecond || t("title")}
-              </span>
-            </h2>
+                {t("subtitle")}
+              </TextScramble>
+            </h1>
+
             <div className="w-24 h-1 bg-gradient-to-r from-[#E32320] to-[#ff574d] rounded-full mb-8"></div>
-            <TextReveal className="mt-6 max-w-xl text-gray-300 text-lg leading-relaxed">
+            <TextScramble className="mt-6 max-w-xl text-gray-300 text-lg leading-relaxed">
               {paragraph || t("description")}
-            </TextReveal>
+            </TextScramble>
           </div>
 
           <div className="mt-8 flex shrink-0 items-center justify-start gap-4">

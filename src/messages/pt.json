@@ -32,7 +32,7 @@
     "button": "Agende uma Análise de Risco"
   },
   "About": {
-    "title": "Sobre",
+    "title": "Sobre ",
     "subtitle": "Kryfal",
     "description": "Especialistas em Threat Intelligence e investigações digitais, protegendo empresas contra ameaças cibernéticas avançadas. A Kryfal nasceu de uma constatação: os setores que formam a espinha dorsal da economia são os mais negligenciados em inteligência cibernética. Enquanto o mercado foca em ameaças genéricas, nós mergulhamos nos ecossistemas específicos do Agronegócio, Portos, Aeroespacial e da nova economia Web3, entregando inteligência que gestores podem usar para tomar decisões estratégicas e proteger seus ativos mais valiosos."
   },
@@ -56,8 +56,8 @@
     "button": "Agende uma Análise de Risco"
   },
   "galLery": {
-    "title": "Inteligência",
-    "subtitle": "Serviços",
+    "title": "Serviços",
+    "subtitle": "Inteligência",
     "description": "Soluções completas de threat intelligence e investigações digitais para proteger sua organização.",
     "learn_more": "Saiba mais",
     "previous_slide": "Slide Anterior",

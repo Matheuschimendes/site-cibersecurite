@@ -1,6 +1,6 @@
 "use client";
 
-import { TextReveal } from "@/components/magicui/text-reveal";
+import { TextScramble } from "@/components/animation/TextScramble";
 import React from "react";
 import StarCanvas from "../_components/star";
 import { Formulario } from "../_components/Form";
@@ -85,24 +85,28 @@ const Contato = () => {
     <section className="p-5 py-24 flex flex-col items-center justify-center relative w-full bg-gradient-to-br">
       <StarCanvas />
       <div className="container max-w-7xl mx-auto">
-        {/* Título */}
-        <h2 className="text-5xl font-extrabold text-white tracking-tight mb-4 leading-tight">
-          {t("title")}{" "}
-          <span
-            className="bg-gradient-to-r from-[#E32320] to-[#ff574d] bg-clip-text text-transparent"
-            style={{ fontWeight: 900 }}
+        <h1 className="text-5xl font-extrabold tracking-tight mb-4 leading-tight inline-flex">
+          {/* Título normal */}
+          <TextScramble className="text-white mr-4">
+            {t("title")}
+          </TextScramble>
+
+          {/* Subtítulo com gradiente */}
+          <TextScramble
+            className="bg-gradient-to-r from-[#E32320] to-[#ff574d] bg-clip-text text-transparent font-extrabold"
+            duration={2.5}
           >
             {t("subtitle")}
-          </span>
-        </h2>
+          </TextScramble>
+        </h1>
 
         {/* Linha decorativa */}
         <div className="w-24 h-1 bg-gradient-to-r from-[#E32320] to-[#ff574d] rounded-full mb-8"></div>
 
         {/* Descrição */}
-        <TextReveal className="text-xl md:text-2xl font-light text-gray-300 leading-relaxed max-w-3xl mb-16">
+        <TextScramble className="text-xl md:text-2xl font-light text-gray-300 leading-relaxed max-w-3xl mb-16">
           {t("description")}
-        </TextReveal>
+        </TextScramble>
 
         {/* Grid */}
         <div className="mt-8 grid gap-12 md:grid-cols-2">

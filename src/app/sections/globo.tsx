@@ -4,8 +4,9 @@ import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { TextReveal } from "@/components/magicui/text-reveal";
+import { TextScramble } from "@/components/animation/TextScramble";
 import { useTranslations } from 'next-intl';
+import { HoverScrambleButton } from "@/components/animation/HoverScrambleButton";
 
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
   ssr: false,
@@ -418,39 +419,48 @@ export default function Globe() {
             }}
             className="div"
           >
-            <h1 className="text-center text-3xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
-              {t('title')} <span className="text-[#E32320]">{t('subtitle')}</span><span className="text-white">{t('subtitle2')}</span>
+            <h1 className="text-center text-3xl md:text-7xl font-extrabold tracking-tight leading-tight flex justify-center flex-wrap">
+              <TextScramble className="text-white">{t('title')}</TextScramble>
+              <TextScramble className="text-[#E32320] ml-1">{t('subtitle')}</TextScramble>
+              <TextScramble className="text-white ml-1">{t('subtitle2')}</TextScramble>
             </h1>
-            {/* <p className="text-center text-lg md:text-2xl font-medium">Don&rsquo;t <span className=" text-[#E32320]">React. </span> Anticipate </p> */}
-            <TextReveal className="text-center text-lg md:text-2xl font-medium text-neutral-300 max-w-2xl mt-4 mx-auto">
-              {t('title2')}
-            </TextReveal>
 
-            <TextReveal className="text-center text-lg md:text-1xl font-medium text-neutral-400 max-w-2xl mt-4 mx-auto z-10">
+            {/* <p className="text-center text-lg md:text-2xl font-medium">Don&rsquo;t <span className=" text-[#E32320]">React. </span> Anticipate </p> */}
+            <TextScramble className="text-center text-lg md:text-2xl font-medium text-neutral-300 max-w-2xl mt-4 mx-auto">
+              {t('title2')}
+            </TextScramble>
+
+            <TextScramble className="text-center text-lg md:text-1xl font-medium text-neutral-400 max-w-2xl mt-4 mx-auto z-10">
               {t('description')}
-            </TextReveal>
+            </TextScramble>
 
             <div className="flex items-center justify-center mt-8">
               <Button
                 size="lg"
-                className="z-10 bg-[#E32320] hover:bg-[#b41c1a] text-white font-semibold text-base px-6 py-3 rounded-lg transition-colors"
+                className="z-10  text-white font-semibold text-base px-6 py-3 rounded-lg transition-colors"
                 asChild
               >
-                <Link href="/login" className="hover:bg-white hover:text-[#E32320]">{t('button')}</Link>
+                <Link href="/login" passHref>
+                  <HoverScrambleButton
+                    text={t('button')}       // aqui passa o texto corretamente
+                    className="bg-[#E32320] hover:bg-white hover:text-[#E32320] text-white font-semibold px-6 py-3 rounded transition cursor-pointer"
+                  />
+                </Link>
+
               </Button>
             </div>
 
           </motion.div>
           <div className=" absolute w-full bottom-10 inset-x-0 h-10 bg-gradient-to-b pointer-events-none select-none from-transparent " />
-        </div>
-        {/* Wrapper com ref para animar com gsap */}
+        </div >
+        {/* Globos */}
         <div
           className="md:-mt-290 absolute w-full -bottom-50 md:-bottom-25 h-120 md:h-230"
           id="hero-lightpass" >
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
 
-      </div>
+      </div >
     </>
   );
 }
