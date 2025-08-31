@@ -85,7 +85,7 @@ const Contato = () => {
     <section className="p-5 py-24 flex flex-col items-center justify-center relative w-full bg-gradient-to-br">
       <StarCanvas />
       <div className="container max-w-7xl mx-auto">
-        <h1 className="text-5xl font-extrabold tracking-tight mb-4 leading-tight inline-flex">
+        <h1 className="text-5xl flex-col font-extrabold tracking-tight mb-4 leading-tight inline-flex">
           {/* Título normal */}
           <TextScramble className="text-white mr-4">
             {t("title")}
