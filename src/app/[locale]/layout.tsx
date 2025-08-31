@@ -10,33 +10,34 @@ const kanit = Kanit({
   subsets: ["latin"],
   variable: "--font-serif",
   weight: [
-    "100", "200", "300", "400", "500", "600", "700", "800", "900"
+    "100", "200", "300", "400", "500", "600", "700", "800", "900",
   ],
 });
 
 export const metadata: Metadata = {
   title: "Kryfal",
-  description: "Kryfal - Experts in Threat Intelligence and digital investigations, protecting companies against advanced cyber threats.",
+  description:
+    "Kryfal - Experts in Threat Intelligence and digital investigations, protecting companies against advanced cyber threats.",
 };
 
 // Locales suportados
 const SUPPORTED_LOCALES = ["pt", "en"];
 
-// Layout em /[locale]/layout.tsx
+// Tipo para mensagens aninhadas
+type Messages = Record<string, any>;
+
 export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  // Usa locale apenas se for suportado
-  const { locale: rawLocale } = await params; //
-  const locale = SUPPORTED_LOCALES.includes(rawLocale)
-    ? (rawLocale as string)
-    : "pt";
+  const rawLocale = params.locale;
+  const locale = SUPPORTED_LOCALES.includes(rawLocale) ? rawLocale : "pt";
 
-  let messages = {};
+  let messages: Messages = {};
+
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;
   } catch (err) {
