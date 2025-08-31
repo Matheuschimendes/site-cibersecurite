@@ -7,10 +7,11 @@ import * as THREE from "three";
 import { random } from "maath";
 import { useInView } from "react-intersection-observer";
 
-// Componente memoizado para reduzir re-renders desnecessários
+// Componente memoizado Star
 const Star = memo(({ animate }: { animate: boolean }) => {
   const ref = useRef<THREE.Points>(null);
-  // Cria posições dos pontos uma vez
+
+  // Cria posições dos pontos apenas uma vez
   const positions = useRef(
     new Float32Array(random.inSphere(new Float32Array(200), { radius: 1.2 }))
   );
@@ -37,6 +38,9 @@ const Star = memo(({ animate }: { animate: boolean }) => {
   );
 });
 
+// Define displayName para eliminar warning do ESLint
+Star.displayName = "Star";
+
 const StarCanvas = () => {
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
   const [shouldRender, setShouldRender] = useState(false);
@@ -51,7 +55,7 @@ const StarCanvas = () => {
       {shouldRender && (
         <Canvas
           camera={{ position: [0, 0, 1] }}
-          frameloop="demand" // só renderiza quando houver animação
+          frameloop="demand" // só renderiza quando há animação
           gl={{ antialias: true, alpha: true }}
         >
           <Suspense fallback={null}>

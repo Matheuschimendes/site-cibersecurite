@@ -31,15 +31,11 @@ interface GalleryItem {
 }
 
 interface GalleryProps {
-  heading?: string;
-  headingSecond?: string;
   paragraph?: string;
   items?: GalleryItem[];
 }
 
 const Gallery = ({
-  heading,
-  headingSecond,
   paragraph,
   items = [
     { id: "item-1", key: "threat_intelligence", icon: <BookOpen size={40} />, namespace: "mentorias" },
@@ -76,12 +72,7 @@ const Gallery = ({
         <div className="mb-12 flex flex-col justify-between md:mb-16 md:flex-row md:items-end">
           <div>
             <h1 className="text-5xl flex-col md:flex-row font-extrabold tracking-tight mb-4 leading-tight inline-flex">
-              {/* Título normal */}
-              <TextScramble className="text-white mr-4">
-                {t("title")}
-              </TextScramble>
-
-              {/* Subtítulo com gradiente */}
+              <TextScramble className="text-white mr-4">{t("title")}</TextScramble>
               <TextScramble
                 className="bg-gradient-to-r from-[#E32320] to-[#ff574d] bg-clip-text text-transparent font-extrabold"
                 duration={2.5}
@@ -89,7 +80,6 @@ const Gallery = ({
                 {t("subtitle")}
               </TextScramble>
             </h1>
-
 
             <div className="w-24 h-1 bg-gradient-to-r from-[#E32320] to-[#ff574d] rounded-full mb-8"></div>
 
@@ -138,7 +128,7 @@ const Gallery = ({
                   bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f]
                   p-8 text-white shadow-lg shadow-[#E32320]/25
                   transition-all duration-300
-                  hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]]
+                  hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]
                 "
               >
                 <div
@@ -151,10 +141,7 @@ const Gallery = ({
                       <h3 className="text-xl font-semibold uppercase tracking-wide text-[#E32320] group-hover:text-[#ff574d] transition-colors duration-300">
                         {t(`items.${item.key}.title`)}
                       </h3>
-                      <p>
-                        {t(`items.${item.key}.paragraph`) ||
-                          t(`items.${item.key}.summary`)}
-                      </p>
+                      <p>{t(`items.${item.key}.paragraph`) || t(`items.${item.key}.summary`)}</p>
                     </div>
                   </div>
 
@@ -184,7 +171,6 @@ const Gallery = ({
         descriptionButton={tConsultoria("button")}
       />
 
-      {/* Modal agora com namespace dinâmico */}
       <Modal
         isOpen={!!selectedItem}
         onClose={() => setSelectedItem(null)}
@@ -192,7 +178,7 @@ const Gallery = ({
           selectedItem
             ? {
               ...selectedItem,
-              namespace: "mentorias", // define que o modal vai buscar do JSON de mentorias
+              namespace: "mentorias",
             }
             : undefined
         }
