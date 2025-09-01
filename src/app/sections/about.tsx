@@ -78,7 +78,7 @@ const About = ({ features = [] }: AboutProps) => {
   const tConsultoria = useTranslations("Posicionamento");
 
   return (
-    <section className="-mt-20 md:-mt-70 p-5 py-24 flex flex-col items-center justify-center relative w-full bg-gradient-to-br">
+    <section id="about" className="-mt-20 md:-mt-70 p-5 py-24 flex flex-col items-center justify-center relative w-full bg-gradient-to-br">
       <div className="container max-w-7xl px-4">
         <div className="mb-12 md:mb-16">
           <h1 className="text-5xl font-extrabold tracking-tight mb-4 leading-tight inline-flex">

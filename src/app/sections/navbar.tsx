@@ -54,7 +54,7 @@ const Navbar = ({ logo }: NavbarProps) => {
 
   const menu: MenuItem[] = [
     { title: t("inicio"), url: "/" },
-    { title: t("sobre"), url: "/about" },
+    { title: t("sobre"), url: "#about" },
     {
       title: t("servicos"),
       url: "#",
@@ -85,7 +85,7 @@ const Navbar = ({ logo }: NavbarProps) => {
         },
       ],
     },
-    { title: t("mentorias"), url: "/mentorias" },
+    { title: t("mentorias"), url: "#treinamentos" },
   ];
 
   useEffect(() => {
@@ -246,28 +246,33 @@ const Navbar = ({ logo }: NavbarProps) => {
                   </Accordion>
                   {/* Idiomas Mobile */}
                   <div className="flex flex-col gap-3">
-                    <Link href="/" locale="pt">
-                      <Button
-                        size="sm"
-                        className={`border w-full ${currentLocale === "pt"
-                          ? "bg-white text-[#E32320]"
-                          : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
-                          }`}
-                      >
+                    <Button
+                      size="sm"
+                      asChild
+                      className={`border w-full cursor-pointer ${currentLocale === "pt"
+                        ? "bg-white text-[#E32320]"
+                        : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
+                        }`}
+                    >
+                      <Link href="/" locale="pt">
                         BR
-                      </Button>
-                    </Link>
-                    <Link href="/" locale="en">
-                      <Button
-                        size="sm"
-                        className={`border w-full ${currentLocale === "en"
-                          ? "bg-white text-[#E32320]"
-                          : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
-                          }`}
-                      >
+                      </Link>
+                    </Button>
+
+
+                    <Button
+                      size="sm"
+                      asChild
+                      className={`border w-full cursor-pointer ${currentLocale === "en"
+                        ? "bg-white text-[#E32320]"
+                        : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
+                        }`}
+                    >
+                      <Link href="/" locale="en">
                         US
-                      </Button>
-                    </Link>
+                      </Link>
+                    </Button>
+
                   </div>
                 </div>
               </SheetContent>

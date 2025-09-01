@@ -65,7 +65,7 @@ const Gallery = ({
   }, [carouselApi]);
 
   return (
-    <section className="p-5 mt-30 w-screen h-full flex flex-col items-center justify-center relative bg-gradient-to-br">
+    <section id="treinamentos" className="p-5 mt-30 w-screen h-full flex flex-col items-center justify-center relative bg-gradient-to-br">
       <StarCanvas />
 
       <div className="container max-w-7xl px-4">
