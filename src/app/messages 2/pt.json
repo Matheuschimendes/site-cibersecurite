@@ -1,0 +1,38 @@
+{
+  "Navbar": {
+    "inicio": "Início",
+    "sobre": "Sobre",
+    "servicos": "Serviços",
+    "mentorias": "Mentorias",
+    "submenus": {
+      "brand_protection": {
+        "title": "Proteção de Marca",
+        "description": "Monitore e remova ameaças à sua marca em ambientes digitais."
+      },
+      "leak_detection": {
+        "title": "Detecção de Vazamentos",
+        "description": "Identifique vazamentos de dados e informações sensíveis antes que causem danos."
+      },
+      "vip_protection": {
+        "title": "Proteção VIP",
+        "description": "Garanta a segurança digital de executivos e pessoas de alto risco."
+      },
+      "cyber_risk_insights": {
+        "title": "Insights de Risco Cibernético",
+        "description": "Análises aprofundadas para antecipar ameaças e reduzir riscos."
+      }
+    }
+  },
+  "Home": {
+    "title": "THREAT",
+    "subtitle": "INTELLIGENCE",
+    "title2": "Investigações Digitais & Cibersegurança Avançada",
+    "description": "Protegemos sua marca, investigamos ameaças e fortalecemos sua defesa cibernética com inteligência estratégica e tecnologia de ponta. Mapeamos ameaças em ciberespaços complexos para proteger as operações, a reputação e a vantagem competitiva das indústrias mais críticas.",
+    "button": "Agende uma Análise de Risco"
+  },
+  "About": {
+    "title": "Sobre Nós",
+    "description": "Somos especialistas em cibersegurança e inteligência digital, focados em proteger os ativos mais valiosos da sua organização. Atuamos com ética, sigilo e tecnologia de ponta para enfrentar os desafios mais complexos do mundo digital.",
+    "button": "Saiba Mais"
+  }
+}

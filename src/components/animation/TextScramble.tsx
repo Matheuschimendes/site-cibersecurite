@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -22,40 +22,47 @@ export function TextScramble({
   chars = "01",
 }: TextScrambleProps) {
   const textRef = useRef<HTMLSpanElement | null>(null);
+  const [animationStarted, setAnimationStarted] = useState(false);
 
   useEffect(() => {
     const startAnimation = () => {
-      if (!textRef.current) return;
-
-      gsap.to(textRef.current, {
-        scrambleText: {
-          text: children,
-          chars,
-          speed: 1,
-        },
-        duration,
-        ease: "none",
-        scrollTrigger: {
-          trigger: textRef.current,
-          start: "top 80%",
-          once: true,
-        },
-      });
+      if (textRef.current && !animationStarted) {
+        gsap.to(textRef.current, {
+          scrambleText: {
+            text: children,
+            chars,
+            speed: 1,
+          },
+          duration,
+          ease: "none",
+          scrollTrigger: {
+            trigger: textRef.current,
+            start: "top 80%",
+            once: true,
+          },
+        });
+        setAnimationStarted(true); // Evita reiniciar a animação
+      }
     };
 
-    // Se a página já estiver carregada, inicia imediatamente
+    // Verifica se a página está carregada
     if (document.readyState === "complete") {
       startAnimation();
     } else {
-      // Aguarda o carregamento total da página
-      window.addEventListener("load", startAnimation);
-      return () => window.removeEventListener("load", startAnimation);
+      // Espera pelo carregamento total da página
+      const handleLoad = () => {
+        startAnimation();
+        window.removeEventListener("load", handleLoad); // Remover listener após o evento
+      };
+
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad); // Cleanup
     }
-  }, [children, duration, chars]);
+  }, [children, duration, chars, animationStarted]); // A animação será chamada apenas uma vez
 
   return (
     <div className={cn("", className)}>
-      <span ref={textRef}></span>
+      <span ref={textRef}>{children}</span>
     </div>
   );
 }

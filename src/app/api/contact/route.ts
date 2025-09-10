@@ -27,7 +27,7 @@ export async function POST(request: Request) {
 
     // Envia o e-mail
     await transporter.sendMail({
-      from: `"KRYFAL" <${process.env.EMAIL_USER}>`, // precisa ser o email autenticado no Zoho
+      from: `"${name}" <${process.env.EMAIL_USER}>`, // precisa ser o email autenticado no Zoho
       replyTo: `"${name}" <${email}>`, // cliente: aparece no "Responder"
       to: process.env.EMAIL_USER, // sua caixa de entrada
       subject: assunto || "Sem assunto",
@@ -40,7 +40,12 @@ export async function POST(request: Request) {
               <table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
                 <tr>
                   <td style="background-color:#e32320;padding:20px;text-align:center;color:#ffffff;">
-                    <p style="margin:0;font-size:12px;font-weight:bold;">KRYFAL</p>
+                    <div style="display:flex;justify-content:center;gap:10px;">
+                      <p style="margin:0;font-size:20px;font-weight:bold;">De: </p>
+                      <p style="margin:0;font-size:20px;font-weight:bold;">${
+                        name || "Nome desconhecido"
+                      }</p>
+                    </div>
                     <div style="display:flex;justify-content:center;gap:10px;">
                       <p style="margin:0;font-size:20px;font-weight:bold;">Assunto: </p>
                       <p style="margin:0;font-size:20px;font-weight:bold;">${

@@ -77,7 +77,10 @@ export const Formulario = () => {
       body: JSON.stringify(values),
     });
 
-    if (res.ok) toast.success(t("success"));
+    if (res.ok) {
+      toast.success(t("success"));
+      form.reset();
+    }
     else if (res.status === 400 || res.status === 500)
       toast.error(t("error", { status: res.statusText }));
     else toast.error(t("validation"));
