@@ -60,95 +60,48 @@
     "subtitle": "Inteligência",
     "description": "Soluções completas de threat intelligence e investigações digitais para proteger sua organização.",
     "learn_more": "Saiba mais",
+    "url": "pt/services",
     "previous_slide": "Slide Anterior",
     "next_slide": "Próximo Slide",
     "items": {
       "brand_protection": {
         "title": "Contrainteligência Corporativa",
         "description": "Proteja seu negócio de dentro para fora com inteligência investigativa para decisões de máxima confiança.",
+        "list_title": "O Desafio",
+        "list_title2": "A integridade da sua operação depende diretamente da robustez de sua cadeia de suprimentos — que inclui tanto fornecedores externos quanto o capital humano interno. A falha em verificar rigorosamente um único elo, seja um parceiro logístico crítico ou um executivo recém-contratado, pode introduzir vulnerabilidades em toda a sua estrutura.",
         "listItems": [
-          "Monitoramento contínuo de violações de marca",
-          "Detecção de domínios maliciosos e phishing",
-          "Remoção de perfis e conteúdos falsos",
+          "Sua empresa pode ter acesso a feeds de segurança e até alertas da Deep Web, mas como conectar esses pontos?",
+          "Como traduzir um indicador técnico em um risco de negócio real?",
+          "E como garantir que a pessoa certa — do analista do SOC ao CEO — receba a inteligência correta, no formato certo e na hora certa para agir?",
           "Proteção da propriedade intelectual"
         ],
+        "list_description": "A informação sem contexto é apenas ruído.",
         "button": "Agende uma Análise de Risco"
       },
       "leak_detection": {
         "title": "Detecção de Vazamentos",
         "description": "Identifique vazamentos de dados e informações sensíveis antes que causem danos.",
+        "list_title": "O Desafio",
         "listItems": [
           "Monitoramento contínuo de violações de marca",
           "Análise de credenciais comprometidas",
           "Investigação em fóruns clandestinos",
           "Alertas em tempo real sobre exposições"
         ],
+        "list_description": "A informação sem contexto é apenas ruído.",
         "button": "Agende uma Análise de Risco"
       },
       "vip_protection": {
         "title": "Proteção VIP",
         "description": "Garanta segurança digital para executivos e pessoas de alto risco.",
+        "list_title": "Proteção VIP",
         "listItems": [
           "Monitoramento contínuo de violações de marca",
           "Análise de credenciais comprometidas",
           "Investigação em fóruns clandestinos",
           "Alertas em tempo real sobre exposições"
         ],
-        "button": "Agende uma Análise de Risco"
-      },
-      "cyber_risk_insights": {
-        "title": "Insights de Risco Cibernético",
-        "description": "Análises aprofundadas para antecipar ameaças e reduzir riscos.",
-        "listItems": [
-          "Monitoramento contínuo de violações de marca",
-          "Análise de credenciais comprometidas",
-          "Investigação em fóruns clandestinos",
-          "Alertas em tempo real sobre exposições"
-        ],
-        "button": "Agende uma Análise de Risco"
-      },
-      "corporate_counterintelligence": {
-        "title": "Contrainteligência Corporativa",
-        "description": "Proteja sua empresa contra espionagem e ameaças internas.",
-        "listItems": [
-          "Detecção de espionagem corporativa",
-          "Análise de riscos internos",
-          "Mapeamento de atores hostis",
-          "Planos de mitigação estratégica"
-        ],
-        "button": "Agende uma Análise de Risco"
-      },
-      "digital_investigations": {
-        "title": "Investigações Digitais",
-        "description": "Rastreamento e análise de crimes digitais.",
-        "listItems": [
-          "Investigação de fraudes online",
-          "Rastreamento de ataques cibernéticos",
-          "Análise de provas digitais",
-          "Suporte a processos legais"
-        ],
-        "button": "Agende uma Análise de Risco"
-      },
-      "threat_analysis": {
-        "title": "Análise de Ameaças",
-        "description": "Antecipe movimentos de atores maliciosos.",
-        "listItems": [
-          "Monitoramento de tendências de ataque",
-          "Perfis de atores maliciosos",
-          "Relatórios de inteligência acionável",
-          "Alerta sobre novas vulnerabilidades"
-        ],
-        "button": "Agende uma Análise de Risco"
-      },
-      "takedown_disassembly": {
-        "title": "Takedown & Desmonte",
-        "description": "Ações estratégicas para remoção de ameaças digitais.",
-        "listItems": [
-          "Derrubada de domínios fraudulentos",
-          "Remoção de conteúdos ilícitos",
-          "Ações contra perfis falsos",
-          "Colaboração com autoridades"
-        ],
+        "list_description": "A informação sem contexto é apenas ruído.",
         "button": "Agende uma Análise de Risco"
       }
     }

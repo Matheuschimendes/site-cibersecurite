@@ -6,14 +6,13 @@ import {
   ArrowRight,
   ArrowUpRight,
   Brain,
-  Check,
   Eye,
   Globe,
   Search,
   ShieldIcon,
   TriangleAlert,
   Users,
-  Zap
+  Zap,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -26,44 +25,45 @@ import {
 import StarCanvas from "./star";
 import { SessaoConsultoria } from "./SessaoConsultoria";
 import { TextScramble } from "@/components/animation/TextScramble";
-import Modal from "./modal";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 
 interface GalleryItem {
   id: string;
   key: string;
   icon?: React.ReactNode;
+  namespace?: "galLery" | "mentorias";
 }
 
-interface Gallery6Props {
-  heading: string;
-  headingSecond?: string;
-  paragraph?: string;
-  items?: GalleryItem[];
-}
+const iconMap: Record<string, React.ReactNode> = {
+  brand_protection: <ShieldIcon size={40} />,
+  leak_detection: <Search size={40} />,
+  vip_protection: <Eye size={40} />,
+  cyber_risk_insights: <Brain size={40} />,
+  corporate_counterintelligence: <Users size={40} />,
+  digital_investigations: <TriangleAlert size={40} />,
+  threat_analysis: <Globe size={40} />,
+  takedown_disassembly: <Zap size={40} />,
+};
 
-const Gallery = ({
-  heading,
-  headingSecond,
-  paragraph,
-  items = [
-    { id: "item-1", key: "brand_protection", icon: <ShieldIcon size={40} /> },
-    { id: "item-2", key: "leak_detection", icon: <Search size={40} /> },
-    { id: "item-3", key: "vip_protection", icon: <Eye size={40} /> },
-    { id: "item-4", key: "cyber_risk_insights", icon: <Brain size={40} /> },
-    { id: "item-5", key: "corporate_counterintelligence", icon: <Users size={40} /> },
-    { id: "item-6", key: "digital_investigations", icon: <TriangleAlert size={40} /> },
-    { id: "item-7", key: "threat_analysis", icon: <Globe size={40} /> },
-    { id: "item-8", key: "takedown_disassembly", icon: <Zap size={40} /> },
-  ],
-}: Gallery6Props) => {
+const Gallery = () => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
-  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
   const t = useTranslations("galLery");
   const tConsultoria = useTranslations("Personalizada");
+  const locale = useLocale(); // ✅ idioma atual (ex: "pt")
+
+  // Serviços vindos do JSON de traduções
+  const jsonItems = t.raw("items") as Record<string, any>;
+
+  const items: GalleryItem[] = Object.keys(jsonItems).map((key, index) => ({
+    id: `item-${index + 1}`,
+    key,
+    icon: iconMap[key] || <Zap size={40} />,
+    namespace: "galLery",
+  }));
 
   useEffect(() => {
     if (!carouselApi) return;
@@ -85,12 +85,9 @@ const Gallery = ({
         <div className="mb-12 flex flex-col justify-between md:mb-16 md:flex-row md:items-end">
           <div>
             <h1 className="text-5xl flex-col md:flex-row font-extrabold tracking-tight mb-4 leading-tight inline-flex">
-              {/* Título normal */}
               <TextScramble className="text-white mr-4">
                 {t("title")}
               </TextScramble>
-
-              {/* Subtítulo com gradiente */}
               <TextScramble
                 className="bg-gradient-to-r from-[#E32320] to-[#ff574d] bg-clip-text text-transparent font-extrabold"
                 duration={2.5}
@@ -101,7 +98,7 @@ const Gallery = ({
 
             <div className="w-24 h-1 bg-gradient-to-r from-[#E32320] to-[#ff574d] rounded-full mb-8"></div>
             <TextScramble className="mt-6 max-w-xl text-gray-300 text-lg leading-relaxed">
-              {paragraph || t("description")}
+              {t("description")}
             </TextScramble>
           </div>
 
@@ -112,7 +109,7 @@ const Gallery = ({
               onClick={() => carouselApi?.scrollPrev()}
               disabled={!canScrollPrev}
               className="border-[#E32320] text-[#E32320] hover:bg-[#E32320]/30 hover:shadow-[0_0_15px_rgba(227,35,32,0.7)] disabled:text-gray-600 disabled:border-gray-600 transition-shadow duration-300"
-              aria-label={t("previous_slide") || "Previous Slide"}
+              aria-label={t("previous_slide")}
             >
               <ArrowLeft className="w-6 h-6" />
             </Button>
@@ -123,7 +120,7 @@ const Gallery = ({
               onClick={() => carouselApi?.scrollNext()}
               disabled={!canScrollNext}
               className="border-[#E32320] text-[#E32320] hover:bg-[#E32320]/30 hover:shadow-[0_0_15px_rgba(227,35,32,0.7)] disabled:text-gray-600 disabled:border-gray-600 transition-shadow duration-300"
-              aria-label={t("next_slide") || "Next Slide"}
+              aria-label={t("next_slide")}
             >
               <ArrowRight className="w-6 h-6" />
             </Button>
@@ -135,25 +132,24 @@ const Gallery = ({
         <Carousel
           setApi={setCarouselApi}
           opts={{
-            align: "start",
+            align: "center",
             slidesToScroll: 1,
-            breakpoints: { "(max-width: 768px)": { dragFree: false, slidesToScroll: 1 } },
+            breakpoints: {
+              "(max-width: 768px)": { dragFree: false, slidesToScroll: 1 },
+            },
           }}
           className="relative w-full h-full"
         >
-          <CarouselContent className="hide-scrollbar md:w-full md:ml-auto ml-auto mb-20 h-full">
+          <CarouselContent className="hide-scrollbar flex justify-center md:w-full md:ml-auto ml-auto mb-20 h-full">
             {items.map((item) => (
               <CarouselItem
                 key={item.id}
-                className="flex-none mx-auto my-6 basis-full m-5 md:basis-auto w-[90%] md:max-w-[352px] 
+                className="flex-none mx-auto my-6 basis-full m-5 md:basis-auto w-[90%] md:max-w-[352px]
                   rounded-[24px] border-transparent 
                   bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f] p-8 text-white shadow-lg shadow-[#E32320]/25 
                   transition-all duration-300 hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]"
               >
-                <div
-                  onClick={() => setSelectedItem(item)}
-                  className="flex flex-col h-full group cursor-pointer"
-                >
+                <div className="flex flex-col h-full group">
                   <div className="mb-5 flex items-center justify-start gap-4">
                     {item.icon}
                     <h3 className="text-xl font-semibold uppercase tracking-wide text-[#E32320] group-hover:text-[#ff574d] transition-colors duration-300">
@@ -165,21 +161,13 @@ const Gallery = ({
                     {t(`items.${item.key}.description`)}
                   </p>
 
-                  {Array.isArray(t.raw(`items.${item.key}.listItems`)) && (
-                    <ul className="mb-8 space-y-3 text-sm text-gray-400">
-                      {(t.raw(`items.${item.key}.listItems`) as string[]).map((listItem, index) => (
-                        <li key={index} className="flex items-center gap-3">
-                          <Check className="w-6 h-6 text-red-600" />
-                          <span>{listItem}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-
-                  <div className="mt-auto flex items-center gap-3 text-sm font-semibold text-[#E32320] group-hover:underline">
-                    {t("learn_more") || "Saiba mais"}
+                  <Link
+                    href={`/${locale}/${item.key} `} // ex: /pt/investigatico
+                    className="mt-auto flex items-center gap-3 text-sm font-semibold text-[#E32320] group-hover:underline"
+                  >
+                    {t("learn_more")}
                     <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                  </div>
+                  </Link>
                 </div>
               </CarouselItem>
             ))}
@@ -191,12 +179,6 @@ const Gallery = ({
         title={tConsultoria("title")}
         description={tConsultoria("description")}
         descriptionButton={tConsultoria("button")}
-      />
-
-      <Modal
-        isOpen={!!selectedItem}
-        onClose={() => setSelectedItem(null)}
-        item={selectedItem || undefined}
       />
     </section>
   );
