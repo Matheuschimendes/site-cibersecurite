@@ -27,12 +27,18 @@ import { SessaoConsultoria } from "./SessaoConsultoria";
 import { TextScramble } from "@/components/animation/TextScramble";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
+import React from "react";
 
 interface GalleryItem {
   id: string;
   key: string;
   icon?: React.ReactNode;
   namespace?: "galLery" | "mentorias";
+}
+
+interface GalleryTranslationItem {
+  title: string;
+  description: string;
 }
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -55,8 +61,8 @@ const Gallery = () => {
   const tConsultoria = useTranslations("Personalizada");
   const locale = useLocale(); // ✅ idioma atual (ex: "pt")
 
-  // Serviços vindos do JSON de traduções
-  const jsonItems = t.raw("items") as Record<string, any>;
+  // Tipagem segura para os dados traduzidos
+  const jsonItems = t.raw("items") as Record<string, GalleryTranslationItem>;
 
   const items: GalleryItem[] = Object.keys(jsonItems).map((key, index) => ({
     id: `item-${index + 1}`,
@@ -162,7 +168,7 @@ const Gallery = () => {
                   </p>
 
                   <Link
-                    href={`/${locale}/${item.key} `} // ex: /pt/investigatico
+                    href={`/${locale}/${item.key}`}
                     className="mt-auto flex items-center gap-3 text-sm font-semibold text-[#E32320] group-hover:underline"
                   >
                     {t("learn_more")}

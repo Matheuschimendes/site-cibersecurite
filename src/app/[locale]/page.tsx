@@ -13,7 +13,7 @@ export default function Home() {
       <Navbar />
       <Globe />
       <About />
-      <Gallery heading={""} />
+      <Gallery />
       <Treinamento />
       <Contato />
       <FooterPage />

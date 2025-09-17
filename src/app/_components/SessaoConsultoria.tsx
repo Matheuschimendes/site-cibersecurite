@@ -8,7 +8,7 @@ import { HoverScrambleButton } from "@/components/animation/HoverScrambleButton"
 interface SessaoConsultoriaProps {
   title?: string;
   description?: string;
-  descriptionButton?: string;
+  descriptionButton: string;
 }
 
 export const SessaoConsultoria = ({
