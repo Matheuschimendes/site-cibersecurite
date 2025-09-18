@@ -1,4 +1,4 @@
-import { Target, UsersRound, Award } from "lucide-react";
+import { Target, UsersRound, Award, Star } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 interface Platform {
@@ -18,12 +18,12 @@ interface CardsProps {
 }
 
 const Cards = ({ platforms }: CardsProps) => {
-  const t = useTranslations("Cards");
+  const t = useTranslations("CardsService");
 
-  // Ícones por índice para manter a ordem Precision, Expertise, Excellence
-  const icons = [Target, UsersRound, Award];
+  // Ícones na ordem correta
+  const icons = [Target, UsersRound, Award, Star];
 
-  // Conteúdo default puxando das traduções
+  // Dados default via tradução
   const defaultPlatforms = {
     precision: {
       subtitle: t("card1.title"),
@@ -40,14 +40,19 @@ const Cards = ({ platforms }: CardsProps) => {
       description: t("card3.description"),
       url: "#",
     },
+    innovation: {
+      subtitle: t("card4.title"),
+      description: t("card4.description"),
+      url: "#",
+    },
   };
 
   const data = platforms ?? defaultPlatforms;
 
   return (
     <section className="flex justify-center w-full py-12 px-4">
-      <div className="container max-w-6xl mx-auto">
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+      <div className="container max-w-sx mx-auto">
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2">
           {Object.entries(data).map(([key, platform], idx) => {
             if (!platform) return null;
 
@@ -56,15 +61,15 @@ const Cards = ({ platforms }: CardsProps) => {
             return (
               <div
                 key={key}
-                className="group relative flex flex-col gap-5 rounded-2xl border border-zinc-700 bg-[#0c0c0c] px-8 py-10 text-white transition-all duration-300 hover:scale-[1.02] hover:ring-2 hover:ring-[#E32320]/50 hover:shadow-lg"
+                className="group relative flex flex-col items-start gap-1 rounded-2xl border border-zinc-700 bg-[#0c0c0c] px-8 py-10 text-white transition-all duration-300 hover:scale-[1.02] hover:ring-2 hover:ring-[#E32320]/50 hover:shadow-lg"
               >
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#1a1a1a] shadow">
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#1a1a1a] shadow">
                   <Icon className="w-8 h-8 text-[#E32320]" />
                 </div>
-                <h2 className="text-lg font-semibold tracking-widest uppercase font-mono text-center">
+                <h2 className="text-lg font-semibold tracking-widest uppercase font-mono">
                   {platform.subtitle}
                 </h2>
-                <p className="text-sm md:text-base text-white/80 text-center leading-relaxed font-medium">
+                <p className="text-sm md:text-base text-white/80 leading-relaxed font-medium">
                   {platform.description}
                 </p>
               </div>

@@ -3,6 +3,10 @@ import { Navbar } from "@/app/sections/navbar";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useParams } from "next/navigation"
+import SectionSevice from "./_components/sectionSevice";
+import { About } from "./_components/aboutService";
+import { SectionServiceSecond } from "./_components/sectionSeviceSecond";
+
 
 export default function ServicePage() {
 
@@ -12,9 +16,9 @@ export default function ServicePage() {
     <>
       <div className="p-10 mx-full mx-auto">
         <Navbar />
-        <h1 className="text-4xl font-bold">{t("title")}</h1>
-        <p className="mt-4 text-gray-700">{t("description")}</p>
-        <Link href="/" className="text-[#E32320] underline">Home</Link>
+        <SectionSevice />
+        <About />
+        <SectionServiceSecond />
       </div>
     </>
   )
