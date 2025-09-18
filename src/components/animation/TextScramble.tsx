@@ -18,7 +18,7 @@ interface TextScrambleProps {
 export function TextScramble({
   children,
   className,
-  duration = 2.3,
+  duration = 1.2,
   chars = "01",
 }: TextScrambleProps) {
   const textRef = useRef<HTMLSpanElement | null>(null);
