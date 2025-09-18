@@ -73,7 +73,7 @@ const About = ({ features = [] }: AboutProps) => {
   return (
     <section
       id="about"
-      className="-mt-20 md:-mt-70 p-5 py-24 flex flex-col items-center justify-center relative w-full bg-gradient-to-br"
+      className="-mt-30 md:-mt-50 p-0 md:p-10 py-24 flex flex-col items-center justify-center relative w-full bg-gradient-to-br"
     >
       <div className="container max-w-full px-4 overflow-hidden">
         {/* Flex responsivo: coluna em mobile, linha em desktop */}

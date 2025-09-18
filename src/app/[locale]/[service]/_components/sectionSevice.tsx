@@ -7,6 +7,7 @@ import Link from "next/link";
 import { TextScramble } from "@/components/animation/TextScramble";
 import { useTranslations } from 'next-intl';
 import { HoverScrambleButton } from "@/components/animation/HoverScrambleButton";
+import Image from "next/image";
 
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
   ssr: false,
@@ -33,8 +34,8 @@ export default function SectionSevice() {
             }}
             className="div"
           >
-            <h1 className="text-center text-3xl md:text-7xl  font-extrabold md:max-w-2xl tracking-tight leading-tight flex justify-center flex-wrap
-            text-neutral-400 max-w-2xl mt-4 mx-auto">
+            <h1 className="text-center text-5xl md:text-7xl  font-extrabold md:max-w-2xl tracking-tight leading-tight flex justify-center flex-wrap
+            text-neutral-400 max-w-2xl mt-10 mx-auto">
               <TextScramble className="text-white">{t('title')}</TextScramble>
             </h1>
 
