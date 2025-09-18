@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { HoverScrambleButton } from "@/components/animation/HoverScrambleButton";
 import { Cards } from "./cardsSecvice";
+import { usePathname } from "next/navigation";
 
 interface Feature {
   id: string;
@@ -78,11 +79,12 @@ const CardWithLight = ({ feature }: { feature: Feature }) => {
 };
 
 const SectionServiceSecond = ({ features = [] }: AboutProps) => {
-  const t = useTranslations("SectionServiceSecond");
-  const tConsultoria = useTranslations("Posicionamento");
+  const pathname = usePathname();
+  const serviceKey = pathname.split("/")[2] || "brand_protection" // pega o nome do serviço
+  const t = useTranslations(`galLery.items.${serviceKey}`); // pega as traduções específicas do serviço
 
   return (
-    <div className="flex flex-row items-center justify-center py-10 h-screen md:h-auto relative w-full">
+    <div className="p-0 md:p-10 py-24 flex flex-col items-center justify-center relative w-full bg-gradient-to-br overflow-hidden">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-full px-4">
         <motion.div
           initial={{
@@ -100,14 +102,15 @@ const SectionServiceSecond = ({ features = [] }: AboutProps) => {
         >
           <h1 className="text-center text-3xl md:text-7xl  font-extrabold md:max-w-2xl tracking-tight leading-tight flex justify-center flex-wrap
         text-neutral-400 max-w-2xl mt-4 mx-auto">
-            <TextScramble className="text-white">{t('title')}</TextScramble>
+            <TextScramble className="text-white">{t('SectionServiceSecond.title')}</TextScramble>
           </h1>
 
           <TextScramble className="text-center text-lg md:text-2xl font-medium text-neutral-400 max-w-2xl mt-4 mx-auto z-10">
-            {t('description')}
+            {t('SectionServiceSecond.description')}
           </TextScramble>
 
           <Cards />
+
           <div className="flex items-center justify-center mt-8">
             <Button
               size="lg"
@@ -116,7 +119,7 @@ const SectionServiceSecond = ({ features = [] }: AboutProps) => {
             >
               <Link href="/login" passHref>
                 <HoverScrambleButton
-                  text={t('button')}       // aqui passa o texto corretamente
+                  text={t('SectionServiceSecond.button')}       // aqui passa o texto corretamente
                   className="bg-[#E32320] hover:bg-white hover:text-[#E32320] text-white font-semibold px-6 py-3 rounded transition cursor-pointer"
                 />
               </Link>

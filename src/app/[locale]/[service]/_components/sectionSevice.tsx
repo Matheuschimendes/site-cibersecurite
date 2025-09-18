@@ -6,20 +6,22 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { TextScramble } from "@/components/animation/TextScramble";
 import { useTranslations } from 'next-intl';
+import { usePathname } from "next/navigation";
 import { HoverScrambleButton } from "@/components/animation/HoverScrambleButton";
-import Image from "next/image";
 
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
   ssr: false,
 });
 
 export default function SectionSevice() {
-  const t = useTranslations('SectionService');
+  const pathname = usePathname();
+  const serviceKey = pathname.split("/")[2] || "brand_protection" // pega o nome do serviço
+  const t = useTranslations(`galLery.items.${serviceKey}`); // pega as traduções específicas do serviço
 
   return (
     <>
-      <div className="flex flex-row items-center justify-center py-10 h-screen md:h-auto relative w-full">
-        <div className="mt-30 max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
+      <div className="mt-30 flex flex-row items-center justify-center py-10 h-screen md:h-auto relative w-full">
+        <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] h-[40rem]px-4">
           <motion.div
             initial={{
               opacity: 0,
@@ -46,7 +48,7 @@ export default function SectionSevice() {
             <div className="flex items-center justify-center mt-8">
               <Button
                 size="lg"
-                className="z-10  text-white font-semibold text-base px-6 py-3 rounded-lg transition-colors"
+                className="text-white font-semibold text-base px-6 py-3 rounded-lg transition-colors"
                 asChild
               >
                 <Link href="/login" passHref>

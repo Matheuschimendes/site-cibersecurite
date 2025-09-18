@@ -105,7 +105,7 @@ const About = ({ features = [] }: AboutProps) => {
           {/* Descrição com efeito */}
           <TextScramble
             className="
-            text-xl md:text-2xl font-light text-gray-300 leading-relaxed
+            text-[16px] md:text-[18px] font-light text-gray-300 leading-relaxed
             max-w-3xl w-full text-left break-words
           "
           >

@@ -3,8 +3,11 @@ import { Navbar } from "@/app/sections/navbar";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation"
 import SectionSevice from "./_components/sectionSevice";
-import { About } from "./_components/aboutService";
 import { SectionServiceSecond } from "./_components/sectionSeviceSecond";
+import { AboutService } from "./_components/aboutService";
+import { SectionBusiness } from "./_components/sectionBusiness";
+
+
 
 
 export default function ServicePage() {
@@ -13,11 +16,12 @@ export default function ServicePage() {
   const t = useTranslations(`galLery.items.${service}`); // pegar tradução do JSON
   return (
     <>
-      <div className="p-10 mx-full mx-auto" >
+      <div className="p-5" >
         <Navbar />
         <SectionSevice />
-        <About />
+        <AboutService />
         <SectionServiceSecond />
+        <SectionBusiness />
       </div>
     </>
   )

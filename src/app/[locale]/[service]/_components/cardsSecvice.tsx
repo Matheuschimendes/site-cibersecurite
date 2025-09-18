@@ -1,5 +1,6 @@
 import { Target, UsersRound, Award, Star } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 interface Platform {
   subtitle: string;
@@ -18,7 +19,9 @@ interface CardsProps {
 }
 
 const Cards = ({ platforms }: CardsProps) => {
-  const t = useTranslations("CardsService");
+  const pathname = usePathname(); // /pt/leak_detection
+  const serviceKey = pathname.split("/")[2] || "brand_protection"; // pega o segmento da rota
+  const t = useTranslations(`galLery.items.${serviceKey}`); // pega as traduções do serviço automaticamente
 
   // Ícones na ordem correta
   const icons = [Target, UsersRound, Award, Star];
@@ -26,23 +29,23 @@ const Cards = ({ platforms }: CardsProps) => {
   // Dados default via tradução
   const defaultPlatforms = {
     precision: {
-      subtitle: t("card1.title"),
-      description: t("card1.description"),
+      subtitle: t("CardsService.Cards.card1.title"),
+      description: t("CardsService.Cards.card1.description"),
       url: "#",
     },
     expertise: {
-      subtitle: t("card2.title"),
-      description: t("card2.description"),
+      subtitle: t("CardsService.Cards.card2.title"),
+      description: t("CardsService.Cards.card2.description"),
       url: "#",
     },
     excellence: {
-      subtitle: t("card3.title"),
-      description: t("card3.description"),
+      subtitle: t("CardsService.Cards.card3.title"),
+      description: t("CardsService.Cards.card3.description"),
       url: "#",
     },
     innovation: {
-      subtitle: t("card4.title"),
-      description: t("card4.description"),
+      subtitle: t("CardsService.Cards.card4.title"),
+      description: t("CardsService.Cards.card4.description"),
       url: "#",
     },
   };
@@ -50,7 +53,7 @@ const Cards = ({ platforms }: CardsProps) => {
   const data = platforms ?? defaultPlatforms;
 
   return (
-    <section className="flex justify-center w-full py-12 px-4">
+    <section className="p-0 md:p-10 py-24 flex flex-col items-center justify-center relative w-full bg-gradient-to-br overflow-hidden">
       <div className="container max-w-sx mx-auto">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2">
           {Object.entries(data).map(([key, platform], idx) => {

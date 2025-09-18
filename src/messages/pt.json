@@ -69,6 +69,7 @@
         "description": "Proteja seu negócio de dentro para fora com inteligência investigativa para decisões de máxima confiança.",
         "list_title": "O Desafio",
         "list_title2": "A integridade da sua operação depende diretamente da robustez de sua cadeia de suprimentos — que inclui tanto fornecedores externos quanto o capital humano interno. A falha em verificar rigorosamente um único elo, seja um parceiro logístico crítico ou um executivo recém-contratado, pode introduzir vulnerabilidades em toda a sua estrutura.",
+        "list_title3": "A análise superficial de credenciais e a auditoria puramente financeira são insuficientes para detectar os riscos mais danosos: fraudes premeditadas, conflitos de interesse, passivos legais e reputacionais ocultos. Contratar ou se associar sem uma análise prévia de Background Check é gerenciar o negócio com base em uma visão incompleta e perigosa da realidade operacional e ética de seus parceiros.",
         "listItems": [
           "Sua empresa pode ter acesso a feeds de segurança e até alertas da Deep Web, mas como conectar esses pontos?",
           "Como traduzir um indicador técnico em um risco de negócio real?",
@@ -76,12 +77,40 @@
           "Proteção da propriedade intelectual"
         ],
         "list_description": "A informação sem contexto é apenas ruído.",
+        "image": "/person.jpg",
+        "SectionServiceSecond": {
+          "title": "Nossos Entregáveis",
+          "title2": "Investigações Digitais & Cibersegurança Avançada",
+          "description": "Proteja seu negócio de dentro para fora com inteligência investigativa para decisões de máxima confiança.",
+          "button": "Agende um Briefing de Ameaças"
+        },
+        "CardsService": {
+          "Cards": {
+            "card1": {
+              "title": "Precisão",
+              "description": "Due Diligence de Terceiros: Investigamos a fundo potenciais parceiros, fornecedores ou alvos de fusão e aquisição (M&A). Mapeamos a estrutura societária, o histórico reputacional e legal dos sócios (KYP - Know Your Partner), e identificamos passivos ocultos ou envolvimento em atividades ilícitas."
+            },
+            "card2": {
+              "title": "Expertise",
+              "description": "Background Check (Análise de Perfil): Realizamos verificações aprofundadas de candidatos e colaboradores em posições-chave. Analisamos o histórico profissional, processos judiciais, reputação digital e potenciais conflitos de interesse para garantir a integridade e a confiabilidade da sua equipe."
+            },
+            "card3": {
+              "title": "Excelência",
+              "description": "Investigação e Resposta a Fraudes: Atuamos na apuração de suspeitas de fraude, corrupção, roubo de ativos e sabotagem interna. Coletamos evidências de forma estruturada, identificamos os envolvidos e fornecemos relatórios detalhados que servem de base para medidas administrativas e legais."
+            },
+            "card4": {
+              "title": "teste",
+              "description": "Mapeamento de Riscos Internos e Conflitos de Interesse: Analisamos o ecossistema de seus colaboradores e suas conexões para identificar relacionamentos não declarados com concorrentes, atividades paralelas suspeitas e outros fatores de risco que as auditorias tradicionais não revelam."
+            }
+          }
+        },
         "button": "Agende uma Análise de Risco"
       },
       "leak_detection": {
         "title": "Detecção de Vazamentos",
         "description": "Identifique vazamentos de dados e informações sensíveis antes que causem danos.",
         "list_title": "O Desafio",
+        "list_title2": "A integridade da sua operação depende diretamente da robustez de sua cadeia de suprimentos — que inclui tanto fornecedores externos quanto o capital humano interno. A falha em verificar rigorosamente um único elo, seja um parceiro logístico crítico ou um executivo recém-contratado, pode introduzir vulnerabilidades em toda a sua estrutura.",
         "listItems": [
           "Monitoramento contínuo de violações de marca",
           "Análise de credenciais comprometidas",
@@ -89,12 +118,40 @@
           "Alertas em tempo real sobre exposições"
         ],
         "list_description": "A informação sem contexto é apenas ruído.",
+        "image": "/mundo.jpg",
+        "SectionServiceSecond": {
+          "title": "Nossos Entregáveis2",
+          "title2": "Investigações Digitais & Cibersegurança Avançada",
+          "description": "Proteja seu negócio de dentro para fora com inteligência investigativa para decisões de máxima confiança.",
+          "button": "Agende um Briefing de Ameaças"
+        },
+        "CardsService": {
+          "Cards": {
+            "card1": {
+              "title": "Precisão",
+              "description": "Due Diligence de Terceiros: Investigamos a fundo potenciais parceiros, fornecedores ou alvos de fusão e aquisição (M&A). Mapeamos a estrutura societária, o histórico reputacional e legal dos sócios (KYP - Know Your Partner), e identificamos passivos ocultos ou envolvimento em atividades ilícitas."
+            },
+            "card2": {
+              "title": "Expertise",
+              "description": "Background Check (Análise de Perfil): Realizamos verificações aprofundadas de candidatos e colaboradores em posições-chave. Analisamos o histórico profissional, processos judiciais, reputação digital e potenciais conflitos de interesse para garantir a integridade e a confiabilidade da sua equipe."
+            },
+            "card3": {
+              "title": "Excelência",
+              "description": "Investigação e Resposta a Fraudes: Atuamos na apuração de suspeitas de fraude, corrupção, roubo de ativos e sabotagem interna. Coletamos evidências de forma estruturada, identificamos os envolvidos e fornecemos relatórios detalhados que servem de base para medidas administrativas e legais."
+            },
+            "card4": {
+              "title": "teste",
+              "description": "Mapeamento de Riscos Internos e Conflitos de Interesse: Analisamos o ecossistema de seus colaboradores e suas conexões para identificar relacionamentos não declarados com concorrentes, atividades paralelas suspeitas e outros fatores de risco que as auditorias tradicionais não revelam."
+            }
+          }
+        },
         "button": "Agende uma Análise de Risco"
       },
       "vip_protection": {
         "title": "Proteção VIP",
         "description": "Garanta segurança digital para executivos e pessoas de alto risco.",
         "list_title": "Proteção VIP",
+        "list_title2": "A integridade da sua operação depende diretamente da robustez de sua cadeia de suprimentos — que inclui tanto fornecedores externos quanto o capital humano interno. A falha em verificar rigorosamente um único elo, seja um parceiro logístico crítico ou um executivo recém-contratado, pode introduzir vulnerabilidades em toda a sua estrutura.",
         "listItems": [
           "Monitoramento contínuo de violações de marca",
           "Análise de credenciais comprometidas",
@@ -102,6 +159,33 @@
           "Alertas em tempo real sobre exposições"
         ],
         "list_description": "A informação sem contexto é apenas ruído.",
+        "image": "/person.jpg",
+        "SectionServiceSecond": {
+          "title": "Nossos Entregáveis3",
+          "title2": "Investigações Digitais & Cibersegurança Avançada",
+          "description": "Proteja seu negócio de dentro para fora com inteligência investigativa para decisões de máxima confiança.",
+          "button": "Agende um Briefing de Ameaças"
+        },
+        "CardsService": {
+          "Cards": {
+            "card1": {
+              "title": "Precisão",
+              "description": "Due Diligence de Terceiros: Investigamos a fundo potenciais parceiros, fornecedores ou alvos de fusão e aquisição (M&A). Mapeamos a estrutura societária, o histórico reputacional e legal dos sócios (KYP - Know Your Partner), e identificamos passivos ocultos ou envolvimento em atividades ilícitas."
+            },
+            "card2": {
+              "title": "Expertise",
+              "description": "Background Check (Análise de Perfil): Realizamos verificações aprofundadas de candidatos e colaboradores em posições-chave. Analisamos o histórico profissional, processos judiciais, reputação digital e potenciais conflitos de interesse para garantir a integridade e a confiabilidade da sua equipe."
+            },
+            "card3": {
+              "title": "Excelência",
+              "description": "Investigação e Resposta a Fraudes: Atuamos na apuração de suspeitas de fraude, corrupção, roubo de ativos e sabotagem interna. Coletamos evidências de forma estruturada, identificamos os envolvidos e fornecemos relatórios detalhados que servem de base para medidas administrativas e legais."
+            },
+            "card4": {
+              "title": "teste",
+              "description": "Mapeamento de Riscos Internos e Conflitos de Interesse: Analisamos o ecossistema de seus colaboradores e suas conexões para identificar relacionamentos não declarados com concorrentes, atividades paralelas suspeitas e outros fatores de risco que as auditorias tradicionais não revelam."
+            }
+          }
+        },
         "button": "Agende uma Análise de Risco"
       }
     }
@@ -296,48 +380,6 @@
     "securityNotice": {
       "title": "Aviso de Segurança: ",
       "description": " Todas as comunicações são criptografadas e tratadas com máxima confidencialidade. Nossos serviços seguem os mais altos padrões de segurança da informação."
-    }
-  },
-  "SectionService": {
-    "title": "Contrainteligência Corporativa",
-    "title2": "Investigações Digitais & Cibersegurança Avançada",
-    "description": "Proteja seu negócio de dentro para fora com inteligência investigativa para decisões de máxima confiança.",
-    "button": "Agende uma Análise de Risco"
-  },
-  "AboutService": {
-    "title": "",
-    "subtitle": "O Desafio",
-    "description": "A integridade da sua operação depende diretamente da robustez de sua cadeia de suprimentos — que inclui tanto fornecedores externos quanto o capital humano interno. A falha em verificar rigorosamente um único elo, seja um parceiro logístico crítico ou um executivo recém-contratado, pode introduzir vulnerabilidades em toda a sua estrutura.",
-    "description2": "A análise superficial de credenciais e a auditoria puramente financeira são insuficientes para detectar os riscos mais danosos: fraudes premeditadas, conflitos de interesse, passivos legais e reputacionais ocultos. Contratar ou se associar sem uma análise prévia de Background Check é gerenciar o negócio com base em uma visão incompleta e perigosa da realidade operacional e ética de seus parceiros."
-  },
-  "AboutService2": {
-    "title": "A Solução",
-    "subtitle": "",
-    "description": "A integridade da sua operação depende diretamente da robustez de sua cadeia de suprimentos — que inclui tanto fornecedores externos quanto o capital humano interno. A falha em verificar rigorosamente um único elo, seja um parceiro logístico crítico ou um executivo recém-contratado, pode introduzir vulnerabilidades em toda a sua estrutura.",
-    "description2": "A análise superficial de credenciais e a auditoria puramente financeira são insuficientes para detectar os riscos mais danosos: fraudes premeditadas, conflitos de interesse, passivos legais e reputacionais ocultos. Contratar ou se associar sem uma análise prévia de Background Check é gerenciar o negócio com base em uma visão incompleta e perigosa da realidade operacional e ética de seus parceiros."
-  },
-  "SectionServiceSecond": {
-    "title": "Nossos Entregáveis",
-    "title2": "Investigações Digitais & Cibersegurança Avançada",
-    "description": "Proteja seu negócio de dentro para fora com inteligência investigativa para decisões de máxima confiança.",
-    "button": "Agende uma Análise de Risco"
-  },
-  "CardsService": {
-    "card1": {
-      "title": "Precisão",
-      "description": "Due Diligence de Terceiros: Investigamos a fundo potenciais parceiros, fornecedores ou alvos de fusão e aquisição (M&A). Mapeamos a estrutura societária, o histórico reputacional e legal dos sócios (KYP - Know Your Partner), e identificamos passivos ocultos ou envolvimento em atividades ilícitas."
-    },
-    "card2": {
-      "title": "Expertise",
-      "description": "Background Check (Análise de Perfil): Realizamos verificações aprofundadas de candidatos e colaboradores em posições-chave. Analisamos o histórico profissional, processos judiciais, reputação digital e potenciais conflitos de interesse para garantir a integridade e a confiabilidade da sua equipe."
-    },
-    "card3": {
-      "title": "Excelência",
-      "description": "Investigação e Resposta a Fraudes: Atuamos na apuração de suspeitas de fraude, corrupção, roubo de ativos e sabotagem interna. Coletamos evidências de forma estruturada, identificamos os envolvidos e fornecemos relatórios detalhados que servem de base para medidas administrativas e legais."
-    },
-    "card4": {
-      "title": "teste",
-      "description": "Mapeamento de Riscos Internos e Conflitos de Interesse: Analisamos o ecossistema de seus colaboradores e suas conexões para identificar relacionamentos não declarados com concorrentes, atividades paralelas suspeitas e outros fatores de risco que as auditorias tradicionais não revelam."
     }
   }
 }
