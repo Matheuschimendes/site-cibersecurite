@@ -8,8 +8,6 @@ import { AboutService } from "./_components/aboutService";
 import { SectionBusiness } from "./_components/serviceBusiness";
 
 
-
-
 export default function ServicePage() {
 
   const { service } = useParams(); // pegar 'leak_detection' ou 'outros servicos'
