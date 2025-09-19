@@ -188,6 +188,28 @@
         },
         "button": "Agende uma Análise de Risco"
       }
+    },
+    "seu_negocio": {
+      "title": "O Impacto no Seu Negócio",
+      "description": "Analisar um texto para esse local",
+      "cards": {
+        "card1": {
+          "title": "Contratações mais seguras e redução drástica do risco de ameaças internas (insider threats)."
+        },
+        "card2": {
+          "title": "Mitigação de perdas financeiras e danos reputacionais em parcerias e operações de M&A."
+        },
+        "card3": {
+          "title": "Respostas rápidas e estruturadas a incidentes de fraude, minimizando o impacto negativo."
+        },
+        "card4": {
+          "title": "Aumento da transparência, da ética e da governança corporativa."
+        },
+        "card5": {
+          "title": "Tomada de decisão estratégica baseada em fatos verificados, não em suposições"
+        }
+      },
+      "button": "Agende uma Análise de Risco"
     }
   },
   "Personalizada": {

@@ -5,7 +5,7 @@ import { useParams } from "next/navigation"
 import SectionSevice from "./_components/sectionSevice";
 import { SectionServiceSecond } from "./_components/sectionSeviceSecond";
 import { AboutService } from "./_components/aboutService";
-import { SectionBusiness } from "./_components/sectionBusiness";
+import { SectionBusiness } from "./_components/serviceBusiness";
 
 
 

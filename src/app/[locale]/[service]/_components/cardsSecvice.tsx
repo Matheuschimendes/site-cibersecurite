@@ -15,18 +15,17 @@ interface CardsProps {
     precision?: Platform;
     expertise?: Platform;
     excellence?: Platform;
+    innovation?: Platform;
   };
 }
 
-const Cards = ({ platforms }: CardsProps) => {
-  const pathname = usePathname(); // /pt/leak_detection
-  const serviceKey = pathname.split("/")[2] || "brand_protection"; // pega o segmento da rota
-  const t = useTranslations(`galLery.items.${serviceKey}`); // pega as traduções do serviço automaticamente
+const CardsService = ({ platforms }: CardsProps) => {
+  const pathname = usePathname(); // ex.: /pt/leak_detection
+  const serviceKey = pathname.split("/")[2] || "brand_protection";
+  const t = useTranslations(`galLery.items.${serviceKey}`);
 
-  // Ícones na ordem correta
   const icons = [Target, UsersRound, Award, Star];
 
-  // Dados default via tradução
   const defaultPlatforms = {
     precision: {
       subtitle: t("CardsService.Cards.card1.title"),
@@ -52,27 +51,53 @@ const Cards = ({ platforms }: CardsProps) => {
 
   const data = platforms ?? defaultPlatforms;
 
+
+
   return (
-    <section className="p-0 md:p-10 py-24 flex flex-col items-center justify-center relative w-full bg-gradient-to-br overflow-hidden">
-      <div className="container max-w-sx mx-auto">
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2">
+    <section
+      className={`
+        relative w-full bg-gradient-to-br
+        flex flex-col items-center justify-center
+        px-4 sm:px-6 md:px-10
+        py-5 sm:py-14 md:py-20   /* <<< margens verticais ajustadas */
+        overflow-hidden 
+     `}
+    >
+      <div className="mx-auto w-full max-w-6xl">
+        <div
+          className="
+            grid gap-6 sm:gap-8
+            grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2
+          "
+        >
           {Object.entries(data).map(([key, platform], idx) => {
             if (!platform) return null;
-
             const Icon = icons[idx];
+
+            const isWhiteCard = idx % 3 === 0;
 
             return (
               <div
                 key={key}
-                className="group relative flex flex-col items-start gap-1 rounded-2xl border border-zinc-700 bg-[#0c0c0c] px-8 py-10 text-white transition-all duration-300 hover:scale-[1.02] hover:ring-2 hover:ring-[#E32320]/50 hover:shadow-lg"
+                className={`
+                  group relative flex flex-col items-start
+                  gap-2 rounded-2xl border border-zinc-700
+                  bg-[#0c0c0c] px-6 py-8 sm:px-8 sm:py-10
+                  text-white transition-all duration-300
+                  hover:scale-[1.02] hover:ring-2 hover:ring-[#E32320]/50 hover:shadow-lg
+                  ${isWhiteCard
+                    ? "bg-[#E32320] text-white border-zinc-300"
+                    : "bg-[#0c0c0c] text-white border-zinc-700"
+                  }
+                `}
               >
-                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#1a1a1a] shadow">
-                  <Icon className="w-8 h-8 text-[#E32320]" />
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#1a1a1a] shadow">
+                  <Icon className="h-8 w-8 text-[#ffffff]" />
                 </div>
-                <h2 className="text-lg font-semibold tracking-widest uppercase font-mono">
+                <h2 className="text-base sm:text-lg font-semibold tracking-widest uppercase font-mono">
                   {platform.subtitle}
                 </h2>
-                <p className="text-sm md:text-base text-white/80 leading-relaxed font-medium">
+                <p className="text-sm sm:text-base text-white/80 leading-relaxed font-medium">
                   {platform.description}
                 </p>
               </div>
@@ -84,4 +109,4 @@ const Cards = ({ platforms }: CardsProps) => {
   );
 };
 
-export { Cards };
+export { CardsService };

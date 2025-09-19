@@ -171,6 +171,13 @@ const Navbar = ({ logo }: NavbarProps) => {
     </Link>
   );
 
+  // Função para gerar a URL correta ao trocar idioma
+  const getLocaleHref = (lang: string) => {
+    const segments = pathname.split("/").filter(Boolean); // ["pt","leak_detection"]
+    segments.shift(); // remove o locale atual
+    return "/" + segments.join("/"); // "/leak_detection"
+  };
+
   return (
     <section
       className={`fixed top-0 left-0 w-full z-10 transition-all duration-500 
@@ -199,19 +206,23 @@ const Navbar = ({ logo }: NavbarProps) => {
 
           {/* Idiomas Desktop */}
           <div className="flex gap-2">
-            <Link href="/" locale="pt">
+            <Link href={getLocaleHref("pt")} locale="pt">
               <Button
                 size="sm"
-                className={`border ${currentLocale === "pt" ? "bg-[#E32320] text-white" : "hover:bg-[#E32320] hover:text-white"
+                className={`border ${currentLocale === "pt"
+                    ? "bg-[#E32320] text-white"
+                    : "hover:bg-[#E32320] hover:text-white"
                   }`}
               >
                 PT
               </Button>
             </Link>
-            <Link href="/" locale="en">
+            <Link href={getLocaleHref("en")} locale="en">
               <Button
                 size="sm"
-                className={`border ${currentLocale === "en" ? "bg-[#E32320] text-white" : "hover:bg-[#E32320] hover:text-white"
+                className={`border ${currentLocale === "en"
+                    ? "bg-[#E32320] text-white"
+                    : "hover:bg-[#E32320] hover:text-white"
                   }`}
               >
                 EN
@@ -224,7 +235,13 @@ const Navbar = ({ logo }: NavbarProps) => {
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
             <Link href="/">
-              <Image src={logo?.src || "/Logo Horizontal.png"} className="max-h-8 dark:invert" alt={logo?.alt || "logo"} width={100} height={100} />
+              <Image
+                src={logo?.src || "/Logo Horizontal.png"}
+                className="max-h-8 dark:invert"
+                alt={logo?.alt || "logo"}
+                width={100}
+                height={100}
+              />
             </Link>
             <Sheet>
               <SheetTrigger asChild>
@@ -236,43 +253,49 @@ const Navbar = ({ logo }: NavbarProps) => {
                 <SheetHeader>
                   <SheetTitle>
                     <Link href="/">
-                      <Image src={logo?.src || "/Logo Horizontal.png"} className="max-h-8 dark:invert" alt={logo?.alt || "logo"} width={100} height={100} />
+                      <Image
+                        src={logo?.src || "/Logo Horizontal.png"}
+                        className="max-h-8 dark:invert"
+                        alt={logo?.alt || "logo"}
+                        width={100}
+                        height={100}
+                      />
                     </Link>
                   </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-6 p-4">
-                  <Accordion type="single" collapsible className="flex w-full flex-col gap-4">
+                  <Accordion
+                    type="single"
+                    collapsible
+                    className="flex w-full flex-col gap-4"
+                  >
                     {menu.map((item) => renderMobileMenuItem(item))}
                   </Accordion>
                   {/* Idiomas Mobile */}
                   <div className="flex flex-col gap-3">
-                    <Button
-                      size="sm"
-                      asChild
-                      className={`border w-full cursor-pointer ${currentLocale === "pt"
-                        ? "bg-white text-[#E32320]"
-                        : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
-                        }`}
-                    >
-                      <Link href="/" locale="pt">
+                    <Link href={getLocaleHref("pt")} locale="pt">
+                      <Button
+                        size="sm"
+                        className={`border w-full cursor-pointer ${currentLocale === "pt"
+                            ? "bg-white text-[#E32320]"
+                            : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
+                          }`}
+                      >
                         BR
-                      </Link>
-                    </Button>
+                      </Button>
+                    </Link>
 
-
-                    <Button
-                      size="sm"
-                      asChild
-                      className={`border w-full cursor-pointer ${currentLocale === "en"
-                        ? "bg-white text-[#E32320]"
-                        : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
-                        }`}
-                    >
-                      <Link href="/" locale="en">
+                    <Link href={getLocaleHref("en")} locale="en">
+                      <Button
+                        size="sm"
+                        className={`border w-full cursor-pointer ${currentLocale === "en"
+                            ? "bg-white text-[#E32320]"
+                            : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
+                          }`}
+                      >
                         US
-                      </Link>
-                    </Button>
-
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </SheetContent>

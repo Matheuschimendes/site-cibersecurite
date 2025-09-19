@@ -90,7 +90,7 @@ const AboutService = ({ features = [] }: AboutProps) => {
   return (
     <section
       id="about"
-      className="flex flex-col items-center justify-center relative w-full bg-gradient-to-br overflow-hidden -mt-30"
+      className="p-5 flex flex-col items-center justify-center relative w-full bg-gradient-to-br overflow-hidden -mt-30"
     >
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-12 relative">
@@ -111,7 +111,7 @@ const AboutService = ({ features = [] }: AboutProps) => {
               {t("list_title2")}
             </p>
             <p className="text-xl font-light text-gray-300 leading-relaxed max-w-full break-words ">
-              {t("list_title3")}
+              {t("list_title2")}
             </p>
           </div>
 

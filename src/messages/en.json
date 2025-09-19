@@ -19,7 +19,7 @@
       },
       "cyber_risk_insights": {
         "title": "Cyber Risk Insights",
-        "description": "In-depth analysis to anticipate threats and reduce risks."
+        "description": "In-depth analyses to anticipate threats and reduce risks."
       }
     }
   },
@@ -28,18 +28,18 @@
     "subtitle": "REACT. ",
     "subtitle2": "ANTICIPATE.",
     "title2": "Digital Investigations & Advanced Cybersecurity",
-    "description": "We protect your brand, investigate threats, and strengthen your cyber defense with strategic intelligence and cutting-edge technology. We map threats in complex cyberspaces to safeguard operations, reputation, and competitive advantage of the most critical industries.",
+    "description": "We protect your brand, investigate threats, and strengthen your cyber defense with strategic intelligence and cutting-edge technology. We map threats across complex cyberspaces to safeguard operations, reputation, and competitive advantage in the most critical industries.",
     "button": "Schedule a Risk Assessment"
   },
   "About": {
-    "title": "About",
+    "title": "About ",
     "subtitle": "Kryfal",
-    "description": "Experts in Threat Intelligence and digital investigations, protecting companies against advanced cyber threats. Kryfal was born from a realization: the sectors that form the backbone of the economy are the most neglected in cyber intelligence. While the market focuses on generic threats, we dive deep into the specific ecosystems of Agribusiness, Ports, Aerospace, and the new Web3 economy, delivering intelligence that managers can use to make strategic decisions and protect their most valuable assets."
+    "description": "Experts in Threat Intelligence and digital investigations, protecting companies against advanced cyber threats. Kryfal was born from a realization: sectors forming the backbone of the economy are the most neglected in cyber intelligence. While the market focuses on generic threats, we dive into the specific ecosystems of Agribusiness, Ports, Aerospace, and the new Web3 economy, delivering intelligence managers can use to make strategic decisions and protect their most valuable assets."
   },
   "Cards": {
     "card1": {
       "title": "Precision",
-      "description": "Detailed analyses and meticulous investigations providing accurate and actionable insights."
+      "description": "Detailed analyses and meticulous investigations that provide precise and actionable insights."
     },
     "card2": {
       "title": "Expertise",
@@ -52,297 +52,101 @@
   },
   "Posicionamento": {
     "title": "Our Positioning",
-    "description": "There is no effective threat intelligence without a deep understanding of the business. That’s why Kryfal positions itself at the intersection between cyber expertise and the operational reality of the most critical sectors. Instead of offering generic solutions, we dive into your value chain to understand who the threat actors are, how they think, and how they act in ways that truly compromise your business continuity.",
+    "description": "There is no effective threat intelligence without deep business knowledge. Kryfal positions itself at the intersection of cyber expertise and the operational reality of the most critical sectors. Instead of offering generic solutions, we dive into your value chain to understand who the threat actors are, how they think, and how they operate, ensuring business continuity.",
     "button": "Schedule a Risk Assessment"
   },
   "galLery": {
-    "title": "Intelligence",
-    "subtitle": "Services",
+    "title": "Services",
+    "subtitle": "Intelligence",
     "description": "Comprehensive threat intelligence and digital investigation solutions to protect your organization.",
     "learn_more": "Learn more",
+    "url": "en/services",
     "previous_slide": "Previous Slide",
     "next_slide": "Next Slide",
     "items": {
       "brand_protection": {
-        "title": "Brand Protection",
-        "description": "Monitoring and response to misuse of your brand.",
+        "title": "Corporate Counterintelligence",
+        "description": "Protect your business from the inside out with investigative intelligence for high-confidence decisions.",
+        "list_title": "The Challenge",
+        "list_title2": "The integrity of your operation depends directly on the robustness of your supply chain — including both external suppliers and internal human capital. Failing to rigorously verify a single link, whether a critical logistics partner or a newly hired executive, can introduce vulnerabilities across your entire structure.",
+        "list_title3": "Superficial credential checks and purely financial audits are insufficient to detect the most damaging risks: premeditated fraud, conflicts of interest, hidden legal and reputational liabilities. Hiring or partnering without prior background checks is managing a business based on an incomplete and dangerous view of your partners’ operational and ethical reality.",
         "listItems": [
-          "Continuous brand violation monitoring",
-          "Detection of malicious domains and phishing",
-          "Removal of fake profiles and content",
+          "Your company may have access to security feeds and even Deep Web alerts, but how do you connect these dots?",
+          "How to translate a technical indicator into a real business risk?",
+          "And how to ensure the right person — from SOC analyst to CEO — receives the correct intelligence, in the right format, at the right time to act?",
           "Intellectual property protection"
         ],
+        "list_description": "Information without context is just noise.",
+        "image": "/person.jpg",
+        "SectionServiceSecond": {
+          "title": "Our Deliverables",
+          "title2": "Digital Investigations & Advanced Cybersecurity",
+          "description": "Protect your business from the inside out with investigative intelligence for high-confidence decisions.",
+          "button": "Schedule a Threat Briefing"
+        },
+        "CardsService": {
+          "Cards": {
+            "card1": {
+              "title": "Precision",
+              "description": "Third-Party Due Diligence: We thoroughly investigate potential partners, suppliers, or M&A targets. We map corporate structures, reputational and legal history of partners (KYP - Know Your Partner), and identify hidden liabilities or involvement in illicit activities."
+            },
+            "card2": {
+              "title": "Expertise",
+              "description": "Background Check: We perform in-depth checks of candidates and key personnel. We analyze professional history, legal proceedings, digital reputation, and potential conflicts of interest to ensure integrity and reliability."
+            },
+            "card3": {
+              "title": "Excellence",
+              "description": "Fraud Investigation & Response: We investigate suspected fraud, corruption, asset theft, and internal sabotage. We collect structured evidence, identify the involved parties, and provide detailed reports to support administrative and legal actions."
+            },
+            "card4": {
+              "title": "Internal Risk Mapping",
+              "description": "Mapping Internal Risks and Conflicts of Interest: We analyze your employees' ecosystem and connections to identify undeclared relationships with competitors, suspicious side activities, and other risk factors not revealed by traditional audits."
+            }
+          }
+        },
         "button": "Schedule a Risk Assessment"
       },
       "leak_detection": {
         "title": "Leak Detection",
         "description": "Identify data leaks and sensitive information before they cause damage.",
+        "list_title": "The Challenge",
+        "list_title2": "The integrity of your operation depends directly on the robustness of your supply chain — including both external suppliers and internal human capital. Failing to rigorously verify a single link, whether a critical logistics partner or a newly hired executive, can introduce vulnerabilities across your entire structure.",
         "listItems": [
           "Continuous brand violation monitoring",
-          "Compromised credential analysis",
+          "Compromised credentials analysis",
           "Investigation in underground forums",
-          "Real-time exposure alerts"
+          "Real-time alerts on exposures"
         ],
-        "button": "Schedule a Risk Assessment"
-      },
-      "vip_protection": {
-        "title": "VIP Protection",
-        "description": "Ensure digital security for executives and high-risk individuals.",
-        "listItems": [
-          "Continuous brand violation monitoring",
-          "Compromised credential analysis",
-          "Investigation in underground forums",
-          "Real-time exposure alerts"
-        ],
-        "button": "Schedule a Risk Assessment"
-      },
-      "cyber_risk_insights": {
-        "title": "Cyber Risk Insights",
-        "description": "In-depth analysis to anticipate threats and reduce risks.",
-        "listItems": [
-          "Continuous brand violation monitoring",
-          "Compromised credential analysis",
-          "Investigation in underground forums",
-          "Real-time exposure alerts"
-        ],
-        "button": "Schedule a Risk Assessment"
-      },
-      "corporate_counterintelligence": {
-        "title": "Corporate Counterintelligence",
-        "description": "Protect your company against espionage and insider threats.",
-        "listItems": [
-          "Corporate espionage detection",
-          "Internal risk analysis",
-          "Hostile actor mapping",
-          "Strategic mitigation plans"
-        ],
-        "button": "Schedule a Risk Assessment"
-      },
-      "digital_investigations": {
-        "title": "Digital Investigations",
-        "description": "Tracking and analysis of digital crimes.",
-        "listItems": [
-          "Online fraud investigation",
-          "Cyberattack tracing",
-          "Digital evidence analysis",
-          "Legal process support"
-        ],
-        "button": "Schedule a Risk Assessment"
-      },
-      "threat_analysis": {
-        "title": "Threat Analysis",
-        "description": "Anticipate malicious actors’ moves.",
-        "listItems": [
-          "Monitoring of attack trends",
-          "Malicious actor profiles",
-          "Actionable intelligence reports",
-          "Alerts on new vulnerabilities"
-        ],
-        "button": "Schedule a Risk Assessment"
-      },
-      "takedown_disassembly": {
-        "title": "Takedown & Disruption",
-        "description": "Strategic actions for removing digital threats.",
-        "listItems": [
-          "Shutdown of fraudulent domains",
-          "Removal of illicit content",
-          "Actions against fake profiles",
-          "Collaboration with authorities"
-        ],
+        "list_description": "Information without context is just noise.",
+        "image": "/mundo.jpg",
+        "SectionServiceSecond": {
+          "title": "Our Deliverables 2",
+          "title2": "Digital Investigations & Advanced Cybersecurity",
+          "description": "Protect your business from the inside out with investigative intelligence for high-confidence decisions.",
+          "button": "Schedule a Threat Briefing"
+        },
+        "CardsService": {
+          "Cards": {
+            "card1": {
+              "title": "Precision",
+              "description": "Third-Party Due Diligence: We thoroughly investigate potential partners, suppliers, or M&A targets. We map corporate structures, reputational and legal history of partners (KYP - Know Your Partner), and identify hidden liabilities or involvement in illicit activities."
+            },
+            "card2": {
+              "title": "Expertise",
+              "description": "Background Check: We perform in-depth checks of candidates and key personnel. We analyze professional history, legal proceedings, digital reputation, and potential conflicts of interest to ensure integrity and reliability."
+            },
+            "card3": {
+              "title": "Excellence",
+              "description": "Fraud Investigation & Response: We investigate suspected fraud, corruption, asset theft, and internal sabotage. We collect structured evidence, identify the involved parties, and provide detailed reports to support administrative and legal actions."
+            },
+            "card4": {
+              "title": "Internal Risk Mapping",
+              "description": "Mapping Internal Risks and Conflicts of Interest: We analyze your employees' ecosystem and connections to identify undeclared relationships with competitors, suspicious side activities, and other risk factors not revealed by traditional audits."
+            }
+          }
+        },
         "button": "Schedule a Risk Assessment"
       }
-    }
-  },
-  "Personalizada": {
-    "title": "Need a Customized Solution?",
-    "description": "Our experts can develop tailored intelligence strategies for your organization’s specific needs.",
-    "button": "Schedule a Risk Assessment"
-  },
-  "mentorias": {
-    "title": "Mentorships and",
-    "subtitle": "Trainings",
-    "description": "Specialized training in Threat Intelligence, OSINT, and cyber investigations.",
-    "learn_more": "Learn more",
-    "items": {
-      "threat_intelligence": {
-        "id": "item-1",
-        "title": "Introduction to Threat Intelligence",
-        "paragraph": "Recorded Course",
-        "tags": "Duration: 8 hours",
-        "tagsSecond": "Beginner",
-        "description": "Essential threat intelligence fundamentals",
-        "url": "#",
-        "listItems": [
-          "Continuous brand violation monitoring",
-          "Detection of malicious domains and phishing",
-          "Takedown of fake content and profiles",
-          "Intellectual property protection"
-        ],
-        "icon": "BookOpen"
-      },
-      "threat_operational": {
-        "id": "item-2",
-        "title": "Operational Threat Intelligence",
-        "paragraph": "Live Course",
-        "tags": "Duration: 16 hours",
-        "tagsSecond": "Intermediate",
-        "description": "Practical application of CTI in security operations",
-        "url": "#",
-        "listItems": [
-          "Continuous brand violation monitoring",
-          "Compromised credential analysis",
-          "Investigation in underground forums",
-          "Real-time exposure alerts"
-        ],
-        "icon": "Target"
-      },
-      "dark_web": {
-        "id": "item-3",
-        "title": "Deep and Dark Web in Practice",
-        "paragraph": "Recorded Course",
-        "tags": "Duration: 12 hours",
-        "tagsSecond": "Advanced",
-        "description": "Safe navigation and investigation in hidden environments",
-        "url": "#",
-        "listItems": [],
-        "icon": "Video"
-      },
-      "opsec": {
-        "id": "item-4",
-        "title": "OPSEC for Investigations",
-        "paragraph": "Live Course",
-        "tags": "Duration: 6 hours",
-        "tagsSecond": "Intermediate",
-        "description": "Operational security in digital investigations",
-        "url": "#",
-        "listItems": [],
-        "icon": "Award"
-      },
-      "open_source_intelligence": {
-        "id": "item-5",
-        "title": "OSINT Tools and Techniques",
-        "paragraph": "Recorded Course",
-        "tags": "Duration: 20 hours",
-        "tagsSecond": "All levels",
-        "description": "Mastering open-source intelligence tools",
-        "url": "#",
-        "listItems": [],
-        "icon": "Lightbulb"
-      },
-      "advanced_investigations": {
-        "id": "item-6",
-        "title": "Advanced Cyber Investigations",
-        "paragraph": "Live Course",
-        "tags": "Duration: 24 hours",
-        "tagsSecond": "Advanced",
-        "description": "Advanced methodologies for digital investigations",
-        "url": "#",
-        "listItems": [],
-        "icon": "Users"
-      }
-    }
-  },
-  "Personalizada2": {
-    "title": "Need a Custom Solution",
-    "description": "Our experts can develop tailored intelligence strategies for your organization’s specific needs.",
-    "button": "Risk Assessment"
-  },
-  "Contato": {
-    "title": "Get in",
-    "subtitle": "Touch",
-    "description": "Our team is available to answer questions and provide personalized support.",
-    "email": {
-      "title": "Email",
-      "primary": "contato@kryfal.com",
-      "secondary": "comercial@kryfal.com"
-    },
-    "phone": {
-      "title": "Phone",
-      "primary": "+55 (11) 9999-9999",
-      "secondary": "+55 (11) 8888-8888"
-    },
-    "location": {
-      "title": "Location",
-      "city": "São Paulo, Brazil",
-      "service": "National and International Support"
-    },
-    "hours": {
-      "title": "Business Hours",
-      "weekdays": {
-        "label": "Monday - Friday:",
-        "time": "08:00 - 18:00"
-      },
-      "saturday": {
-        "label": "Saturday:",
-        "time": "09:00 - 14:00"
-      },
-      "sunday": {
-        "label": "Sunday:",
-        "time": "Closed"
-      },
-      "emergency": "24/7 emergencies for corporate clients"
-    }
-  },
-  "Form": {
-    "heading": "Send a secure message",
-    "fields": {
-      "name": "Name *",
-      "email": "Email *",
-      "company": "Company",
-      "phone": "Phone",
-      "subject": "Subject *",
-      "message": "Message *"
-    },
-    "placeholders": {
-      "name": "Your full name",
-      "email": "your@email.com",
-      "company": "Company name",
-      "phone": "(11) 99999-9999",
-      "subject": "Select a subject",
-      "message": "Type your message"
-    },
-    "subjects": {
-      "Threat Intelligence": "Threat Intelligence",
-      "Brand Protection": "Brand Protection",
-      "Investigações Digitais": "Digital Investigations",
-      "Treinamentos": "Trainings",
-      "Consultoria": "Consulting",
-      "Outros": "Others"
-    },
-    "send": "Send message",
-    "security": "Your information is encrypted and treated with confidentiality.",
-    "required": "Fields marked with * are required.",
-    "success": "Message sent successfully!",
-    "error": "An error occurred while sending the message! Error: {status}",
-    "validation": "Please fill in all fields correctly!",
-    "errors": {
-      "name": "Name must be at least 2 characters",
-      "company": "Company name is required",
-      "email": "Enter a valid email",
-      "phone": "Invalid phone. Expected format: (99) 99999-9999",
-      "subject": "Select a valid subject",
-      "message": "Message must be at least 2 characters"
-    }
-  },
-  "Footer": {
-    "description": "Experts in Threat Intelligence and digital investigations, protecting companies against cyber threats with strategic solutions and cutting-edge technology.",
-    "guarantee": "Guaranteed security and confidentiality.",
-    "rights": "All rights reserved.",
-    "address": "São Paulo, Brazil - National Support",
-    "sections": {
-      "services": "Services",
-      "contacts": "Contacts"
-    },
-    "services": {
-      "brandProtection": "Brand Protection",
-      "leakDetection": "Leak Detection",
-      "vipProtection": "VIP Protection",
-      "cyberRiskInsights": "Cyber Risk Insights",
-      "trainings": "Trainings"
-    },
-    "securityNotice": {
-      "title": "Security Notice:",
-      "description": " All communications are encrypted and handled with the utmost confidentiality. Our services follow the highest information security standards."
     }
   }
 }
