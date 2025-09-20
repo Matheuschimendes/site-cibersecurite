@@ -91,11 +91,7 @@ const Navbar = ({ logo }: NavbarProps) => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 80) {
-        setVisible(false);
-      } else {
-        setVisible(true);
-      }
+      setVisible(currentScrollY <= lastScrollY || currentScrollY <= 80);
       setLastScrollY(currentScrollY);
     };
 
@@ -171,8 +167,8 @@ const Navbar = ({ logo }: NavbarProps) => {
     </Link>
   );
 
-  // Função para gerar a URL correta ao trocar idioma
-  const getLocaleHref = (lang: string) => {
+  // Função corrigida: remove parâmetro não usado
+  const getLocaleHref = () => {
     const segments = pathname.split("/").filter(Boolean); // ["pt","leak_detection"]
     segments.shift(); // remove o locale atual
     return "/" + segments.join("/"); // "/leak_detection"
@@ -206,7 +202,7 @@ const Navbar = ({ logo }: NavbarProps) => {
 
           {/* Idiomas Desktop */}
           <div className="flex gap-2">
-            <Link href={getLocaleHref("pt")} locale="pt">
+            <Link href={getLocaleHref()} locale="pt">
               <Button
                 size="sm"
                 className={`border ${currentLocale === "pt"
@@ -217,7 +213,7 @@ const Navbar = ({ logo }: NavbarProps) => {
                 PT
               </Button>
             </Link>
-            <Link href={getLocaleHref("en")} locale="en">
+            <Link href={getLocaleHref()} locale="en">
               <Button
                 size="sm"
                 className={`border ${currentLocale === "en"
@@ -273,7 +269,7 @@ const Navbar = ({ logo }: NavbarProps) => {
                   </Accordion>
                   {/* Idiomas Mobile */}
                   <div className="flex flex-col gap-3">
-                    <Link href={getLocaleHref("pt")} locale="pt">
+                    <Link href={getLocaleHref()} locale="pt">
                       <Button
                         size="sm"
                         className={`border w-full cursor-pointer ${currentLocale === "pt"
@@ -285,7 +281,7 @@ const Navbar = ({ logo }: NavbarProps) => {
                       </Button>
                     </Link>
 
-                    <Link href={getLocaleHref("en")} locale="en">
+                    <Link href={getLocaleHref()} locale="en">
                       <Button
                         size="sm"
                         className={`border w-full cursor-pointer ${currentLocale === "en"

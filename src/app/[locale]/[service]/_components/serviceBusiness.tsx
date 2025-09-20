@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
@@ -11,76 +11,7 @@ import { HoverScrambleButton } from "@/components/animation/HoverScrambleButton"
 import { Button } from "@/components/ui/button";
 import { CardsSectionBusiness } from "./cardsServiceBusiness";
 
-interface Feature {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  subDescription: string;
-}
-
-interface AboutProps {
-  features?: Feature[];
-}
-
-const CardWithLight = ({ feature }: { feature: Feature }) => {
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const card = cardRef.current;
-    if (!card) return;
-
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    card.style.setProperty("--x", `${x}px`);
-    card.style.setProperty("--y", `${y}px`);
-  };
-
-  return (
-    <div
-      ref={cardRef}
-      onMouseMove={handleMouseMove}
-      className="
-        relative group flex flex-col gap-4 sm:gap-6
-        p-6 sm:p-10 rounded-[20px] border border-transparent
-        bg-gradient-to-br from-[#1b1b1b] via-[#121212] to-[#0a0a0a]
-        shadow-[0_0_15px_rgba(227,35,32,0.15)]
-        transition-transform duration-400 ease-in-out
-        hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:-translate-y-2
-        overflow-hidden
-      "
-    >
-      <div
-        className="pointer-events-none absolute inset-0 z-0 rounded-[20px]"
-        style={{
-          background: `radial-gradient(
-            250px circle at var(--x, 50%) var(--y, 50%),
-            rgba(227, 35, 32, 0.25),
-            transparent 85%
-          )`,
-          transition: "background 0.25s ease",
-          filter: "blur(60px)",
-          opacity: 0.8,
-        }}
-      />
-
-      <div className="relative">
-        <h3 className="mb-2 sm:mb-3 text-2xl sm:text-3xl font-extrabold leading-snug text-white">
-          {feature.title}
-        </h3>
-
-        <div className="space-y-3 sm:space-y-4 text-base sm:text-lg leading-relaxed text-gray-300">
-          <p>{feature.description}</p>
-          <p>{feature.subDescription}</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const SectionBusiness = ({ features = [] }: AboutProps) => {
+const SectionBusiness = () => {
   const pathname = usePathname();
   const serviceKey = pathname.split("/")[0] || "seu_negocio";
   const t = useTranslations(`galLery.${serviceKey}`);
@@ -90,7 +21,7 @@ const SectionBusiness = ({ features = [] }: AboutProps) => {
       className="
         relative flex w-full flex-col items-center justify-center
         bg-gradient-to-br px-4 sm:px-6 md:px-10
-        py-5 sm:py-16 md:py-0   /* <-- margens verticais */
+        py-5 sm:py-16 md:py-0
         overflow-hidden
       "
     >

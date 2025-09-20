@@ -1,17 +1,12 @@
 "use client";
 
 import { motion } from "motion/react";
-import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { TextScramble } from "@/components/animation/TextScramble";
 import { useTranslations } from 'next-intl';
 import { usePathname } from "next/navigation";
 import { HoverScrambleButton } from "@/components/animation/HoverScrambleButton";
-
-const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
-  ssr: false,
-});
 
 export default function SectionSevice() {
   const pathname = usePathname();

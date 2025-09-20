@@ -23,6 +23,7 @@ interface AboutProps {
   features?: Feature[];
 }
 
+/** Card com efeito de luz */
 const CardWithLight = ({ feature }: { feature: Feature }) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -53,7 +54,6 @@ const CardWithLight = ({ feature }: { feature: Feature }) => {
       "
       style={{ fontFamily: "'Kanit', sans-serif" }}
     >
-      {/* Luz dinâmica */}
       <div
         className="pointer-events-none absolute inset-0 z-0 rounded-[20px]"
         style={{
@@ -68,7 +68,6 @@ const CardWithLight = ({ feature }: { feature: Feature }) => {
         }}
       />
 
-      {/* Conteúdo */}
       <div className="relative z-10">
         <h3 className="mb-2 sm:mb-3 text-2xl sm:text-3xl font-extrabold leading-snug text-white">
           {feature.title}
@@ -89,64 +88,45 @@ const SectionServiceSecond = ({ features = [] }: AboutProps) => {
   const t = useTranslations(`galLery.items.${serviceKey}`);
 
   return (
-    <div
-      className="
-        relative flex w-full flex-col items-center justify-center
-        bg-gradient-to-br px-4 sm:px-6 md:px-10 py-16 sm:py-20 md:py-24
-        overflow-hidden
-      "
-    >
+    <div className="relative flex w-full flex-col items-center justify-center bg-gradient-to-br px-4 sm:px-6 md:px-10 py-16 sm:py-20 md:py-24 overflow-hidden">
       <div className="relative mx-auto h-full w-full max-w-7xl md:max-w-8xl overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1
-            className="
-              mx-auto mt-2 sm:mt-4 flex max-w-xl sm:max-w-2xl md:max-w-7xl
-              flex-wrap justify-center text-center
-              text-2xl sm:text-3xl md:text-6xl
-              font-extrabold tracking-tight text-neutral-400
-              leading-tight
-            "
-          >
+          <h1 className="mx-auto mt-2 sm:mt-4 flex max-w-xl sm:max-w-2xl md:max-w-7xl flex-wrap justify-center text-center text-2xl sm:text-3xl md:text-6xl font-extrabold tracking-tight text-neutral-400 leading-tight">
             <TextScramble className="text-white">
               {t("SectionServiceSecond.title")}
             </TextScramble>
           </h1>
 
-          <TextScramble
-            className="
-              z-10 mx-auto mt-4 max-w-lg sm:max-w-2xl md:max-w-4xl
-              text-center text-base sm:text-lg md:text-2xl
-              font-medium text-neutral-400
-            "
-          >
+          <TextScramble className="z-10 mx-auto mt-4 max-w-lg sm:max-w-2xl md:max-w-4xl text-center text-base sm:text-lg md:text-2xl font-medium text-neutral-400">
             {t("SectionServiceSecond.description")}
           </TextScramble>
 
-          {/* Cards responsivos já são flex/stack */}
+          {/* Cards padrões */}
           <CardsService />
 
-          <div className=" flex items-center justify-center sm:mb-5">
+          {/* Cards extras se vierem como props */}
+          {features.length > 0 && (
+            <div className="mt-10 grid gap-8 sm:grid-cols-2 md:grid-cols-3 w-full">
+              {features.map((f) => (
+                <CardWithLight key={f.id} feature={f} />
+              ))}
+            </div>
+          )}
+
+          <div className="flex items-center justify-center sm:mb-5 mt-8">
             <Button
               size="lg"
-              className="
-                z-10 rounded-lg px-5 sm:px-6 py-2 sm:py-3
-                text-sm sm:text-base font-semibold text-white
-                transition-colors
-              "
+              className="z-10 rounded-lg px-5 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold text-white transition-colors"
               asChild
             >
               <Link href="/login" passHref>
                 <HoverScrambleButton
                   text={t("SectionServiceSecond.button")}
-                  className="
-                    cursor-pointer rounded bg-[#E32320] px-5 sm:px-6 py-2 sm:py-3
-                    text-sm sm:text-base font-semibold text-white
-                    transition hover:bg-white hover:text-[#E32320]
-                  "
+                  className="cursor-pointer rounded bg-[#E32320] px-5 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold text-white transition hover:bg-white hover:text-[#E32320]"
                 />
               </Link>
             </Button>
