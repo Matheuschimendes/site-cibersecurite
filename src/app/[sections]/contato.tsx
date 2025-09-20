@@ -82,7 +82,7 @@ const Contato = () => {
   const t = useTranslations("Contato");
 
   return (
-    <section className="p-5 py-5 items-center justify-center relative w-full bg-gradient-to-br">
+    <section className="p-5 py-5 mt-10 items-center justify-center relative w-full bg-gradient-to-br">
       <StarCanvas />
       <div className="container max-w-7xl mx-auto">
         <h1 className="text-5xl flex-col md:flex-row font-extrabold tracking-tight mb-4 leading-tight inline-flex">

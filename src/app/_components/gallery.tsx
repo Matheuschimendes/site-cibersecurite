@@ -108,77 +108,43 @@ const Gallery = () => {
             </TextScramble>
           </div>
 
-          <div className="mt-8 flex shrink-0 items-center justify-start gap-4">
-            <Button
-              size="icon"
-              variant="outline"
-              onClick={() => carouselApi?.scrollPrev()}
-              disabled={!canScrollPrev}
-              className="border-[#E32320] text-[#E32320] hover:bg-[#E32320]/30 hover:shadow-[0_0_15px_rgba(227,35,32,0.7)] disabled:text-gray-600 disabled:border-gray-600 transition-shadow duration-300"
-              aria-label={t("previous_slide")}
-            >
-              <ArrowLeft className="w-6 h-6" />
-            </Button>
 
-            <Button
-              size="icon"
-              variant="outline"
-              onClick={() => carouselApi?.scrollNext()}
-              disabled={!canScrollNext}
-              className="border-[#E32320] text-[#E32320] hover:bg-[#E32320]/30 hover:shadow-[0_0_15px_rgba(227,35,32,0.7)] disabled:text-gray-600 disabled:border-gray-600 transition-shadow duration-300"
-              aria-label={t("next_slide")}
-            >
-              <ArrowRight className="w-6 h-6" />
-            </Button>
-          </div>
         </div>
       </div>
 
-      <div className="w-full h-full overflow-hidden md:mb-10">
-        <Carousel
-          setApi={setCarouselApi}
-          opts={{
-            align: "center",
-            slidesToScroll: 1,
-            breakpoints: {
-              "(max-width: 768px)": { dragFree: false, slidesToScroll: 1 },
-            },
-          }}
-          className="relative w-full h-full"
-        >
-          <CarouselContent className="hide-scrollbar flex justify-center md:w-full md:ml-auto ml-auto mb-20 h-full">
-            {items.map((item) => (
-              <CarouselItem
-                key={item.id}
-                className="flex-none mx-auto my-6 basis-full m-5 md:basis-auto w-[90%] md:max-w-[352px]
-                  rounded-[24px] border-transparent 
-                  bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f] p-8 text-white shadow-lg shadow-[#E32320]/25 
-                  transition-all duration-300 hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]"
-              >
-                <div className="flex flex-col h-full group">
-                  <div className="mb-5 flex items-center justify-start gap-4">
-                    {item.icon}
-                    <h3 className="text-xl font-semibold uppercase tracking-wide text-[#E32320] group-hover:text-[#ff574d] transition-colors duration-300">
-                      {t(`items.${item.key}.title`)}
-                    </h3>
-                  </div>
-
-                  <p className="mb-6 flex-grow text-gray-300 leading-relaxed text-base">
-                    {t(`items.${item.key}.description`)}
-                  </p>
-
-                  <Link
-                    href={`/${locale}/${item.key}`}
-                    className="mt-auto flex items-center gap-3 text-sm font-semibold text-[#E32320] group-hover:underline"
-                  >
-                    {t("learn_more")}
-                    <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                  </Link>
+      <div className=" w-full h-full overflow-hidden md:mb-10 mb-10">
+        <div className="container max-w-6xl mx-auto flex flex-col md:flex-row md:gap-8">
+          {items.map((item) => (
+            <div
+              key={item.id}
+              className="mx-auto my-6 w-[90%] md:w-full
+        rounded-[24px] border-transparent 
+        bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f] p-8 text-white shadow-lg shadow-[#E32320]/25 
+        transition-all duration-300 hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]"
+            >
+              <div className="flex flex-col h-full group">
+                <div className="mb-5 flex items-center justify-start gap-4">
+                  {item.icon}
+                  <h3 className="text-xl font-semibold uppercase tracking-wide text-[#E32320] group-hover:text-[#ff574d] transition-colors duration-300">
+                    {t(`items.${item.key}.title`)}
+                  </h3>
                 </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+
+                <p className="mb-6 flex-grow text-gray-300 leading-relaxed text-base">
+                  {t(`items.${item.key}.description`)}
+                </p>
+
+                <Link
+                  href={`/${locale}/${item.key}`}
+                  className="mt-auto flex items-center gap-3 text-sm font-semibold text-[#E32320] group-hover:underline"
+                >
+                  {t("learn_more")}
+                  <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <SessaoConsultoria
