@@ -7,7 +7,8 @@ import { SectionServiceSecond } from "./_components/sectionSeviceSecond";
 import { AboutService } from "./_components/aboutService";
 import { SectionBusiness } from "./_components/serviceBusiness";
 import FooterPage from "@/app/sections/footer";
-import { Contato } from "../../sections/contato";
+import { Contato } from "@/app/sections/contato"; // também use o caminho absoluto
+
 
 export default function ServicePage() {
   // Pegamos o parâmetro caso queira usar futuramente
