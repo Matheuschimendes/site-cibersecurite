@@ -6,8 +6,9 @@ import SectionSevice from "./_components/sectionSevice";
 import { SectionServiceSecond } from "./_components/sectionSeviceSecond";
 import { AboutService } from "./_components/aboutService";
 import { SectionBusiness } from "./_components/serviceBusiness";
+import { Contato } from "@/app/sections/contato";
 import FooterPage from "../../sections/footer";
-import { Contato } from "../../sections/contato";
+
 
 export default function ServicePage() {
   const _ = useParams();
