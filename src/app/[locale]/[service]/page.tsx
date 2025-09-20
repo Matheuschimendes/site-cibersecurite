@@ -7,7 +7,6 @@ import { SectionServiceSecond } from "./_components/sectionSeviceSecond";
 import { AboutService } from "./_components/aboutService";
 import { SectionBusiness } from "./_components/serviceBusiness";
 import FooterPage from "../../sections/footer";
-import { Contato } from "../../sections/contato";
 
 export default function ServicePage() {
   const _ = useParams();
@@ -19,7 +18,6 @@ export default function ServicePage() {
       <AboutService />
       <SectionServiceSecond />
       <SectionBusiness />
-      <Contato />
       <FooterPage />
     </div>
   );
