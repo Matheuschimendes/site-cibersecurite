@@ -86,7 +86,7 @@ const CardsService = ({ platforms }: CardsProps) => {
                   text-white transition-all duration-300
                   hover:scale-[1.02] hover:ring-2 hover:ring-[#E32320]/50 hover:shadow-lg
                   ${isWhiteCard
-                    ? "bg-[#E32320] text-white border-zinc-300"
+                    ? "bg-[#E32320]/20 backdrop-blur-md text-white border border-[#E32320]/50"
                     : "bg-[#0c0c0c] text-white border-zinc-700"
                   }
                 `}

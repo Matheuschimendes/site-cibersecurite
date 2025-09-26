@@ -1,6 +1,14 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { Color, Scene, Fog, PerspectiveCamera, Vector3, Group } from "three";
+
+import { useEffect, useRef, useState, useMemo } from "react";
+import {
+  Color,
+  Scene,
+  Fog,
+  PerspectiveCamera,
+  Vector3,
+  Group,
+} from "three";
 import ThreeGlobe from "three-globe";
 import { useThree, Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
@@ -14,7 +22,7 @@ declare module "@react-three/fiber" {
   }
 }
 
-extend({ ThreeGlobe: ThreeGlobe });
+extend({ ThreeGlobe });
 
 const RING_PROPAGATION_SPEED = 3;
 const aspect = 1.2;
@@ -56,12 +64,18 @@ export type GlobeConfig = {
   autoRotateSpeed?: number;
 };
 
+// ✅ Tipo correto para a câmera
+export interface CameraPosition {
+  x: number;
+  y: number;
+  z: number;
+}
+
 interface WorldProps {
   globeConfig: GlobeConfig;
   data: Position[];
+  cameraPosition?: CameraPosition;
 }
-
-// numbersOfRings não usado, removido
 
 export function Globe({ globeConfig, data }: WorldProps) {
   const globeRef = useRef<ThreeGlobe | null>(null);
@@ -85,7 +99,6 @@ export function Globe({ globeConfig, data }: WorldProps) {
     ...globeConfig,
   };
 
-  // Inicializa o globo uma vez
   useEffect(() => {
     if (!globeRef.current && groupRef.current) {
       globeRef.current = new ThreeGlobe();
@@ -94,30 +107,37 @@ export function Globe({ globeConfig, data }: WorldProps) {
     }
   }, []);
 
-  // Atualiza material do globo
   useEffect(() => {
     if (!globeRef.current || !isInitialized) return;
-
-    const globeMaterial = globeRef.current
-      .globeMaterial() as unknown as {
-        color: Color;
-        emissive: Color;
-        emissiveIntensity: number;
-        shininess: number;
-      };
-
+    const globeMaterial = globeRef.current.globeMaterial() as unknown as {
+      color: Color;
+      emissive: Color;
+      emissiveIntensity: number;
+      shininess: number;
+    };
     globeMaterial.color = new Color(defaultProps.globeColor);
     globeMaterial.emissive = new Color(defaultProps.emissive);
     globeMaterial.emissiveIntensity = defaultProps.emissiveIntensity;
     globeMaterial.shininess = defaultProps.shininess;
-  }, [isInitialized, defaultProps.globeColor, defaultProps.emissive, defaultProps.emissiveIntensity, defaultProps.shininess]);
+  }, [
+    isInitialized,
+    defaultProps.globeColor,
+    defaultProps.emissive,
+    defaultProps.emissiveIntensity,
+    defaultProps.shininess,
+  ]);
 
-  // Atualiza dados e visual do globo
   useEffect(() => {
     if (!globeRef.current || !isInitialized || !data) return;
 
     const arcs = data;
-    const points: { size: number; order: number; color: string; lat: number; lng: number }[] = [];
+    const points: {
+      size: number;
+      order: number;
+      color: string;
+      lat: number;
+      lng: number;
+    }[] = [];
 
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
@@ -137,7 +157,6 @@ export function Globe({ globeConfig, data }: WorldProps) {
       });
     }
 
-    // Remove pontos duplicados
     const filteredPoints = points.filter(
       (v, i, a) =>
         a.findIndex((v2) =>
@@ -199,33 +218,25 @@ export function Globe({ globeConfig, data }: WorldProps) {
     defaultProps.maxRings,
   ]);
 
-  // Animação dos anéis (rings)
   useEffect(() => {
     if (!globeRef.current || !isInitialized || !data) return;
-
     const interval = setInterval(() => {
       if (!globeRef.current) return;
-
       const newNumbersOfRings = genRandomNumbers(
         0,
         data.length,
         Math.floor((data.length * 4) / 5)
       );
-
       const ringsData = data
-        .filter((d, i) => newNumbersOfRings.includes(i))
+        .filter((_, i) => newNumbersOfRings.includes(i))
         .map((d) => ({
           lat: d.startLat,
           lng: d.startLng,
           color: d.color,
         }));
-
       globeRef.current.ringsData(ringsData);
     }, 2000);
-
-    return () => {
-      clearInterval(interval);
-    };
+    return () => clearInterval(interval);
   }, [isInitialized, data]);
 
   return <group ref={groupRef} />;
@@ -233,22 +244,34 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
 export function WebGLRendererConfig() {
   const { gl, size } = useThree();
-
   useEffect(() => {
     gl.setPixelRatio(window.devicePixelRatio);
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
   }, [gl, size]);
-
   return null;
 }
 
-export function World(props: WorldProps) {
-  const { globeConfig } = props;
-  const scene = new Scene();
-  scene.fog = new Fog(0xffffff, 400, 2000);
+// ✅ usa cameraPosition {x,y,z} de forma segura
+export function World({ globeConfig, data, cameraPosition }: WorldProps) {
+  const scene = useMemo(() => {
+    const s = new Scene();
+    s.fog = new Fog(0xffffff, 400, 2000);
+    return s;
+  }, []);
+
+  const camera = useMemo(() => {
+    const c = new PerspectiveCamera(50, aspect, 180, 1800);
+    if (cameraPosition) {
+      c.position.set(cameraPosition.x, cameraPosition.y, cameraPosition.z);
+    } else {
+      c.position.set(0, 0, cameraZ);
+    }
+    return c;
+  }, [cameraPosition]);
+
   return (
-    <Canvas scene={scene} camera={new PerspectiveCamera(50, aspect, 180, 1800)}>
+    <Canvas scene={scene} camera={camera}>
       <WebGLRendererConfig />
       <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
       <directionalLight
@@ -264,7 +287,7 @@ export function World(props: WorldProps) {
         position={new Vector3(-200, 500, 200)}
         intensity={0.8}
       />
-      <Globe {...props} />
+      <Globe globeConfig={globeConfig} data={data} />
       <OrbitControls
         enablePan={false}
         enableZoom={false}
@@ -281,10 +304,7 @@ export function World(props: WorldProps) {
 
 export function hexToRgb(hex: string) {
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-  hex = hex.replace(shorthandRegex, function (m, r, g, b) {
-    return r + r + g + g + b + b;
-  });
-
+  hex = hex.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b);
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
@@ -299,8 +319,7 @@ export function genRandomNumbers(min: number, max: number, count: number) {
   const arr: number[] = [];
   while (arr.length < count) {
     const r = Math.floor(Math.random() * (max - min)) + min;
-    if (arr.indexOf(r) === -1) arr.push(r);
+    if (!arr.includes(r)) arr.push(r);
   }
-
   return arr;
 }

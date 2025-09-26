@@ -93,6 +93,7 @@ const AboutService = ({ features = [] }: AboutProps) => {
       className="p-5 flex flex-col items-center justify-center relative w-full bg-gradient-to-br overflow-hidden -mt-30"
     >
       <div className="container mx-auto">
+        {/* Sections desafio */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-12 relative">
           {/* Texto principal com z-10 */}
           <div className="flex-1 flex flex-col items-start relative overflow-hidden">
@@ -101,30 +102,61 @@ const AboutService = ({ features = [] }: AboutProps) => {
                 className="bg-gradient-to-r from-[#E32320] to-[#ff574d] bg-clip-text text-transparent font-extrabold"
                 duration={2.5}
               >
-                {t("list_title")}
+                {t("list_title_desafio")}
               </TextScramble>
             </h1>
 
             <div className="w-24 h-1 bg-gradient-to-r from-[#E32320] to-[#ff574d] rounded-full mb-8"></div>
 
             <p className="text-xl font-light text-gray-300 leading-relaxed max-w-full break-words">
-              {t("list_title2")}
+              {t("list_title_Description_desafio")}
             </p>
-            <p className="text-xl font-light text-gray-300 leading-relaxed max-w-full break-words ">
-              {t("list_title2")}
-            </p>
+
           </div>
 
           {/* Imagem isolada, z-0, não afetada pelo texto */}
           <div className="flex-1 relative z-0 w-full">
             <Image
-              src={t("image") || "/person.jpg"}
+              src={t("image_desafio") || "/person.jpg"}
               alt={t("title") || "About Service Image"}
               width={600}
               height={400}
               className="rounded-xl object-center w-full h-auto"
               priority
             />
+          </div>
+        </div>
+        {/* Sections solucao */}
+        <div className="mt-20 flex flex-col md:flex-row md:items-start md:justify-between gap-12 relative">
+          {/* Imagem isolada, z-0, não afetada pelo texto */}
+          <div className="flex-1 relative z-0 w-full">
+            <Image
+              src={t("image_solucao") || "/person.jpg"}
+              alt={t("title_solucao") || "About Service Image"}
+              width={600}
+              height={400}
+              className="rounded-xl object-center w-full h-auto"
+              priority
+            />
+          </div>
+
+          {/* Texto principal com z-10 */}
+          <div className="flex-1 flex flex-col items-start relative overflow-hidden">
+            <h1 className="text-3xl font-extrabold tracking-tight mb-4 leading-tight text-left flex flex-col md:flex-row items-start">
+              <TextScramble
+                className="bg-gradient-to-r from-[#E32320] to-[#ff574d] bg-clip-text text-transparent font-extrabold"
+                duration={2.5}
+              >
+                {t("list_title_solucao")}
+              </TextScramble>
+            </h1>
+
+            <div className="w-24 h-1 bg-gradient-to-r from-[#E32320] to-[#ff574d] rounded-full mb-8"></div>
+
+            <p className="text-xl font-light text-gray-300 leading-relaxed max-w-full break-words">
+              {t("list_title_Description_solucao")}
+            </p>
+
           </div>
         </div>
 

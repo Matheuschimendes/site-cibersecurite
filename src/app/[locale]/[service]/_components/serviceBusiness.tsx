@@ -13,8 +13,8 @@ import { CardsSectionBusiness } from "./cardsServiceBusiness";
 
 const SectionBusiness = () => {
   const pathname = usePathname();
-  const serviceKey = pathname.split("/")[0] || "seu_negocio";
-  const t = useTranslations(`galLery.${serviceKey}`);
+  const serviceKey = pathname.split("/")[2] || "brand_protection";
+  const t = useTranslations(`galLery.items.${serviceKey}.seu_negocio`);
 
   return (
     <div

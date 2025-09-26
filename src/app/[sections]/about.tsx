@@ -89,7 +89,7 @@ const About = ({ features = [] }: AboutProps) => {
 
             {/* Subtítulo com gradiente */}
             <TextScramble
-              className="bg-gradient-to-r from-[#E32320] to-[#ff574d] bg-clip-text text-transparent font-extrabold"
+              className="bg-gradient-to-r from-red-600 to-[#ff574d] bg-clip-text text-transparent font-extrabold"
               duration={2.5}
             >
               {t("subtitle")}
@@ -100,7 +100,7 @@ const About = ({ features = [] }: AboutProps) => {
 
 
           {/* Linha decorativa */}
-          <div className="w-24 h-1 bg-gradient-to-r from-[#E32320] to-[#ff574d] rounded-full mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-[#ff574d] rounded-full mb-8"></div>
 
           {/* Descrição com efeito */}
           <TextScramble

@@ -206,8 +206,8 @@ const Navbar = ({ logo }: NavbarProps) => {
               <Button
                 size="sm"
                 className={`border ${currentLocale === "pt"
-                    ? "bg-[#E32320] text-white"
-                    : "hover:bg-[#E32320] hover:text-white"
+                  ? "bg-red-600 text-white"
+                  : "hover:bg-red-600 hover:text-white"
                   }`}
               >
                 PT
@@ -217,8 +217,8 @@ const Navbar = ({ logo }: NavbarProps) => {
               <Button
                 size="sm"
                 className={`border ${currentLocale === "en"
-                    ? "bg-[#E32320] text-white"
-                    : "hover:bg-[#E32320] hover:text-white"
+                  ? "bg-red-600 text-white"
+                  : "hover:bg-red-600 hover:text-white"
                   }`}
               >
                 EN
@@ -273,8 +273,8 @@ const Navbar = ({ logo }: NavbarProps) => {
                       <Button
                         size="sm"
                         className={`border w-full cursor-pointer ${currentLocale === "pt"
-                            ? "bg-white text-[#E32320]"
-                            : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
+                          ? "bg-white text-red-600"
+                          : "bg-red-600 text-white hover:bg-white hover:text-[#E32320]"
                           }`}
                       >
                         BR
@@ -285,8 +285,8 @@ const Navbar = ({ logo }: NavbarProps) => {
                       <Button
                         size="sm"
                         className={`border w-full cursor-pointer ${currentLocale === "en"
-                            ? "bg-white text-[#E32320]"
-                            : "bg-[#E32320] text-white hover:bg-white hover:text-[#E32320]"
+                          ? "bg-white text-red-600"
+                          : "bg-red-600 text-white hover:bg-white hover:text-[#E32320]"
                           }`}
                       >
                         US

@@ -59,7 +59,7 @@ const Cards = ({ platforms }: CardsProps) => {
                 className="group relative flex flex-col gap-5 rounded-2xl border border-zinc-700 bg-[#0c0c0c] px-8 py-10 text-white transition-all duration-300 hover:scale-[1.02] hover:ring-2 hover:ring-[#E32320]/50 hover:shadow-lg"
               >
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#1a1a1a] shadow">
-                  <Icon className="w-8 h-8 text-[#E32320]" />
+                  <Icon className="w-8 h-8 text-red-600" />
                 </div>
                 <h2 className="text-lg font-semibold tracking-widest uppercase font-mono text-center">
                   {platform.subtitle}
