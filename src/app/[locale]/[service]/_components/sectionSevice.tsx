@@ -52,7 +52,6 @@ export default function SectionSevice() {
                     className="bg-red-600 hover:bg-white hover:text-[#E32320] text-white font-semibold px-6 py-3 rounded transition cursor-pointer"
                   />
                 </Link>
-
               </Button>
             </div>
           </motion.div>

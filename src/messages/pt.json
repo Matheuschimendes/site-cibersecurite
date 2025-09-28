@@ -126,9 +126,9 @@
             "card5": {
               "title": "Tomada de decisão estratégica baseada em fatos verificados, não em suposições."
             }
-          },
-          "button": "Solicite uma Consulta Confidencial"
-        }
+          }
+        },
+        "button": "Solicite uma Consulta Confidencial"
       },
       "leak_detection": {
         "title": "Inteligência de Ameaças Estratégica e Tática",
@@ -187,9 +187,9 @@
             "card4": {
               "title": "Maximização do ROI em Segurança: Justifique investimentos e otimize o uso de ferramentas e pessoal com base em evidências concretas sobre as ameaças que realmente importam para você."
             }
-          },
-          "button": "Agende um Briefing de Ameaças"
-        }
+          }
+        },
+        "button": "Agende um Briefing de Ameaças"
       },
       "vip_protection": {
         "title": "Vigilância e Proteção de Ativos na Deep & Dark Web",
@@ -249,9 +249,9 @@
             "card4": {
               "title": "Eficiência Operacional: Simplifique a gestão de segurança externa com um único parceiro especialista, em vez de múltiplos fornecedores."
             }
-          },
-          "button": "Agende uma Análise de Risco"
-        }
+          }
+        },
+        "button": "Agende uma Análise de Risco"
       }
     }
   },
