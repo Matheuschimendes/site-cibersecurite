@@ -84,7 +84,7 @@ const CardWithLight = ({ feature }: { feature: Feature }) => {
 
 const AboutService = ({ features = [] }: AboutProps) => {
   const pathname = usePathname(); // /pt/leak_detection
-  const serviceKey = pathname.split("/")[2] || "brand_protection"; // pega o segmento da rota
+  const serviceKey = pathname.split("/")[3] || "brand_protection"; // pega o segmento da rota
   const t = useTranslations(`galLery.items.${serviceKey}`); // pega as traduções do serviço automaticamente
 
   return (
