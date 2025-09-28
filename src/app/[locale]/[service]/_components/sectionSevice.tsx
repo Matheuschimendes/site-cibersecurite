@@ -32,7 +32,7 @@ export default function SectionSevice() {
             className="flex flex-col items-center text-center"
           >
             <h1
-              className="
+              className="mt-20
               text-3xl sm:text-4xl md:text-5xl
               font-extrabold tracking-tight leading-tight
               text-neutral-300

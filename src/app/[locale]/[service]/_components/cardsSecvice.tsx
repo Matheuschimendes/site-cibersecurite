@@ -20,7 +20,7 @@ interface CardsProps {
 }
 
 const CardsService = ({ platforms }: CardsProps) => {
-  const pathname = usePathname(); // ex.: /pt/leak_detection
+  const pathname = usePathname();
   const serviceKey = pathname.split("/")[2] || "brand_protection";
   const t = useTranslations(`galLery.items.${serviceKey}`);
 
@@ -51,25 +51,19 @@ const CardsService = ({ platforms }: CardsProps) => {
 
   const data = platforms ?? defaultPlatforms;
 
-
-
   return (
     <section
-      className={`
+      className="
         relative w-full bg-gradient-to-br
         flex flex-col items-center justify-center
         px-4 sm:px-6 md:px-10
-        py-5 sm:py-14 md:py-20   /* <<< margens verticais ajustadas */
-        overflow-hidden 
-     `}
+        py-5 sm:py-14 md:py-20
+        overflow-hidden
+      "
     >
       <div className="mx-auto w-full max-w-6xl">
-        <div
-          className="
-            grid gap-6 sm:gap-8
-            grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2
-          "
-        >
+        {/* Grid responsivo: 1 coluna mobile, 2 em sm/md, 4 em lg */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {Object.entries(data).map(([key, platform], idx) => {
             if (!platform) return null;
             const Icon = icons[idx];
@@ -80,9 +74,9 @@ const CardsService = ({ platforms }: CardsProps) => {
               <div
                 key={key}
                 className={`
-                  group relative flex flex-col items-start
-                  gap-2 rounded-2xl border border-zinc-700
-                  bg-[#0c0c0c] px-6 py-8 sm:px-8 sm:py-10
+                  group relative flex flex-col items-start gap-2
+                  rounded-2xl border border-zinc-700
+                  px-6 py-8 sm:px-8 sm:py-10
                   text-white transition-all duration-300
                   hover:scale-[1.02] hover:ring-2 hover:ring-[#E32320]/50 hover:shadow-lg
                   ${isWhiteCard
