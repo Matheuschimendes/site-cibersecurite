@@ -61,9 +61,9 @@ const CardsService = ({ platforms }: CardsProps) => {
         overflow-hidden
       "
     >
-      <div className="mx-auto w-full max-w-6xl">
+      <div className="mx-auto w-full max-w-9xl">
         {/* Grid responsivo: 1 coluna mobile, 2 em sm/md, 4 em lg */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
           {Object.entries(data).map(([key, platform], idx) => {
             if (!platform) return null;
             const Icon = icons[idx];

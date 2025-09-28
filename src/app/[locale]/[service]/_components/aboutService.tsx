@@ -120,7 +120,8 @@ const AboutService = ({ features = [] }: AboutProps) => {
         </div>
 
         {/* ======= SOLUÇÃO ======= */}
-        <div className="mt-20 flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-12 relative">
+        {/* Inverte a ordem no desktop, mantendo mobile intacto */}
+        <div className="mt-20 flex flex-col md:flex-row-reverse md:items-start md:justify-between gap-8 md:gap-12 relative">
           {/* Texto sempre em cima no mobile */}
           <div className="flex-1 flex flex-col items-start">
             <h1 className="text-3xl font-extrabold tracking-tight mb-4 leading-tight text-left">

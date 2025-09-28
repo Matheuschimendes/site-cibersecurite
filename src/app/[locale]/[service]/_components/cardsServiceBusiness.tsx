@@ -49,7 +49,7 @@ const CardsSectionBusiness = ({ platforms }: CardsProps) => {
 
   return (
     <section className="relative flex w-full flex-col items-center justify-center bg-gradient-to-br px-4 sm:px-6 md:px-10 py-10 sm:py-14 md:py-20 overflow-hidden">
-      <div className="w-full max-w-6xl">
+      <div className="w-full max-w-9xl">
         {/* Grid responsivo: 1 coluna mobile, 2 sm/md, 5 lg */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 w-full">
           {validPlatforms.map(([key, platform], idx) => {
@@ -78,7 +78,7 @@ const CardsSectionBusiness = ({ platforms }: CardsProps) => {
                 >
                   <Icon className={`${isWhiteCard ? "text-black" : "text-[#E32320]"}`} />
                 </div>
-                <h2 className="text-[14px] sm:text-sm lg:text-base font-semibold tracking-widest font-mono">
+                <h2 className="text-[14px] sm:text-sm lg:text-base font-mono">
                   {platform.subtitle}
                 </h2>
               </div>
