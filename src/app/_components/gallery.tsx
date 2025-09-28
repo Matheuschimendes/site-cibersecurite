@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React from "react";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 import {
-  ArrowLeft,
-  ArrowRight,
   ArrowUpRight,
   Brain,
   Eye,
@@ -15,19 +15,9 @@ import {
   Zap,
 } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
-import type { CarouselApi } from "@/components/ui/carousel";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
 import StarCanvas from "./star";
 import { SessaoConsultoria } from "./SessaoConsultoria";
 import { TextScramble } from "@/components/animation/TextScramble";
-import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
-import React from "react";
 
 interface GalleryItem {
   id: string;
@@ -53,15 +43,11 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 const Gallery = () => {
-  const [carouselApi, setCarouselApi] = useState<CarouselApi>();
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(false);
-
   const t = useTranslations("galLery");
   const tConsultoria = useTranslations("Personalizada");
-  const locale = useLocale(); // ✅ idioma atual (ex: "pt")
+  const locale = useLocale();
 
-  // Tipagem segura para os dados traduzidos
+  // dados traduzidos
   const jsonItems = t.raw("items") as Record<string, GalleryTranslationItem>;
 
   const items: GalleryItem[] = Object.keys(jsonItems).map((key, index) => ({
@@ -70,18 +56,6 @@ const Gallery = () => {
     icon: iconMap[key] || <Zap size={40} />,
     namespace: "galLery",
   }));
-
-  useEffect(() => {
-    if (!carouselApi) return;
-
-    const updateSelection = () => {
-      setCanScrollPrev(carouselApi.canScrollPrev());
-      setCanScrollNext(carouselApi.canScrollNext());
-    };
-
-    updateSelection();
-    carouselApi.on("select", updateSelection);
-  }, [carouselApi]);
 
   return (
     <section className="p-5 w-screen h-full flex flex-col items-center justify-center relative bg-gradient-to-br md:pb-10">
@@ -107,20 +81,18 @@ const Gallery = () => {
               {t("description")}
             </TextScramble>
           </div>
-
-
         </div>
       </div>
 
-      <div className=" w-full h-full overflow-hidden md:mb-10 mb-10">
+      <div className="w-full h-full overflow-hidden md:mb-10 mb-10">
         <div className="container max-w-6xl mx-auto flex flex-col md:flex-row md:gap-8">
           {items.map((item) => (
             <div
               key={item.id}
               className="mx-auto my-6 w-[90%] md:w-full
-        rounded-[24px] border-transparent 
-        bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f] p-8 text-white shadow-lg shadow-[#E32320]/25 
-        transition-all duration-300 hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]"
+                rounded-[24px] border-transparent 
+                bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f] p-8 text-white shadow-lg shadow-[#E32320]/25 
+                transition-all duration-300 hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]"
             >
               <div className="flex flex-col h-full group">
                 <div className="mb-5 flex items-center justify-start gap-4">
