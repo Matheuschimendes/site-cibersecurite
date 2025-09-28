@@ -67,6 +67,7 @@
       "brand_protection": {
         "title": "Contrainteligência Corporativa",
         "description": "Proteja seu negócio de dentro para fora com inteligência investigativa para decisões de máxima confiança.",
+        "button": "Agende uma Análise de Risco",
         "list_title_desafio": "O Desafio",
         "list_title_Description_desafio": "A integridade da sua operação depende diretamente da robustez de sua cadeia de suprimentos — que inclui tanto fornecedores externos quanto o capital humano interno. A falha em verificar rigorosamente um único elo, seja um parceiro logístico crítico ou um executivo recém-contratado, pode introduzir vulnerabilidades em toda a sua estrutura. A análise superficial de credenciais e a auditoria puramente financeira são insuficientes para detectar os riscos mais danosos: fraudes premeditadas, conflitos de interesse, passivos legais e reputacionais ocultos. Contratar ou se associar sem uma análise prévia de Background Check é gerenciar o negócio com base em uma visão incompleta e perigosa da realidade operacional e ética de seus parceiros.",
         "list_title_solucao": "A Solução",
@@ -126,13 +127,14 @@
             "card5": {
               "title": "Tomada de decisão estratégica baseada em fatos verificados, não em suposições."
             }
-          }
-        },
-        "button": "Solicite uma Consulta Confidencial"
+          },
+          "button": "Solicite uma Consulta Confidencial"
+        }
       },
       "leak_detection": {
         "title": "Inteligência de Ameaças Estratégica e Tática",
         "description": "Transformando dados brutos de ameaças em clareza e vantagem decisória para o seu negócio.",
+        "button": "Agende uma Análise de Risco",
         "list_title_desafio": "O Desafio",
         "list_title_Description_desafio": "Sua empresa pode ter acesso a feeds de segurança e até alertas da Deep Web, mas como conectar esses pontos? Como traduzir um indicador técnico em um risco de negócio real? E como garantir que a pessoa certa — do analista do SOC ao CEO — receba a inteligência correta, no formato certo e na hora certa para agir? A informação sem contexto é apenas ruído.",
         "list_title_solucao": "A Solução",
@@ -187,13 +189,14 @@
             "card4": {
               "title": "Maximização do ROI em Segurança: Justifique investimentos e otimize o uso de ferramentas e pessoal com base em evidências concretas sobre as ameaças que realmente importam para você."
             }
-          }
-        },
-        "button": "Agende um Briefing de Ameaças"
+          },
+          "button": "Agende um Briefing de Ameaças"
+        }
       },
       "vip_protection": {
         "title": "Vigilância e Proteção de Ativos na Deep & Dark Web",
         "description": "Um serviço unificado para monitorar tanto o ator da ameaça quanto seus ativos digitais expostos.",
+        "button": "Agende uma Análise de Risco",
         "list_title_desafio": "O Desafio",
         "list_title_Description_desafio": "Sua empresa enfrenta dois riscos críticos e invisíveis: o adversário que planeja um ataque e o seu próprio dado sensível que já pode estar comprometido. Como monitorar ambos os lados dessa equação – o caçador e a presa – em um ambiente anônimo e hostil como a Deep & Dark Web? Contratar soluções separadas gera complexidade e desconecta a inteligência da ação.",
         "list_title_solucao": "A Solução",
@@ -249,9 +252,9 @@
             "card4": {
               "title": "Eficiência Operacional: Simplifique a gestão de segurança externa com um único parceiro especialista, em vez de múltiplos fornecedores."
             }
-          }
-        },
-        "button": "Agende uma Análise de Risco"
+          },
+          "button": "Agende uma Análise de Risco"
+        }
       }
     }
   },
