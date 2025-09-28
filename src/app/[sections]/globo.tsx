@@ -78,9 +78,9 @@ export default function Globe() {
     []
   );
 
-  const colors = useMemo(() => ["#E32320", "#E32320", "#E32320"], []);
+  const colors = useMemo(() => ["#E32320", "#E32320", "#E32320"], []); // cores aleatórias para os arcos do globo
 
-  const sampleArcs = useMemo(
+  const sampleArcs = useMemo( // 4 arcos aleatórios para o globo rotacionar ao longo do tempo
     () => [
       { order: 1, startLat: 37.0902, startLng: -95.7129, endLat: 51.5072, endLng: -0.1276, arcAlt: 0.3, color: colors[0] },
       { order: 2, startLat: -14.235, startLng: -51.9253, endLat: 51.5072, endLng: -0.1276, arcAlt: 0.3, color: colors[1] },
@@ -97,7 +97,7 @@ export default function Globe() {
 
   return (
     <div className="flex flex-col items-center justify-center py-10 h-screen md:h-auto relative w-full">
-      <div className="mt-30 max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[65rem] px-4">
+      <div className="mt-30 max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[55rem] px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -140,7 +140,7 @@ export default function Globe() {
       {/* 🌍 Renderiza o globo */}
       {showGlobe && (
         <div
-          className="md:-mt-290 absolute w-full -bottom-50 md:-bottom-25 h-120 md:h-230"
+          className="md:-mt-200 absolute w-full -bottom-50 md:-bottom-10 h-100 md:h-180"
           id="hero-lightpass"
         >
           <World
