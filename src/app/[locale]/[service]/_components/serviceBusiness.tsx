@@ -74,7 +74,7 @@ const SectionBusiness = () => {
               "
               asChild
             >
-              <Link href="/login" passHref>
+              <Link href="#" passHref>
                 <HoverScrambleButton
                   text={t("button")}
                   className="

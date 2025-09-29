@@ -101,7 +101,7 @@ const Navbar = ({ logo, currentLocale = "pt" }: NavbarProps) => {
       return (
         <NavigationMenuItem key={item.title}>
           <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-          <NavigationMenuContent className="bg-[#E32320] min-w-[320px]">
+          <NavigationMenuContent className="bg-red-600 min-w-[320px]">
             {item.items.map((subItem) => (
               <NavigationMenuLink
                 asChild
@@ -151,7 +151,7 @@ const Navbar = ({ logo, currentLocale = "pt" }: NavbarProps) => {
 
   const SubMenuLink = ({ item }: { item: MenuItem }) => (
     <Link
-      className="hover:bg-white hover:text-[#E32320] flex select-none flex-row gap-4 rounded-md p-3 transition-colors"
+      className="bg-white text-red-600 hover:bg-red-600 hover:text-white flex select-none flex-row gap-4 rounded-md p-3 mt-3 transition-colors "
       href={item.url}
     >
       <div>{item.icon}</div>
@@ -241,7 +241,7 @@ const Navbar = ({ logo, currentLocale = "pt" }: NavbarProps) => {
                   <Menu className="size-4" />
                 </Button>
               </SheetTrigger>
-              <SheetContent className="overflow-y-auto bg-[#E32320]">
+              <SheetContent className="overflow-y-auto bg-red-600">
                 <SheetHeader>
                   <SheetTitle>
                     <Link href="/">
@@ -269,11 +269,11 @@ const Navbar = ({ logo, currentLocale = "pt" }: NavbarProps) => {
                       <Button
                         size="sm"
                         className={`border w-full cursor-pointer ${currentLocale === "pt"
-                          ? "bg-white text-red-600"
+                          ? "bg-white text-red-600 hover:text-white"
                           : "bg-red-600 text-white hover:bg-white hover:text-[#E32320]"
                           }`}
                       >
-                        BR
+                        PT
                       </Button>
                     </Link>
 
@@ -285,7 +285,7 @@ const Navbar = ({ logo, currentLocale = "pt" }: NavbarProps) => {
                           : "bg-red-600 text-white hover:bg-white hover:text-[#E32320]"
                           }`}
                       >
-                        US
+                        EN
                       </Button>
                     </Link>
                   </div>
