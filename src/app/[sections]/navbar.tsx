@@ -43,13 +43,16 @@ interface NavbarProps {
     alt: string;
     title: string;
   };
+  currentLocale?: string;
 }
 
-const Navbar = ({ logo }: NavbarProps) => {
+const Navbar = ({ logo, currentLocale = "pt" }: NavbarProps) => {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const pathname = usePathname();
-  const currentLocale = pathname.split("/")[1];
+  const segments = pathname.split("/").filter(Boolean);
+  const serviceKey = segments[2] || "brand_protection"; // Ajuste para pegar o submenu correto
+
   const t = useTranslations("Navbar");
 
   const menu: MenuItem[] = [
@@ -60,28 +63,22 @@ const Navbar = ({ logo }: NavbarProps) => {
       url: "#",
       items: [
         {
-          title: t("submenus.brand_protection.title"),
-          description: t("submenus.brand_protection.description"),
+          title: t(`submenus.brand_protection.title`),
+          description: t(`submenus.brand_protection.description`),
           icon: <Zap className="size-5 shrink-0" />,
-          url: "/services/brand-protection",
+          url: `/brand_protection`,
         },
         {
-          title: t("submenus.leak_detection.title"),
-          description: t("submenus.leak_detection.description"),
+          title: t(`submenus.leak_detection.title`),
+          description: t(`submenus.leak_detection.description`),
           icon: <Sunset className="size-5 shrink-0" />,
-          url: "/services/leak-detection",
+          url: `/leak_detection`,
         },
         {
-          title: t("submenus.vip_protection.title"),
-          description: t("submenus.vip_protection.description"),
+          title: t(`submenus.vip_protection.title`),
+          description: t(`submenus.vip_protection.description`),
           icon: <Trees className="size-5 shrink-0" />,
-          url: "/services/vip-protection",
-        },
-        {
-          title: t("submenus.cyber_risk_insights.title"),
-          description: t("submenus.cyber_risk_insights.description"),
-          icon: <Book className="size-5 shrink-0" />,
-          url: "/services/cyber-risk-insights",
+          url: `/vip_protection`,
         },
       ],
     },
@@ -109,7 +106,7 @@ const Navbar = ({ logo }: NavbarProps) => {
               <NavigationMenuLink
                 asChild
                 key={subItem.title}
-                className="p-2 hover:bg-white hover:*:text-[#E32320] transition-colors block"
+                className="p-2 hover:bg-white hover:text-[#E32320] transition-colors block"
               >
                 <SubMenuLink item={subItem} />
               </NavigationMenuLink>
@@ -167,11 +164,10 @@ const Navbar = ({ logo }: NavbarProps) => {
     </Link>
   );
 
-  // Função corrigida: remove parâmetro não usado
   const getLocaleHref = () => {
-    const segments = pathname.split("/").filter(Boolean); // ["pt","leak_detection"]
-    segments.shift(); // remove o locale atual
-    return "/" + segments.join("/"); // "/leak_detection"
+    const segments = pathname.split("/").filter(Boolean);
+    segments.shift(); // remove locale atual
+    return "/" + segments.join("/");
   };
 
   return (

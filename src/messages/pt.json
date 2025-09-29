@@ -6,20 +6,16 @@
     "mentorias": "Mentorias",
     "submenus": {
       "brand_protection": {
-        "title": "Proteção de Marca",
+        "title": "Contrainteligência Corporativa",
         "description": "Monitore e remova ameaças à sua marca em ambientes digitais."
       },
       "leak_detection": {
-        "title": "Detecção de Vazamentos",
+        "title": "Inteligência de Ameaças Estratégica e Tática",
         "description": "Identifique vazamentos de dados e informações sensíveis antes que causem danos."
       },
       "vip_protection": {
-        "title": "Proteção VIP",
+        "title": "Vigilância e Proteção de Ativos na Deep & Dark Web",
         "description": "Garanta a segurança digital de executivos e pessoas de alto risco."
-      },
-      "cyber_risk_insights": {
-        "title": "Insights de Risco Cibernético",
-        "description": "Análises aprofundadas para antecipar ameaças e reduzir riscos."
       }
     }
   },
