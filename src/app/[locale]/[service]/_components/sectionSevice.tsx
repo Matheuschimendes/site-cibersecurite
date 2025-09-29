@@ -43,7 +43,7 @@ export default function SectionSevice() {
             </h1>
 
 
-            <TextScramble className="text-center text-lg md:text-2xl font-medium text-neutral-400 max-w-2xl mt-4 mx-auto z-10">
+            <TextScramble className="text-center text-lg md:text-2xl font-medium text-neutral-400 max-w-2xl mt-4 mx-auto">
               {t('description')}
             </TextScramble>
 
