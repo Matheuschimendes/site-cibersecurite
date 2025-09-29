@@ -91,19 +91,19 @@
         "CardsService": {
           "Cards": {
             "card1": {
-              "title": "Precisão",
+              "title": "",
               "description": "Due Diligence de Terceiros: Investigamos a fundo potenciais parceiros, fornecedores ou alvos de fusão e aquisição (M&A). Mapeamos a estrutura societária, o histórico reputacional e legal dos sócios (KYP - Know Your Partner), e identificamos passivos ocultos ou envolvimento em atividades ilícitas."
             },
             "card2": {
-              "title": "Expertise",
+              "title": "",
               "description": "Background Check (Análise de Perfil): Realizamos verificações aprofundadas de candidatos e colaboradores em posições-chave. Analisamos o histórico profissional, processos judiciais, reputação digital e potenciais conflitos de interesse para garantir a integridade e a confiabilidade da sua equipe."
             },
             "card3": {
-              "title": "Excelência",
+              "title": "",
               "description": "Investigação e Resposta a Fraudes: Atuamos na apuração de suspeitas de fraude, corrupção, roubo de ativos e sabotagem interna. Coletamos evidências de forma estruturada, identificamos os envolvidos e fornecemos relatórios detalhados que servem de base para medidas administrativas e legais."
             },
             "card4": {
-              "title": "teste",
+              "title": "",
               "description": "Mapeamento de Riscos Internos e Conflitos de Interesse: Analisamos o ecossistema de seus colaboradores e suas conexões para identificar relacionamentos não declarados com concorrentes, atividades paralelas suspeitas e outros fatores de risco que as auditorias tradicionais não revelam."
             }
           }
@@ -156,19 +156,19 @@
         "CardsService": {
           "Cards": {
             "card1": {
-              "title": "Precisão",
+              "title": "",
               "description": "Inteligência Estratégica (Para a Liderança): Entregamos relatórios executivos que conectam o cenário de ameaças (atores, tendências, riscos geopolíticos) diretamente aos objetivos e à continuidade do seu negócio. Nossas análises respondem ao (porquê) e (e se), recomendando direcionamentos estratégicos e de investimento."
             },
             "card2": {
-              "title": "Expertise",
+              "title": "",
               "description": "Inteligência Tática (Para a Defesa Ativa): Produzimos dossiês detalhados sobre as Táticas, Técnicas e Procedimentos (TTPs) dos grupos de ataque que visam seu setor. Descrevemos seus métodos e ferramentas para enriquecer seu threat hunting, aprimorar suas regras de detecção e treinar sua equipe de defesa."
             },
             "card3": {
-              "title": "Excelência",
+              "title": "",
               "description": "Inteligência Operacional (Para o SOC): Fornecemos alertas contextualizados sobre campanhas de ataque em andamento. Aqui, enriquecemos os achados do nosso serviço de DDW e de outras fontes com o contexto do seu negócio, respondendo (o que isso significa para nós agora?) e fornecendo IOCs de alta fidelidade para resposta a incidentes."
             },
             "card4": {
-              "title": "teste",
+              "title": "",
               "description": "Inteligência de Vulnerabilidades (Para a TI e Infraestrutura): Monitoramos e analisamos vulnerabilidades (CVEs) que são relevantes para o seu stack tecnológico e que estão sendo ativamente discutidas ou exploradas por cibercriminosos. Isso permite uma priorização de patching baseada em risco real, e não apenas em criticidade teórica."
             }
           }
@@ -219,19 +219,19 @@
         "CardsService": {
           "Cards": {
             "card1": {
-              "title": "Precisão",
+              "title": "",
               "description": "Monitoramento de Credenciais Comprometidas: Alertas sobre e-mails e senhas de colaboradores e clientes encontrados em vazamentos e stealer logs."
             },
             "card2": {
-              "title": "Expertise",
+              "title": "",
               "description": "Busca por Dados Sensíveis (PII): Detecção de bases de dados, documentos confidenciais e informações de clientes sendo compartilhados ou vendidos."
             },
             "card3": {
-              "title": "Excelência",
+              "title": "",
               "description": "Identificação de Propriedade Intelectual Vazada: Alertas sobre código-fonte, patentes e segredos comerciais expostos em fóruns ou mercados."
             },
             "card4": {
-              "title": "teste",
+              "title": "",
               "description": "Mapeamento de Riscos Internos e Conflitos de Interesse: Analisamos o ecossistema de seus colaboradores e suas conexões para identificar relacionamentos não declarados com concorrentes, atividades paralelas suspeitas e outros fatores de risco que as auditorias tradicionais não revelam."
             }
           }
