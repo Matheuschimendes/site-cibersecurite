@@ -64,9 +64,9 @@
         "title": "Contrainteligência Corporativa",
         "description": "Proteja seu negócio de dentro para fora com inteligência investigativa para decisões de máxima confiança.",
         "button": "Agende uma Análise de Risco",
-        "list_title_desafio": "O Desafio",
+        "list_title_desafio": "Gestão de Riscos Ocultos",
         "list_title_Description_desafio": "A integridade da sua operação depende diretamente da robustez de sua cadeia de suprimentos — que inclui tanto fornecedores externos quanto o capital humano interno. A falha em verificar rigorosamente um único elo, seja um parceiro logístico crítico ou um executivo recém-contratado, pode introduzir vulnerabilidades em toda a sua estrutura. A análise superficial de credenciais e a auditoria puramente financeira são insuficientes para detectar os riscos mais danosos: fraudes premeditadas, conflitos de interesse, passivos legais e reputacionais ocultos. Contratar ou se associar sem uma análise prévia de Background Check é gerenciar o negócio com base em uma visão incompleta e perigosa da realidade operacional e ética de seus parceiros.",
-        "list_title_solucao": "A Solução",
+        "list_title_solucao": "Decisões Baseadas em Fatos, não Suposições",
         "list_title_Description_solucao": "Nosso serviço de Inteligência e Investigações Corporativas é a sua unidade de diligência e apuração. Atuamos de forma discreta e metódica para verificar fatos, analisar históricos e expor riscos ocultos antes que eles se tornem um problema. Combinando técnicas avançadas de investigação em fontes abertas (OSINT), análise de dados e, quando necessário, apuração em campo, nós fornecemos um dossiê completo para garantir que suas decisões de contratação, parceria e investimento sejam baseadas em informações verificadas.",
         "list_title2": "A análise superficial de credenciais e a auditoria puramente financeira são insuficientes para detectar os riscos mais danosos: fraudes premeditadas, conflitos de interesse, passivos legais e reputacionais ocultos. Contratar ou se associar sem uma análise prévia de Background Check é gerenciar o negócio com base em uma visão incompleta e perigosa da realidade operacional e ética de seus parceiros.",
         "listItems": [
@@ -76,52 +76,57 @@
           "Proteção da propriedade intelectual"
         ],
         "list_description": "A informação sem contexto é apenas ruído.",
-        "image_desafio": "/person.jpg",
-        "image_solucao": "/mundo.jpg",
+        "image_desafio": "/person.webp",
+        "image_solucao": "/risco.webp",
         "SectionServiceSecond": {
-          "title": "Nossos Entregáveis",
+          "title": "Nossas Soluções em Contrainteligência",
           "title2": "Investigações Digitais & Cibersegurança Avançada",
-          "description": "Proteja seu negócio de dentro para fora com inteligência investigativa para decisões de máxima confiança.",
+          "description": "Investigamos, analisamos e expomos riscos ocultos para proteger sua operação de ameaças internas e externas.",
           "button": "Agende um Briefing de Ameaças"
         },
         "CardsService": {
           "Cards": {
             "card1": {
-              "title": "",
-              "description": "Due Diligence de Terceiros: Investigamos a fundo potenciais parceiros, fornecedores ou alvos de fusão e aquisição (M&A). Mapeamos a estrutura societária, o histórico reputacional e legal dos sócios (KYP - Know Your Partner), e identificamos passivos ocultos ou envolvimento em atividades ilícitas."
+              "title": "Due Diligence de Terceiros",
+              "description": " Investigamos a fundo potenciais parceiros, fornecedores ou alvos de fusão e aquisição (M&A). Mapeamos a estrutura societária, o histórico reputacional e legal dos sócios (KYP - Know Your Partner), e identificamos passivos ocultos ou envolvimento em atividades ilícitas."
             },
             "card2": {
-              "title": "",
-              "description": "Background Check (Análise de Perfil): Realizamos verificações aprofundadas de candidatos e colaboradores em posições-chave. Analisamos o histórico profissional, processos judiciais, reputação digital e potenciais conflitos de interesse para garantir a integridade e a confiabilidade da sua equipe."
+              "title": "Background Check (Análise de Perfil)",
+              "description": " Realizamos verificações aprofundadas de candidatos e colaboradores em posições-chave. Analisamos o histórico profissional, processos judiciais, reputação digital e potenciais conflitos de interesse para garantir a integridade e a confiabilidade da sua equipe."
             },
             "card3": {
-              "title": "",
-              "description": "Investigação e Resposta a Fraudes: Atuamos na apuração de suspeitas de fraude, corrupção, roubo de ativos e sabotagem interna. Coletamos evidências de forma estruturada, identificamos os envolvidos e fornecemos relatórios detalhados que servem de base para medidas administrativas e legais."
+              "title": "Investigação e Resposta a Fraudes",
+              "description": " Atuamos na apuração de suspeitas de fraude, corrupção, roubo de ativos e sabotagem interna. Coletamos evidências de forma estruturada, identificamos os envolvidos e fornecemos relatórios detalhados que servem de base para medidas administrativas e legais."
             },
             "card4": {
-              "title": "",
-              "description": "Mapeamento de Riscos Internos e Conflitos de Interesse: Analisamos o ecossistema de seus colaboradores e suas conexões para identificar relacionamentos não declarados com concorrentes, atividades paralelas suspeitas e outros fatores de risco que as auditorias tradicionais não revelam."
+              "title": "Mapeamento de Riscos Internos e Conflitos de Interesse",
+              "description": " Analisamos o ecossistema de seus colaboradores e suas conexões para identificar relacionamentos não declarados com concorrentes, atividades paralelas suspeitas e outros fatores de risco que as auditorias tradicionais não revelam."
             }
           }
         },
         "seu_negocio": {
-          "title": "O Impacto no Seu Negócio",
-          "description": "Analisar um texto para esse local",
+          "title": "Proteção que Gera Resultados",
+          "description": "Mitigação de perdas, aumento da transparência e fortalecimento da governança corporativa.",
           "cards": {
             "card1": {
-              "title": "Contratações mais seguras e redução drástica do risco de ameaças internas (insider threats)."
+              "title": "Contratações mais seguras e redução drástica do risco de ameaças internas (insider threats).",
+              "description": ""
             },
             "card2": {
-              "title": "Mitigação de perdas financeiras e danos reputacionais em parcerias e operações de M&A."
+              "title": "Mitigação de perdas financeiras e danos reputacionais em parcerias e operações de M&A.",
+              "description": ""
             },
             "card3": {
-              "title": "Respostas rápidas e estruturadas a incidentes de fraude, minimizando o impacto negativo."
+              "title": "Respostas rápidas e estruturadas a incidentes de fraude, minimizando o impacto negativo.",
+              "description": ""
             },
             "card4": {
-              "title": "Aumento da transparência, da ética e da governança corporativa."
+              "title": "Aumento da transparência, da ética e da governança corporativa.",
+              "description": ""
             },
             "card5": {
-              "title": "Tomada de decisão estratégica baseada em fatos verificados, não em suposições."
+              "title": "Tomada de decisão estratégica baseada em fatos verificados, não em suposições.",
+              "description": ""
             }
           },
           "button": "Solicite uma Consulta Confidencial"
@@ -131,9 +136,9 @@
         "title": "Inteligência de Ameaças Estratégica e Tática",
         "description": "Transformando dados brutos de ameaças em clareza e vantagem decisória para o seu negócio.",
         "button": "Agende uma Análise de Risco",
-        "list_title_desafio": "O Desafio",
+        "list_title_desafio": "Quando Informação é Apenas Ruído",
         "list_title_Description_desafio": "Sua empresa pode ter acesso a feeds de segurança e até alertas da Deep Web, mas como conectar esses pontos? Como traduzir um indicador técnico em um risco de negócio real? E como garantir que a pessoa certa — do analista do SOC ao CEO — receba a inteligência correta, no formato certo e na hora certa para agir? A informação sem contexto é apenas ruído.",
-        "list_title_solucao": "A Solução",
+        "list_title_solucao": "Do Contexto à Ação",
         "list_title_Description_solucao": "Nosso serviço de Inteligência de Ameaças funciona como seu centro de fusão de inteligência. Nós vamos além da simples coleta de dados, atuando na análise, contextualização e produção de relatórios sob medida para cada nível da sua organização. Integramos informações de múltiplas fontes — incluindo nosso monitoramento especializado de Deep & Dark Web, OSINT (fontes abertas) e feeds técnicos — para construir um panorama 360° do seu cenário de ameaças e entregar insights que direcionam desde a caça a ameaças (threat hunting) até as decisões de investimento em segurança.",
         "listItems": [
           "Sua empresa pode ter acesso a feeds de segurança e até alertas da Deep Web, mas como conectar esses pontos?",
@@ -141,49 +146,53 @@
           "E como garantir que a pessoa certa — do analista do SOC ao CEO — receba a inteligência correta, no formato certo e na hora certa para agir?",
           "Proteção da propriedade intelectual"
         ],
-        "image_desafio": "/person.jpg",
-        "image_solucao": "/person.jpg",
+        "image_desafio": "/empresa.webp",
+        "image_solucao": "/dark.webp",
         "SectionServiceSecond": {
-          "title": "Nossos Entregáveis",
+          "title": "Inteligência em Todos os Níveis",
           "title2": "Investigações Digitais & Cibersegurança Avançada",
-          "description": "Proteja seu negócio de dentro para fora com inteligência investigativa para decisões de máxima confiança.",
+          "description": "Da estratégia à ação, fornecemos inteligência aplicável a todos os níveis da sua organização.",
           "button": "Agende um Briefing de Ameaças"
         },
         "CardsService": {
           "Cards": {
             "card1": {
-              "title": "",
-              "description": "Inteligência Estratégica (Para a Liderança): Entregamos relatórios executivos que conectam o cenário de ameaças (atores, tendências, riscos geopolíticos) diretamente aos objetivos e à continuidade do seu negócio. Nossas análises respondem ao (porquê) e (e se), recomendando direcionamentos estratégicos e de investimento."
+              "title": "Inteligência Estratégica (Para a Liderança)",
+              "description": "Entregamos relatórios executivos que conectam o cenário de ameaças (atores, tendências, riscos geopolíticos) diretamente aos objetivos e à continuidade do seu negócio. Nossas análises respondem ao (porquê) e (e se), recomendando direcionamentos estratégicos e de investimento."
             },
             "card2": {
-              "title": "",
-              "description": "Inteligência Tática (Para a Defesa Ativa): Produzimos dossiês detalhados sobre as Táticas, Técnicas e Procedimentos (TTPs) dos grupos de ataque que visam seu setor. Descrevemos seus métodos e ferramentas para enriquecer seu threat hunting, aprimorar suas regras de detecção e treinar sua equipe de defesa."
+              "title": "Inteligência Tática (Para a Defesa Ativa)",
+              "description": "Produzimos dossiês detalhados sobre as Táticas, Técnicas e Procedimentos (TTPs) dos grupos de ataque que visam seu setor. Descrevemos seus métodos e ferramentas para enriquecer seu threat hunting, aprimorar suas regras de detecção e treinar sua equipe de defesa."
             },
             "card3": {
-              "title": "",
-              "description": "Inteligência Operacional (Para o SOC): Fornecemos alertas contextualizados sobre campanhas de ataque em andamento. Aqui, enriquecemos os achados do nosso serviço de DDW e de outras fontes com o contexto do seu negócio, respondendo (o que isso significa para nós agora?) e fornecendo IOCs de alta fidelidade para resposta a incidentes."
+              "title": "Inteligência Operacional (Para o SOC)",
+              "description": "Fornecemos alertas contextualizados sobre campanhas de ataque em andamento. Aqui, enriquecemos os achados do nosso serviço de DDW e de outras fontes com o contexto do seu negócio, respondendo (o que isso significa para nós agora?) e fornecendo IOCs de alta fidelidade para resposta a incidentes."
             },
             "card4": {
-              "title": "",
-              "description": "Inteligência de Vulnerabilidades (Para a TI e Infraestrutura): Monitoramos e analisamos vulnerabilidades (CVEs) que são relevantes para o seu stack tecnológico e que estão sendo ativamente discutidas ou exploradas por cibercriminosos. Isso permite uma priorização de patching baseada em risco real, e não apenas em criticidade teórica."
+              "title": "Inteligência de Vulnerabilidades (Para a TI e Infraestrutura)",
+              "description": "Monitoramos e analisamos vulnerabilidades (CVEs) que são relevantes para o seu stack tecnológico e que estão sendo ativamente discutidas ou exploradas por cibercriminosos. Isso permite uma priorização de patching baseada em risco real, e não apenas em criticidade teórica."
             }
           }
         },
         "seu_negocio": {
-          "title": "O Impacto no Seu Negócio",
-          "description": "Analisar um texto para esse local",
+          "title": "O valor da Inteligência",
+          "description": "Transformamos informações de ameaças em decisões estratégicas, sinérgicas e orientadas a resultados.",
           "cards": {
             "card1": {
-              "title": "Decisões Baseadas em Contexto: Saia da reatividade baseada em alertas e passe a tomar decisões proativas baseadas em inteligência contextualizada."
+              "title": "Decisões Baseadas em Contexto:",
+              "description": "Saia da reatividade baseada em alertas e passe a tomar decisões proativas baseadas em inteligência contextualizada."
             },
             "card2": {
-              "title": "Defesa Intelligence-Led: Adote uma postura de segurança onde a inteligência direciona todas as suas ações defensivas, do bloqueio no firewall à estratégia de segurança da diretoria."
+              "title": "Defesa Intelligence-Led",
+              "description": "Adote uma postura de segurança onde a inteligência direciona todas as suas ações defensivas, do bloqueio no firewall à estratégia de segurança da diretoria."
             },
             "card3": {
-              "title": "Sinergia Entre Equipes: Crie uma linguagem comum sobre riscos que conecta a equipe técnica (SOC, TI) à liderança executiva, garantindo que todos trabalhem com a mesma visão."
+              "title": "Sinergia Entre Equipes",
+              "description": "Crie uma linguagem comum sobre riscos que conecta a equipe técnica (SOC, TI) à liderança executiva, garantindo que todos trabalhem com a mesma visão."
             },
             "card4": {
-              "title": "Maximização do ROI em Segurança: Justifique investimentos e otimize o uso de ferramentas e pessoal com base em evidências concretas sobre as ameaças que realmente importam para você."
+              "title": "Maximização do ROI em Segurança",
+              "description": "Justifique investimentos e otimize o uso de ferramentas e pessoal com base em evidências concretas sobre as ameaças que realmente importam para você."
             }
           },
           "button": "Agende um Briefing de Ameaças"
@@ -193,9 +202,9 @@
         "title": "Vigilância e Proteção de Ativos na Deep & Dark Web",
         "description": "Um serviço unificado para monitorar tanto o ator da ameaça quanto seus ativos digitais expostos.",
         "button": "Agende uma Análise de Risco",
-        "list_title_desafio": "O Desafio",
+        "list_title_desafio": "Quando a Informação Está em Perigo",
         "list_title_Description_desafio": "Sua empresa enfrenta dois riscos críticos e invisíveis: o adversário que planeja um ataque e o seu próprio dado sensível que já pode estar comprometido. Como monitorar ambos os lados dessa equação – o caçador e a presa – em um ambiente anônimo e hostil como a Deep & Dark Web? Contratar soluções separadas gera complexidade e desconecta a inteligência da ação.",
-        "list_title_solucao": "A Solução",
+        "list_title_solucao": "Monitoramento e Proteção de Dados Críticos",
         "list_title_Description_solucao": "Nosso serviço de Vigilância e Proteção de Ativos oferece uma visão completa do seu risco no submundo digital. Unificamos a Inteligência sobre Ameaças (monitoramento do atacante) com a Detecção de Ativos Expostos (busca por seus dados) em uma única oferta. Através de uma plataforma centralizada e da expertise de nossos analistas, correlacionamos as intenções dos criminosos com a exposição real dos seus dados, permitindo uma defesa verdadeiramente proativa e uma resposta a incidentes muito mais eficaz.",
         "listItems": [
           "Monitoramento contínuo de violações de marca",
@@ -204,49 +213,53 @@
           "Alertas em tempo real sobre exposições"
         ],
         "list_description": "A informação sem contexto é apenas ruído.",
-        "image_desafio": "/person.jpg",
-        "image_solucao": "/person.jpg",
+        "image_desafio": "/ataque.webp",
+        "image_solucao": "/monitoramento.webp",
         "SectionServiceSecond": {
-          "title": "Nossos Pilares de Atuação",
+          "title": "Pilares da Defesa Digital",
           "title2": "Detecção de Exposição de Ativos Digitais ",
-          "description": "Proteja seu negócio de dentro para fora com inteligência investigativa para decisões de máxima confiança.",
+          "description": "Monitoramento contínuo e inteligência aplicada para proteger seus dados críticos e a reputação da sua empresa.",
           "button": "Agende um Briefing de Ameaças"
         },
         "CardsService": {
           "Cards": {
             "card1": {
-              "title": "",
-              "description": "Monitoramento de Credenciais Comprometidas: Alertas sobre e-mails e senhas de colaboradores e clientes encontrados em vazamentos e stealer logs."
+              "title": "Monitoramento de Credenciais Comprometidas",
+              "description": "Alertas sobre e-mails e senhas de colaboradores e clientes encontrados em vazamentos e stealer logs."
             },
             "card2": {
-              "title": "",
-              "description": "Busca por Dados Sensíveis (PII): Detecção de bases de dados, documentos confidenciais e informações de clientes sendo compartilhados ou vendidos."
+              "title": "Busca por Dados Sensíveis (PII)",
+              "description": "Detecção de bases de dados, documentos confidenciais e informações de clientes sendo compartilhados ou vendidos."
             },
             "card3": {
-              "title": "",
-              "description": "Identificação de Propriedade Intelectual Vazada: Alertas sobre código-fonte, patentes e segredos comerciais expostos em fóruns ou mercados."
+              "title": "Identificação de Propriedade Intelectual Vazada",
+              "description": "Alertas sobre código-fonte, patentes e segredos comerciais expostos em fóruns ou mercados."
             },
             "card4": {
-              "title": "",
-              "description": "Mapeamento de Riscos Internos e Conflitos de Interesse: Analisamos o ecossistema de seus colaboradores e suas conexões para identificar relacionamentos não declarados com concorrentes, atividades paralelas suspeitas e outros fatores de risco que as auditorias tradicionais não revelam."
+              "title": "Mapeamento de Riscos Internos e Conflitos de Interesse",
+              "description": "Analisamos o ecossistema de seus colaboradores e suas conexões para identificar relacionamentos não declarados com concorrentes, atividades paralelas suspeitas e outros fatores de risco que as auditorias tradicionais não revelam."
             }
           }
         },
         "seu_negocio": {
-          "title": "O Impacto no Seu Negócio",
-          "description": "Analisar um texto para esse local",
+          "title": "Impacto Real na Proteção Digital",
+          "description": "Simplifique a gestão da segurança externa e minimize impactos com uma visão completa do risco digital.",
           "cards": {
             "card1": {
-              "title": "Visão de Risco Completa: Conecte o (quem) e (como) de um ataque com o (o quê) que foi exposto, tudo em um só lugar"
+              "title": "Visão de Risco Completa",
+              "description": "Conecte o (quem) e (como) de um ataque com o (o quê) que foi exposto, tudo em um só lugar."
             },
             "card2": {
-              "title": "Priorização Inteligente de Resposta: Use a inteligência sobre um ator de ameaça para priorizar a resposta a um vazamento de dados relacionado a ele."
+              "title": "Priorização Inteligente de Resposta",
+              "description": "Use a inteligência sobre um ator de ameaça para priorizar a resposta a um vazamento de dados relacionado a ele."
             },
             "card3": {
-              "title": "Redução do Tempo de Detecção e Contenção: Descubra tanto os planos de ataque quanto os vazamentos existentes mais rapidamente."
+              "title": "Redução do Tempo de Detecção e Contenção",
+              "description": "Descubra tanto os planos de ataque quanto os vazamentos existentes mais rapidamente."
             },
             "card4": {
-              "title": "Eficiência Operacional: Simplifique a gestão de segurança externa com um único parceiro especialista, em vez de múltiplos fornecedores."
+              "title": "Eficiência Operacional",
+              "description": "Simplifique a gestão de segurança externa com um único parceiro especialista, em vez de múltiplos fornecedores."
             }
           },
           "button": "Agende uma Análise de Risco"
