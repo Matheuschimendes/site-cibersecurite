@@ -14,7 +14,6 @@ interface SessaoConsultoriaProps {
 export const SessaoConsultoria = ({
   title,
   description,
-  descriptionButton,
 }: SessaoConsultoriaProps) => {
   const t = useTranslations("Posicionamento");
 
