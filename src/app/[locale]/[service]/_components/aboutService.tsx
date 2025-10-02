@@ -78,7 +78,7 @@ const CardWithLight = ({ feature }: { feature: Feature }) => {
 
 const AboutService = ({ features = [] }: AboutProps) => {
   const pathname = usePathname();
-  const serviceKey = pathname.split("/")[3] || "brand_protection";
+  const serviceKey = pathname.split("/")[2] || "brand_protection";
   const t = useTranslations(`galLery.items.${serviceKey}`);
 
   return (
@@ -94,13 +94,13 @@ const AboutService = ({ features = [] }: AboutProps) => {
           <div className="flex-1 flex flex-col items-start">
             <h1 className="text-3xl font-extrabold tracking-tight mb-4 leading-tight text-left">
               <TextScramble
-                className="bg-gradient-to-r from-[#E32320] to-[#ff574d] bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-red-600 to-[#ff574d] bg-clip-text text-transparent"
                 duration={2.5}
               >
                 {t("list_title_desafio")}
               </TextScramble>
             </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#E32320] to-[#ff574d] rounded-full mb-8" />
+            <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-[#ff574d] rounded-full mb-8" />
             <p className="text-xl font-light text-gray-300 leading-relaxed">
               {t("list_title_Description_desafio")}
             </p>
@@ -126,13 +126,13 @@ const AboutService = ({ features = [] }: AboutProps) => {
           <div className="flex-1 flex flex-col items-start">
             <h1 className="text-3xl font-extrabold tracking-tight mb-4 leading-tight text-left">
               <TextScramble
-                className="bg-gradient-to-r from-[#E32320] to-[#ff574d] bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-red-600 to-[#ff574d] bg-clip-text text-transparent"
                 duration={2.5}
               >
                 {t("list_title_solucao")}
               </TextScramble>
             </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#E32320] to-[#ff574d] rounded-full mb-8" />
+            <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-[#ff574d] rounded-full mb-8" />
             <p className="text-xl font-light text-gray-300 leading-relaxed">
               {t("list_title_Description_solucao")}
             </p>
@@ -141,7 +141,7 @@ const AboutService = ({ features = [] }: AboutProps) => {
           {/* Imagem: abaixo do texto no mobile */}
           <div className="flex-1 relative w-full mt-6 md:mt-0">
             <Image
-              src={t("image_solucao") || "/person.jpg"}
+              src={t("image_solucao") || "/person.webp"}
               alt={t("title_solucao") || "About Service Image"}
               width={600}
               height={400}

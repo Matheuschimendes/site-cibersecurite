@@ -182,7 +182,7 @@ const Navbar = ({ logo, currentLocale = "pt" }: NavbarProps) => {
           <div className="flex items-center gap-6">
             <Link href="/">
               <Image
-                src={logo?.src || "/Logo Horizontal.png"}
+                src={logo?.src || "/Logo Horizontal.webp"}
                 className="max-h-8 dark:invert"
                 alt={logo?.alt || "logo"}
                 width={100}
@@ -228,7 +228,7 @@ const Navbar = ({ logo, currentLocale = "pt" }: NavbarProps) => {
           <div className="flex items-center justify-between">
             <Link href="/">
               <Image
-                src={logo?.src || "/Logo Horizontal.png"}
+                src={logo?.src || "/Logo Horizontal.webp"}
                 className="max-h-8 dark:invert"
                 alt={logo?.alt || "logo"}
                 width={100}
@@ -246,7 +246,7 @@ const Navbar = ({ logo, currentLocale = "pt" }: NavbarProps) => {
                   <SheetTitle>
                     <Link href="/">
                       <Image
-                        src={logo?.src || "/Logo Horizontal.png"}
+                        src={logo?.src || "/Logo Horizontal.webp"}
                         className="max-h-8 dark:invert"
                         alt={logo?.alt || "logo"}
                         width={100}

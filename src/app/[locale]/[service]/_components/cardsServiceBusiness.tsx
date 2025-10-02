@@ -34,11 +34,11 @@ const CardsSectionBusiness = ({ platforms }: CardsProps) => {
   const icons = [ShieldIcon, CircleDollarSign, ClockFading, ZoomIn, BrainCircuit];
 
   const defaultPlatforms = {
-    precision: { subtitle: t("cards.card1.title"), url: "#" },
-    expertise: { subtitle: t("cards.card2.title"), url: "#" },
-    excellence: { subtitle: t("cards.card3.title"), url: "#" },
-    innovation: { subtitle: t("cards.card4.title"), url: "#" },
-    innovat: { subtitle: t("cards.card5.title"), url: "#" },
+    precision: { subtitle: t("cards.card1.title"), description: t("cards.card1.description"), url: "#" },
+    expertise: { subtitle: t("cards.card2.title"), description: t("cards.card2.description"), url: "#" },
+    excellence: { subtitle: t("cards.card3.title"), description: t("cards.card3.description"), url: "#" },
+    innovation: { subtitle: t("cards.card4.title"), description: t("cards.card4.description"), url: "#" },
+    innovat: { subtitle: t("cards.card5.title"), description: t("cards.card5.description"), url: "#" },
   };
 
   const source = platforms ?? defaultPlatforms;
@@ -87,9 +87,12 @@ const CardsSectionBusiness = ({ platforms }: CardsProps) => {
                 >
                   <Icon className={`${isWhiteCard ? "text-black" : "text-[#E32320]"}`} />
                 </div>
-                <h2 className="text-[14px] sm:text-sm lg:text-base font-mono sm:text-left">
+                <h1 className="text-base sm:text-sm font-semibold tracking-widest uppercase font-mono">
                   {platform.subtitle}
-                </h2>
+                </h1>
+                <p className="text-sm sm:text-base text-white/80 leading-relaxed font-medium">
+                  {platform.description}
+                </p>
               </div>
             );
           })}

@@ -62,7 +62,7 @@ export const FooterPage = () => {
             {/* Logo e Descrição */}
             <div className="col-span-full xl:col-span-2">
               <Image
-                src="/Logo Horizontal.png"
+                src="/Logo Horizontal.webp"
                 alt="Logo Kryfal"
                 width={100}
                 height={100}
