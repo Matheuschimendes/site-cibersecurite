@@ -358,7 +358,7 @@
     "description": "Nossa equipe está disponível para responder dúvidas e oferecer suporte personalizado.",
     "email": {
       "title": "Email",
-      "primary": "contato@kryfal.com",
+      "primary": "contact@kryfal.com",
       "secondary": "comercial@kryfal.com"
     },
     "phone": {
@@ -439,10 +439,9 @@
       "contacts": "Contatos"
     },
     "services": {
-      "brandProtection": "Proteção de Marca",
-      "leakDetection": "Detecção de Vazamentos",
-      "vipProtection": "Proteção VIP",
-      "cyberRiskInsights": "Insights de Risco Cibernético",
+      "brandProtection": "Contrainteligência Corporativa",
+      "leakDetection": "Inteligência de Ameaças Estratégica e Tática",
+      "vipProtection": "Vigilância e Proteção de Ativos na Deep & Dark Web",
       "trainings": "Treinamentos"
     },
     "securityNotice": {

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
+import { Eye, Menu, Search, ShieldIcon, Sunset, Trees, Zap } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -65,19 +65,19 @@ const Navbar = ({ logo, currentLocale = "pt" }: NavbarProps) => {
         {
           title: t(`submenus.brand_protection.title`),
           description: t(`submenus.brand_protection.description`),
-          icon: <Zap className="size-5 shrink-0" />,
+          icon: <ShieldIcon className="size-5 shrink-0" />,
           url: `/brand_protection`,
         },
         {
           title: t(`submenus.leak_detection.title`),
           description: t(`submenus.leak_detection.description`),
-          icon: <Sunset className="size-5 shrink-0" />,
+          icon: <Search className="size-5 shrink-0" />,
           url: `/leak_detection`,
         },
         {
           title: t(`submenus.vip_protection.title`),
           description: t(`submenus.vip_protection.description`),
-          icon: <Trees className="size-5 shrink-0" />,
+          icon: <Eye className="size-5 shrink-0" />,
           url: `/vip_protection`,
         },
       ],

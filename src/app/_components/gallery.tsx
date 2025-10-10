@@ -92,12 +92,12 @@ const Gallery = () => {
               className="mx-auto my-6 w-[90%] md:w-full
                 rounded-[24px] border-transparent 
                 bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f] p-8 text-white shadow-lg shadow-[#E32320]/25 
-                transition-all duration-300 hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]"
+                transition-all duration-300 hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-red-600"
             >
               <div className="flex flex-col h-full group">
                 <div className="mb-5 flex items-center justify-start gap-4">
                   {item.icon}
-                  <h3 className="text-xl font-semibold uppercase tracking-wide text-[#E32320] group-hover:text-[#ff574d] transition-colors duration-300">
+                  <h3 className="text-xl font-semibold uppercase tracking-wide text-red-600 group-hover:text-[#ff574d] transition-colors duration-300">
                     {t(`items.${item.key}.title`)}
                   </h3>
                 </div>
@@ -108,7 +108,7 @@ const Gallery = () => {
 
                 <Link
                   href={`/${locale}/${item.key}`}
-                  className="mt-auto flex items-center gap-3 text-sm font-semibold text-[#E32320] group-hover:underline"
+                  className="mt-auto flex items-center gap-3 text-sm font-semibold text-red-600 group-hover:underline"
                 >
                   {t("learn_more")}
                   <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />

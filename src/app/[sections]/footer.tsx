@@ -37,7 +37,6 @@ export const FooterPage = () => {
         { title: t("services.brandProtection"), href: "#", icon: <Zap className="size-5 shrink-0" />, },
         { title: t("services.leakDetection"), href: "#", icon: <Sunset className="size-5 shrink-0" />, },
         { title: t("services.vipProtection"), href: "#", icon: <Trees className="size-5 shrink-0" />, },
-        { title: t("services.cyberRiskInsights"), href: "#", icon: <Book className="size-5 shrink-0" />, },
         { title: t("services.trainings"), href: "#", icon: <ChartColumnIncreasing className="size-5 shrink-0" /> },
       ],
     },
@@ -45,7 +44,7 @@ export const FooterPage = () => {
       title: t("sections.contacts"),
       links: [
         { title: "comercial@kryfal.com", href: "mailto:comercial@kryfal.com", icon: <Mail className="size-5 shrink-0" /> },
-        { title: "contato@kryfal.com", href: "mailto:contato@kryfal.com", icon: <Mail className="size-5 shrink-0" /> },
+        { title: "contact@kryfal.com", href: "mailto:contact@kryfal.com", icon: <Mail className="size-5 shrink-0" /> },
         { title: "+55 (11) 9999-9999", href: "tel:+551199999999", icon: <Phone className="size-5 shrink-0" /> },
         { title: "+55 (11) 8888-8888", href: "tel:+551188888888", icon: <Phone className="size-5 shrink-0" /> },
         { title: t("address"), href: "#", icon: <MapPin className="size-5 shrink-0" /> },
