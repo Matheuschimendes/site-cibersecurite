@@ -278,81 +278,72 @@
     "description": "Capacitação especializada em Threat Intelligence, OSINT e investigações cibernéticas.",
     "learn_more": "Saiba mais",
     "items": {
-      "threat_intelligence": {
+      "OPSEC": {
         "id": "item-1",
-        "title": "Introdução à Threat Intelligence",
+        "title": "OPSEC – Estratégias para operações Anônimas ",
         "paragraph": "Curso Gravado",
-        "tags": "Duração: 8 horas",
-        "tagsSecond": "Iniciante",
-        "description": "Fundamentos essenciais de inteligência de ameaças",
+        "tags": "Duração:",
+        "tagsSecond": "8 horas",
+        "description": "Em um cenário onde cada clique deixa um rastro e exposição.",
         "url": "#",
-        "listItems": [
-          "Monitoramento contínuo de violações de marca",
-          "Detecção de domínios maliciosos e phishing",
-          "Takedown de conteúdos e perfis falsos",
-          "Proteção de propriedade intelectual"
-        ],
-        "icon": "BookOpen"
+        "modal": {
+          "description": "Em um cenário onde cada clique deixa um rastro e a exposição pode comprometer toda uma operação, dominar OPSEC significa ter controle total sobre a sua pegada digital, identidade e segurança operacional.",
+          "second_description": "Este curso não apenas apresenta conceitos — ele entrega estratégias práticas, métodos testados e técnicas reais que nós mesmos da equipe da Kryfal aplicamos no Dia a Dia para proteção em campo. ",
+          "list_title": "Ao final do curso, você será capaz de:",
+          "listItems": [
+            "Criar ambientes digitais seguros para investigações e operações;",
+            "Aplicar técnicas de anonimato para evitar rastreamento e exposição;",
+            "Reduzir a superfície de ataque pessoal e operacional;",
+            "Implementar rotinas de segurança que protegem tanto o operador quanto a missão;",
+            "Operar com confiança e discrição em ambientes hostis — sejam eles físicos ou digitais."
+          ],
+          "icon": "BookOpen",
+          "button": "Agente uma Sessão Estratégica"
+        }
       },
-      "threat_operational": {
+      "Threat_Intelligence": {
         "id": "item-2",
-        "title": "Threat Intelligence Operacional",
+        "title": "Fundamentos em Cyber Threat Intelligence (CTI)",
         "paragraph": "Curso Ao Vivo",
-        "tags": "Duração: 16 horas",
-        "tagsSecond": "Intermediário",
-        "description": "Aplicação prática de CTI em operações de segurança",
+        "tags": "Duração: ",
+        "tagsSecond": "20 horas",
+        "description": "Em um cenário digital cada vez mais dinâmico e complexo.",
         "url": "#",
-        "listItems": [
-          "Monitoramento contínuo de violações de marca",
-          "Análise de credenciais comprometidas",
-          "Investigação em fóruns clandestinos",
-          "Alertas em tempo real de exposições"
-        ],
-        "icon": "Target"
+        "modal": {
+          "description": "Em um cenário digital cada vez mais dinâmico e complexo, compreender os fundamentos de Cyber Threat Intelligence (CTI) tornou-se essencial para qualquer profissional de segurança ou área correlata.",
+          "second_description": "Este treinamento foi desenvolvido para apresentar, de forma clara e estruturada, os conceitos, metodologias e frameworks que compõem a base da inteligência de ameaças. Ao longo do curso, os participantes aprenderão a diferenciar dados de inteligência, entender o ciclo de inteligência, conhecer modelos analíticos amplamente utilizados no mercado e visualizar como a CTI apoia decisões estratégicas e operacionais. O objetivo é fornecer uma base sólida para que cada participante possa avançar com segurança para níveis mais técnicos e analíticos no futuro.",
+          "list_title": "Ao final do curso, você será capaz de:",
+          "listItems": [
+            "Compreender o Ciclo de Inteligência e sua aplicação no contexto de ameaças cibernéticas;",
+            "Reconhecer e classificar diferentes tipos de fontes abertas (OSINT) para coleta básica de informações;",
+            "Entender os conceitos fundamentais de modelagem de ameaças e como adaptá-los a diferentes contextos organizacionais;",
+            "Diferenciar os níveis de inteligência (Tática, Operacional e Estratégica) e compreender como cada um apoia a tomada de decisão;",
+            "Ter uma visão introdutória sobre o Framework MITRE ATT&CK e seu uso na identificação de táticas e técnicas adversárias."
+          ],
+          "icon": "BookOpen",
+          "button": "Agente uma Sessão Estratégica"
+        }
       },
-      "dark_web": {
+      "Pentest_Web": {
         "id": "item-3",
-        "title": "Deep e Dark Web na Prática",
-        "paragraph": "Curso Gravado",
-        "tags": "Duração: 12 horas",
-        "tagsSecond": "Avançado",
-        "description": "Navegação segura e investigação em ambientes ocultos",
-        "url": "#",
-        "listItems": [],
-        "icon": "Video"
-      },
-      "opsec": {
-        "id": "item-4",
-        "title": "OPSEC para Investigações",
+        "title": "Pentest Web",
         "paragraph": "Curso Ao Vivo",
-        "tags": "Duração: 6 horas",
-        "tagsSecond": "Intermediário",
-        "description": "Segurança operacional em investigações digitais",
+        "tags": "Duração:",
+        "tagsSecond": "20 horas",
+        "description": "Em um cenário onde cada clique deixa um rastro e exposição.",
         "url": "#",
-        "listItems": [],
-        "icon": "Award"
-      },
-      "open_source_intelligence": {
-        "id": "item-5",
-        "title": "Ferramentas e Técnicas de OSINT",
-        "paragraph": "Curso Gravado",
-        "tags": "Duração: 20 horas",
-        "tagsSecond": "Todos os níveis",
-        "description": "Domínio de ferramentas de inteligência de fontes abertas",
-        "url": "#",
-        "listItems": [],
-        "icon": "Lightbulb"
-      },
-      "advanced_investigations": {
-        "id": "item-6",
-        "title": "Investigações Cibernéticas Avançadas",
-        "paragraph": "Curso Ao Vivo",
-        "tags": "Duração: 24 horas",
-        "tagsSecond": "Avançado",
-        "description": "Metodologias avançadas de investigação digital",
-        "url": "#",
-        "listItems": [],
-        "icon": "Users"
+        "modal": {
+          "description": "Em um cenário onde a segurança de aplicações web é constantemente desafiada por ameaças sofisticadas e as vulnerabilidades podem custar milhões, dominar o Pentest Web significa não apenas identificar falhas, mas antecipar e neutralizar ataques antes que eles aconteçam.",
+          "second_description": "Esse treinamento não se limita a apresentar ferramentas ou uma lista de verificações; ele entrega estratégias de ataque e defesa, metodologias testadas e técnicas reais  para proteger infraestruturas críticas no dia a dia.",
+          "list_title": "Ao final do curso, você será capaz de:",
+          "listItems": [
+            "Reconhecer e diagnosticar vulnerabilidades como injeção (SQL, NoSQL), controle de acesso mal configurado, exposição de dados sensíveis, falhas de criptografia, configuração incorreta de segurança, problemas em APIs e desvio de autenticação;",
+            "Utilizar metodologias de coleta de informações, exploração, análise de risco e produção de relatórios de pentest, simulando ataques reais para identificar falhas em aplicações web;",
+            "Empregar ferramentas especializadas, como Kali Linux e OWASP ZAP, para avaliar e testar aplicações web nos cenários mais comuns do OWASP Top 10;"
+          ],
+          "icon": "BookOpen",
+          "button": "Agente uma Sessão Estratégica"
+        }
       }
     }
   },
