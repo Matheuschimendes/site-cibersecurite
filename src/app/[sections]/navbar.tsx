@@ -151,7 +151,7 @@ const Navbar = ({ logo, currentLocale = "pt" }: NavbarProps) => {
 
   const SubMenuLink = ({ item }: { item: MenuItem }) => (
     <Link
-      className="bg-white text-red-600 hover:bg-red-600 hover:text-white flex select-none flex-row gap-4 rounded-md p-3 mt-3 transition-colors "
+      className="bg-white text-red-600 hover:bg-red-600 hover:text-white flex select-none flex-row gap-4 rounded-md p-3 mt-3 transition-colors"
       href={item.url}
     >
       <div>{item.icon}</div>

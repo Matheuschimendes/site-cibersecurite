@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Kanit } from "next/font/google";
 import "../../app/globals.css";

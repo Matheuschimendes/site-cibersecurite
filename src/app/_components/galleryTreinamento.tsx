@@ -38,12 +38,12 @@ interface GalleryProps {
 const Gallery = ({
   paragraph,
   items = [
-    { id: "item-1", key: "threat_intelligence", icon: <BookOpen size={40} />, namespace: "mentorias" },
-    { id: "item-2", key: "threat_operational", icon: <Target size={40} />, namespace: "mentorias" },
-    { id: "item-3", key: "dark_web", icon: <Video size={40} />, namespace: "mentorias" },
-    { id: "item-4", key: "opsec", icon: <Award size={40} />, namespace: "mentorias" },
-    { id: "item-5", key: "open_source_intelligence", icon: <Lightbulb size={40} />, namespace: "mentorias" },
-    { id: "item-6", key: "advanced_investigations", icon: <Users size={40} />, namespace: "mentorias" },
+    { id: "item-1", key: "OPSEC", icon: <BookOpen size={40} />, namespace: "mentorias" },
+    { id: "item-2", key: "Threat_Intelligence", icon: <Target size={40} />, namespace: "mentorias" },
+    { id: "item-3", key: "Pentest_Web", icon: <Video size={40} />, namespace: "mentorias" },
+    // { id: "item-4", key: "opsec", icon: <Award size={40} />, namespace: "mentorias" },
+    // { id: "item-5", key: "open_source_intelligence", icon: <Lightbulb size={40} />, namespace: "mentorias" },
+    // { id: "item-6", key: "advanced_investigations", icon: <Users size={40} />, namespace: "mentorias" },
   ],
 }: GalleryProps) => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
