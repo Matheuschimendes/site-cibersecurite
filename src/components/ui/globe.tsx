@@ -56,20 +56,12 @@ export type GlobeConfig = {
   arcLength?: number;
   rings?: number;
   maxRings?: number;
-  initialPosition?: {
-    lat: number;
-    lng: number;
-  };
+  initialPosition?: { lat: number; lng: number };
   autoRotate?: boolean;
   autoRotateSpeed?: number;
 };
 
-// ✅ Tipo correto para a câmera
-export interface CameraPosition {
-  x: number;
-  y: number;
-  z: number;
-}
+export interface CameraPosition { x: number; y: number; z: number; }
 
 interface WorldProps {
   globeConfig: GlobeConfig;
@@ -82,7 +74,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
   const groupRef = useRef<Group>(null);
   const [isInitialized, setIsInitialized] = useState(false);
 
-  const defaultProps = {
+  const defaultProps = useMemo(() => ({
     pointSize: 1,
     atmosphereColor: "#ffffff",
     showAtmosphere: true,
@@ -97,8 +89,9 @@ export function Globe({ globeConfig, data }: WorldProps) {
     rings: 1,
     maxRings: 3,
     ...globeConfig,
-  };
+  }), [globeConfig]);
 
+  // Inicializa Globe
   useEffect(() => {
     if (!globeRef.current && groupRef.current) {
       globeRef.current = new ThreeGlobe();
@@ -107,6 +100,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     }
   }, []);
 
+  // Configura material do globo
   useEffect(() => {
     if (!globeRef.current || !isInitialized) return;
     const globeMaterial = globeRef.current.globeMaterial() as unknown as {
@@ -127,44 +121,27 @@ export function Globe({ globeConfig, data }: WorldProps) {
     defaultProps.shininess,
   ]);
 
-  useEffect(() => {
-    if (!globeRef.current || !isInitialized || !data) return;
+  // Memo para pontos únicos
+  const filteredPoints = useMemo(() => {
+    if (!data) return [];
+    const points: { size: number; order: number; color: string; lat: number; lng: number }[] = [];
 
-    const arcs = data;
-    const points: {
-      size: number;
-      order: number;
-      color: string;
-      lat: number;
-      lng: number;
-    }[] = [];
-
-    for (let i = 0; i < arcs.length; i++) {
-      const arc = arcs[i];
-      points.push({
-        size: defaultProps.pointSize,
-        order: arc.order,
-        color: arc.color,
-        lat: arc.startLat,
-        lng: arc.startLng,
-      });
-      points.push({
-        size: defaultProps.pointSize,
-        order: arc.order,
-        color: arc.color,
-        lat: arc.endLat,
-        lng: arc.endLng,
-      });
+    for (let i = 0; i < data.length; i++) {
+      const arc = data[i];
+      points.push(
+        { size: defaultProps.pointSize, order: arc.order, color: arc.color, lat: arc.startLat, lng: arc.startLng },
+        { size: defaultProps.pointSize, order: arc.order, color: arc.color, lat: arc.endLat, lng: arc.endLng }
+      );
     }
 
-    const filteredPoints = points.filter(
-      (v, i, a) =>
-        a.findIndex((v2) =>
-          ["lat", "lng"].every(
-            (k) => v2[k as "lat" | "lng"] === v[k as "lat" | "lng"]
-          )
-        ) === i
+    return points.filter(
+      (v, i, a) => a.findIndex(v2 => v2.lat === v.lat && v2.lng === v.lng) === i
     );
+  }, [data, defaultProps.pointSize]);
+
+  // Configura Globe com dados
+  useEffect(() => {
+    if (!globeRef.current || !isInitialized) return;
 
     globeRef.current
       .hexPolygonsData(countries.features)
@@ -204,55 +181,42 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .ringRepeatPeriod(
         (defaultProps.arcTime * defaultProps.arcLength) / defaultProps.rings
       );
-  }, [
-    isInitialized,
-    data,
-    defaultProps.pointSize,
-    defaultProps.showAtmosphere,
-    defaultProps.atmosphereColor,
-    defaultProps.atmosphereAltitude,
-    defaultProps.polygonColor,
-    defaultProps.arcLength,
-    defaultProps.arcTime,
-    defaultProps.rings,
-    defaultProps.maxRings,
-  ]);
+  }, [isInitialized, data, filteredPoints, defaultProps]);
 
+  // Intervalo otimizado para rings
   useEffect(() => {
     if (!globeRef.current || !isInitialized || !data) return;
+    const maxRings = Math.min(data.length, defaultProps.maxRings * 10);
+
     const interval = setInterval(() => {
       if (!globeRef.current) return;
-      const newNumbersOfRings = genRandomNumbers(
-        0,
-        data.length,
-        Math.floor((data.length * 4) / 5)
-      );
-      const ringsData = data
-        .filter((_, i) => newNumbersOfRings.includes(i))
-        .map((d) => ({
-          lat: d.startLat,
-          lng: d.startLng,
-          color: d.color,
-        }));
-      globeRef.current.ringsData(ringsData);
+      const indices = genRandomNumbers(0, data.length, maxRings);
+      const ringsData = indices.map(i => ({
+        lat: data[i].startLat,
+        lng: data[i].startLng,
+        color: data[i].color,
+      }));
+      globeRef.current!.ringsData(ringsData);
     }, 2000);
+
     return () => clearInterval(interval);
-  }, [isInitialized, data]);
+  }, [isInitialized, data, defaultProps.maxRings]);
 
   return <group ref={groupRef} />;
 }
 
+// Configuração do renderer otimizada
 export function WebGLRendererConfig() {
   const { gl, size } = useThree();
   useEffect(() => {
-    gl.setPixelRatio(window.devicePixelRatio);
+    gl.setPixelRatio(Math.min(window.devicePixelRatio, 1.5)); // reduz carga em mobile
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
   }, [gl, size]);
   return null;
 }
 
-// ✅ usa cameraPosition {x,y,z} de forma segura
+// Componente World otimizado
 export function World({ globeConfig, data, cameraPosition }: WorldProps) {
   const scene = useMemo(() => {
     const s = new Scene();
@@ -262,11 +226,8 @@ export function World({ globeConfig, data, cameraPosition }: WorldProps) {
 
   const camera = useMemo(() => {
     const c = new PerspectiveCamera(50, aspect, 180, 1800);
-    if (cameraPosition) {
-      c.position.set(cameraPosition.x, cameraPosition.y, cameraPosition.z);
-    } else {
-      c.position.set(0, 0, cameraZ);
-    }
+    if (cameraPosition) c.position.set(cameraPosition.x, cameraPosition.y, cameraPosition.z);
+    else c.position.set(0, 0, cameraZ);
     return c;
   }, [cameraPosition]);
 
@@ -302,16 +263,13 @@ export function World({ globeConfig, data, cameraPosition }: WorldProps) {
   );
 }
 
+// Funções utilitárias
 export function hexToRgb(hex: string) {
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   hex = hex.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b);
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
-    ? {
-      r: parseInt(result[1], 16),
-      g: parseInt(result[2], 16),
-      b: parseInt(result[3], 16),
-    }
+    ? { r: parseInt(result[1], 16), g: parseInt(result[2], 16), b: parseInt(result[3], 16) }
     : null;
 }
 
