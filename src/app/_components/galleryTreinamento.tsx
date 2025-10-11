@@ -64,51 +64,58 @@ const Gallery = ({
           </div>
         </div>
 
-        {/* ===== Cards centralizados ===== */}
-        <div className="flex flex-wrap justify-center gap-8 md:mb-10 mb-20">
+
+        {/* ===== Cards responsivos ===== */}
+        <div
+          className="
+    grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
+    gap-6 md:gap-8 w-full mb-20
+  "
+        >
           {items.map((item) => (
             <div
               key={item.id}
               onClick={() => setSelectedItem(item)}
               className="
-                mx-4 my-6 md:max-w-[352px] w-full sm:w-[352px]
-                rounded-[24px] border-transparent
-                bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f]
-                p-8 text-white shadow-lg shadow-[#E32320]/25
-                transition-all duration-300 cursor-pointer
-                hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]
-              "
+        w-full h-full
+        rounded-[20px] border-transparent
+        bg-gradient-to-br from-[#1e1e1e] via-[#171717] to-[#0f0f0f]
+        p-6 sm:p-8 text-white shadow-lg shadow-[#E32320]/25
+        transition-all duration-300 cursor-pointer
+        hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-[#E32320]
+      "
             >
               <div className="flex flex-col h-full group">
-                <div className="mb-5 flex items-center justify-start gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center">
+                <div className="mb-4 flex items-center justify-start gap-3">
+                  <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center">
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold uppercase tracking-wide text-[#E32320] group-hover:text-[#ff574d] transition-colors duration-300">
+                    <h3 className="text-lg sm:text-xl font-semibold uppercase tracking-wide text-[#E32320] group-hover:text-[#ff574d] transition-colors duration-300">
                       {t(`items.${item.key}.title`)}
                     </h3>
-                    <p>{t(`items.${item.key}.paragraph`) || t(`items.${item.key}.summary`)}</p>
+                    <p className="text-sm sm:text-base">{t(`items.${item.key}.paragraph`) || t(`items.${item.key}.summary`)}</p>
                   </div>
                 </div>
 
-                <p className="mb-6 flex-grow text-gray-300 leading-relaxed text-base">
+                <p className="mb-4 sm:mb-6 flex-grow text-gray-300 leading-relaxed text-sm sm:text-base">
                   {t(`items.${item.key}.description`)}
                 </p>
 
-                <div className="md:mt-5 md:mb-5 flex flex-wrap gap-2 justify-between">
-                  <p>{t(`items.${item.key}.tags`)}</p>
+                <div className="mt-3 sm:mt-5 flex flex-wrap gap-2 justify-between">
+                  <p className="text-xs sm:text-sm">{t(`items.${item.key}.tags`)}</p>
                   <Tags>{t(`items.${item.key}.tagsSecond`)}</Tags>
                 </div>
 
-                <div className="mt-auto flex items-center gap-3 text-sm font-semibold text-[#E32320] group-hover:underline">
+                <div className="mt-auto flex items-center gap-2 sm:gap-3 text-xs sm:text-sm font-semibold text-[#E32320] group-hover:underline">
                   {t("learn_more")}
-                  <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                  <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
             </div>
           ))}
         </div>
+
       </div>
 
       {/* ===== Sessão Consultoria ===== */}

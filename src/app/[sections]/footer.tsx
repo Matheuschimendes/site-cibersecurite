@@ -2,23 +2,23 @@
 
 import { Separator } from "@/components/ui/separator";
 import {
-  Book,
   ChartColumnIncreasing,
   DribbbleIcon,
+  Eye,
   GithubIcon,
   Mail,
   MapPin,
   Phone,
+  Search,
   ShieldIcon,
-  Sunset,
-  Trees,
   TwitchIcon,
   TwitterIcon,
-  Zap,
+  LinkedinIcon
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { ta } from "zod/v4/locales";
 
 export const FooterPage = () => {
   const t = useTranslations("Footer");
@@ -34,10 +34,10 @@ export const FooterPage = () => {
     {
       title: t("sections.services"),
       links: [
-        { title: t("services.brandProtection"), href: "#", icon: <Zap className="size-5 shrink-0" />, },
-        { title: t("services.leakDetection"), href: "#", icon: <Sunset className="size-5 shrink-0" />, },
-        { title: t("services.vipProtection"), href: "#", icon: <Trees className="size-5 shrink-0" />, },
-        { title: t("services.trainings"), href: "#", icon: <ChartColumnIncreasing className="size-5 shrink-0" /> },
+        { title: t("services.brandProtection"), href: "/brand_protection", icon: <ShieldIcon className="size-5 shrink-0" />, },
+        { title: t("services.leakDetection"), href: "/leak_detection", icon: <Search className="size-5 shrink-0" />, },
+        { title: t("services.vipProtection"), href: "/vip_protection", icon: <Eye className="size-5 shrink-0" />, },
+        { title: t("services.trainings"), href: "#treinamentos", icon: <ChartColumnIncreasing className="size-5 shrink-0" /> },
       ],
     },
     {
@@ -45,8 +45,7 @@ export const FooterPage = () => {
       links: [
         { title: "comercial@kryfal.com", href: "mailto:comercial@kryfal.com", icon: <Mail className="size-5 shrink-0" /> },
         { title: "contact@kryfal.com", href: "mailto:contact@kryfal.com", icon: <Mail className="size-5 shrink-0" /> },
-        { title: "+55 (11) 9999-9999", href: "tel:+551199999999", icon: <Phone className="size-5 shrink-0" /> },
-        { title: "+55 (11) 8888-8888", href: "tel:+551188888888", icon: <Phone className="size-5 shrink-0" /> },
+        { title: "+44 7367 184395", href: "tel:+551199999999", icon: <Phone className="size-5 shrink-0" /> },
         { title: t("address"), href: "#", icon: <MapPin className="size-5 shrink-0" /> },
       ],
     },
@@ -88,6 +87,7 @@ export const FooterPage = () => {
                       {icon}
                       <Link
                         href={href}
+                        target="_blank"
                         className="text-muted-foreground transition-colors hover:text-[#E32320] ml-2 items-center"
                       >
                         {title}
@@ -116,6 +116,7 @@ export const FooterPage = () => {
               <Link href="#" target="_blank"><DribbbleIcon className="h-5 w-5 hover:text-[#E32320]" /></Link>
               <Link href="#" target="_blank"><TwitchIcon className="h-5 w-5 hover:text-[#E32320]" /></Link>
               <Link href="#" target="_blank"><GithubIcon className="h-5 w-5 hover:text-[#E32320]" /></Link>
+              <Link href="#" target="_blank"><LinkedinIcon className="h-5 w-5 hover:text-[#E32320]" /></Link>
             </div>
           </div>
         </div>

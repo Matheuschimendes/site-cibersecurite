@@ -95,12 +95,16 @@ const Gallery = () => {
                 transition-all duration-300 hover:shadow-[0_0_40px_rgba(227,35,32,0.6)] hover:border-red-600"
             >
               <div className="flex flex-col h-full group">
-                <div className="mb-5 flex items-center justify-start gap-4">
-                  {item.icon}
-                  <h3 className="text-xl font-semibold uppercase tracking-wide text-red-600 group-hover:text-[#ff574d] transition-colors duration-300">
+                <div className="mb-5 flex items-center justify-start gap-3 md:gap-4">
+                  <div className="flex-shrink-0 w-8 h-8 md:w-12 md:h-12 flex items-center justify-center">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-lg md:text-xl font-semibold uppercase tracking-wide text-red-600 group-hover:text-[#ff574d] transition-colors duration-300">
                     {t(`items.${item.key}.title`)}
                   </h3>
                 </div>
+
+
 
                 <p className="mb-6 flex-grow text-gray-300 leading-relaxed text-base">
                   {t(`items.${item.key}.description`)}
