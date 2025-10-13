@@ -21,7 +21,7 @@ export const SessaoConsultoria = ({
     <section
       className="
         relative overflow-hidden flex justify-center
-        md:w-[70%] mx-auto border border-[#E32320] rounded-md
+        md:w-[70%] max-w-screen-xl mx-auto border border-[#E32320] rounded-md
         bg-gradient-to-r from-[#1a0000] to-[#0a0000] p-5 md:p-10 text-center
       "
     >
