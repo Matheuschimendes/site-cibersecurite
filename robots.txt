@@ -1,0 +1,35 @@
+# Bloqueia todos os bots de acessar áreas de administração e login
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+
+# Permite que o Googlebot (Google) acesse o site completo
+User-agent: Googlebot
+Allow: /
+
+# Permite que o Bingbot (Bing) acesse o site completo
+User-agent: Bingbot
+Allow: /
+
+# Bloqueia o acesso a URLs com parâmetros de rastreamento (ex: ?session=)
+User-agent: *
+Disallow: /*?session=
+
+# Bloqueia o acesso a arquivos temporários e de cache
+User-agent: *
+Disallow: /tmp/
+Disallow: /cache/
+
+# Impede o rastreamento de arquivos sensíveis
+User-agent: *
+Disallow: /private/
+Disallow: /secretdir/
+
+# Permite acesso completo a todas as páginas
+User-agent: *
+Allow: /
+
+# Sitemap do site
+Sitemap: https://kryfal.com/pt/sitemap.xml
