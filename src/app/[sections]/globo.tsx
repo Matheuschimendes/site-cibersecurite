@@ -32,7 +32,7 @@ export default function Globe() {
   // Estado da posição da câmera
   const [cameraPosition, setCameraPosition] = useState<CameraPosition>(defaultCameraPosition);
 
-  useEffect(() => {
+  useEffect(() => { // Verifica se o globo foi renderizado antes
     try {
       const storedCamera = localStorage.getItem("globe-camera");
       if (storedCamera) {

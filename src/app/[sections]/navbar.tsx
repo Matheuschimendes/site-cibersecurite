@@ -82,7 +82,7 @@ const Navbar = ({ logo, currentLocale = "pt" }: NavbarProps) => {
         },
       ],
     },
-    { title: t("mentorias"), url: "#treinamentos" },
+    { title: t("mentorias"), url: "/#treinamentos" },
   ];
 
   useEffect(() => {
