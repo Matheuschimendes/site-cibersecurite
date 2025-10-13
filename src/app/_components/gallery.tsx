@@ -113,7 +113,7 @@ const Gallery = () => {
                 <Link
                   href={`/${locale}/${item.key}`}
                   className="mt-auto flex items-center gap-3 text-sm font-semibold text-red-600 group-hover:underline"
-                >
+                  target="_blank">
                   {t("learn_more")}
                   <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </Link>
