@@ -37,7 +37,7 @@ export const FooterPage = () => {
         { title: t("services.brandProtection"), href: "/brand_protection", icon: <ShieldIcon className="size-5 shrink-0" />, },
         { title: t("services.leakDetection"), href: "/leak_detection", icon: <Search className="size-5 shrink-0" />, },
         { title: t("services.vipProtection"), href: "/vip_protection", icon: <Eye className="size-5 shrink-0" />, },
-        { title: t("services.trainings"), href: "#treinamentos", icon: <ChartColumnIncreasing className="size-5 shrink-0" /> },
+        { title: t("services.trainings"), href: "/#treinamentos", icon: <ChartColumnIncreasing className="size-5 shrink-0" /> },
       ],
     },
     {
