@@ -358,8 +358,7 @@
     "description": "Nossa equipe está disponível para responder dúvidas e oferecer suporte personalizado.",
     "email": {
       "title": "Email",
-      "primary": "contact@kryfal.com",
-      "secondary": "comercial@kryfal.com"
+      "primary": "contact@kryfal.com"
     },
     "phone": {
       "title": "Telefone",
