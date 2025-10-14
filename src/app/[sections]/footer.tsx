@@ -13,7 +13,8 @@ import {
   ShieldIcon,
   TwitchIcon,
   TwitterIcon,
-  LinkedinIcon
+  LinkedinIcon,
+  InstagramIcon
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -43,7 +44,6 @@ export const FooterPage = () => {
     {
       title: t("sections.contacts"),
       links: [
-        { title: "comercial@kryfal.com", href: "mailto:comercial@kryfal.com", icon: <Mail className="size-5 shrink-0" /> },
         { title: "contact@kryfal.com", href: "mailto:contact@kryfal.com", icon: <Mail className="size-5 shrink-0" /> },
         { title: "+44 7367 184395", href: "tel:+551199999999", icon: <Phone className="size-5 shrink-0" /> },
         { title: t("address"), href: "#", icon: <MapPin className="size-5 shrink-0" /> },
@@ -112,11 +112,8 @@ export const FooterPage = () => {
             </span>
 
             <div className="flex items-center gap-5 text-muted-foreground ">
-              <Link href="#" target="_blank"><TwitterIcon className="h-5 w-5 hover:text-[#E32320]" /></Link>
-              <Link href="#" target="_blank"><DribbbleIcon className="h-5 w-5 hover:text-[#E32320]" /></Link>
-              <Link href="#" target="_blank"><TwitchIcon className="h-5 w-5 hover:text-[#E32320]" /></Link>
-              <Link href="#" target="_blank"><GithubIcon className="h-5 w-5 hover:text-[#E32320]" /></Link>
-              <Link href="#" target="_blank"><LinkedinIcon className="h-5 w-5 hover:text-[#E32320]" /></Link>
+              <Link href="https://www.instagram.com/kryfal.cti/" target="_blank"><InstagramIcon className="h-5 w-5 hover:text-[#E32320]" /></Link>
+              <Link href="https://www.linkedin.com/company/kryfal/posts/?feedView=all" target="_blank"><LinkedinIcon className="h-5 w-5 hover:text-[#E32320]" /></Link>
             </div>
           </div>
         </div>

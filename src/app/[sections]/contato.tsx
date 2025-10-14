@@ -20,7 +20,6 @@ const InformacoesContato = () => {
         <div>
           <h3 className="font-bold text-white">{t("email.title")}</h3>
           <p className="text-gray-300">{t("email.primary")}</p>
-          <p className="text-gray-300">{t("email.secondary")}</p>
         </div>
       </div>
 
