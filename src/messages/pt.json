@@ -16,6 +16,10 @@
       "vip_protection": {
         "title": "Vigilância e Proteção de Ativos na Deep & Dark Web",
         "description": "Garanta a segurança digital de executivos e pessoas de alto risco."
+      },
+      "training_program": {
+        "title": "Eleve a cibersegurança da sua organização",
+        "description": "Treinamentos desenvolvidos para elevar a maturidade cibernética da sua empresa."
       }
     }
   },
@@ -260,6 +264,73 @@
             "card4": {
               "title": "Eficiência Operacional",
               "description": "Simplifique a gestão de segurança externa com um único parceiro especialista, em vez de múltiplos fornecedores."
+            }
+          },
+          "button": "Agende uma Análise de Risco"
+        }
+      },
+      "training_program": {
+        "title": "Eleve a cibersegurança da sua organização",
+        "description": "Treinamentos desenvolvidos para elevar a maturidade cibernética da sua empresa.",
+        "button": "Agende um treinamento",
+        "list_title_desafio": "Treinamento corporativo",
+        "list_title_Description_desafio": "Nossos treinamentos corporativos foram desenvolvidos para elevar a maturidade cibernética da sua organização, combinando metodologia sólida, frameworks reconhecidos e experiência prática em Cyber Threat Intelligence (CTI).",
+        "list_title_solucao": "Programas personalizados para equipes de Segurança",
+        "list_title_Description_solucao": "Oferecemos programas personalizados para equipes de Segurança, SOC, CSIRT, Red/Blue Teams, Inteligência e áreas correlatas, adaptando o conteúdo ao nível técnico, setor de atuação e desafios específicos de cada empresa. Nossos diferenciais",
+        "listItems": [
+          "Monitoramento contínuo de violações de marca",
+          "Análise de credenciais comprometidas",
+          "Investigação em fóruns clandestinos",
+          "Alertas em tempo real sobre exposições"
+        ],
+        "list_description": "A informação sem contexto é apenas ruído.",
+        "image_desafio": "/ataque.webp",
+        "image_solucao": "/monitoramento.webp",
+        "SectionServiceSecond": {
+          "title": "Nossos diferenciais",
+          "title2": "Detecção de Exposição de Ativos Digitais ",
+          "description": "",
+          "button": "Agende um Briefing de Ameaças"
+        },
+        "CardsService": {
+          "Cards": {
+            "card1": {
+              "title": "Treinamentos sob medida:",
+              "description": "construímos trilhas personalizadas alinhadas aos objetivos estratégicos e operacionais da sua organização."
+            },
+            "card2": {
+              "title": "Foco em aplicação real:",
+              "description": "todo conteúdo é estruturado para uso prático, com estudos de caso, exercícios e simulações baseadas em cenários reais."
+            },
+            "card3": {
+              "title": "Instrutores especialistas:",
+              "description": "nossa equipe atua diariamente em operações de Threat Intelligence, Hunting e Investigação em diferentes setores críticos."
+            },
+            "card4": {
+              "title": "Abordagem modular:",
+              "description": "conteúdos que vão dos fundamentos de CTI a módulos avançados de Threat Hunting, OPSEC, Investigação em Deep/Dark Web, MITRE ATT&CK, inteligência ofensiva e mais. Por que investir em capacitação corporativa?"
+            }
+          }
+        },
+        "seu_negocio": {
+          "title": "Ao investir em treinamentos estratégicos, sua organização:",
+          "description": "",
+          "cards": {
+            "card1": {
+              "title": "Reduz a dependência exclusiva de ferramentas automatizadas.",
+              "description": ""
+            },
+            "card2": {
+              "title": "Desenvolve times mais críticos, proativos e analíticos.",
+              "description": ""
+            },
+            "card3": {
+              "title": "Melhora a capacidade de detectar, antecipar e responder a ameaças complexas.",
+              "description": ""
+            },
+            "card4": {
+              "title": "Constrói uma cultura de segurança sólida, disseminada por todas as áreas envolvidas.",
+              "description": ""
             }
           },
           "button": "Agende uma Análise de Risco"
