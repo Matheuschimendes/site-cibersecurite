@@ -26,7 +26,7 @@ export const SessaoConsultoria = ({
       "
     >
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative">
         <h2 className="text-2xl font-bold text-white mb-4">
           {title ?? t("title")}
         </h2>

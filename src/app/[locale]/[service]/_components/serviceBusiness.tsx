@@ -41,10 +41,11 @@ const SectionBusiness = () => {
               text-3xl sm:text-4xl md:text-6xl
               font-extrabold tracking-tight text-neutral-300
               leading-tight
-            "
+              overflow-hidden"
           >
             <TextScramble className="text-white">{t("title")}</TextScramble>
           </h1>
+
 
           <TextScramble
             className="
@@ -74,7 +75,7 @@ const SectionBusiness = () => {
               "
               asChild
             >
-              <Link href="#" passHref>
+              <Link href="http://wa.me/447367184395?text=Quero%20agendar%20uma%20analise%20de%20risco" passHref target="_blank">
                 <HoverScrambleButton
                   text={t("button")}
                   className="

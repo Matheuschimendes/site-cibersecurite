@@ -123,7 +123,7 @@ const AboutService = ({ features = [] }: AboutProps) => {
         {/* Inverte a ordem no desktop, mantendo mobile intacto */}
         <div className="mt-20 flex flex-col md:flex-row-reverse md:items-start md:justify-between gap-8 md:gap-12 relative">
           {/* Texto sempre em cima no mobile */}
-          <div className="flex-1 flex flex-col items-start">
+          <div className="flex-1 flex flex-col items-start overflow-hidden rounded-lg">
             <h1 className="text-3xl font-extrabold tracking-tight mb-4 leading-tight text-left">
               <TextScramble
                 className="bg-gradient-to-r from-red-600 to-[#ff574d] bg-clip-text text-transparent"
@@ -137,6 +137,7 @@ const AboutService = ({ features = [] }: AboutProps) => {
               {t("list_title_Description_solucao")}
             </p>
           </div>
+
 
           {/* Imagem: abaixo do texto no mobile */}
           <div className="flex-1 relative w-full mt-6 md:mt-0">

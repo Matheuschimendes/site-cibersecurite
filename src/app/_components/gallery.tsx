@@ -59,8 +59,6 @@ const Gallery = () => {
 
   return (
     <section className="p-5 w-screen h-full flex flex-col items-center justify-center relative bg-gradient-to-br md:pb-10">
-      <StarCanvas />
-
       <div className="container max-w-7xl px-4">
         <div className="mb-12 flex flex-col justify-between md:mb-16 md:flex-row md:items-end">
           <div>
@@ -85,7 +83,7 @@ const Gallery = () => {
       </div>
 
       <div className="w-full h-full overflow-hidden md:mb-10 mb-10">
-        <div className="container max-w-6xl mx-auto flex flex-col md:flex-row md:gap-8">
+        <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-4">
           {items.map((item) => (
             <div
               key={item.id}
@@ -96,10 +94,10 @@ const Gallery = () => {
             >
               <div className="flex flex-col h-full group">
                 <div className="mb-5 flex items-center justify-start gap-3 md:gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 md:w-12 md:h-12 flex items-center justify-center">
+                  <div className="flex-shrink-0 w-8 h-8 md:w-8 md:h-8 flex items-center justify-center">
                     {item.icon}
                   </div>
-                  <h3 className="text-lg md:text-xl font-semibold uppercase tracking-wide text-red-600 group-hover:text-[#ff574d] transition-colors duration-300">
+                  <h3 className="text-lg md:text-[20px] font-semibold uppercase tracking-wide text-red-600 group-hover:text-[#ff574d] transition-colors duration-300">
                     {t(`items.${item.key}.title`)}
                   </h3>
                 </div>

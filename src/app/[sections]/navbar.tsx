@@ -80,6 +80,12 @@ const Navbar = ({ logo, currentLocale = "pt" }: NavbarProps) => {
           icon: <Eye className="size-5 shrink-0" />,
           url: `/vip_protection`,
         },
+        {
+          title: t(`submenus.training_program.title`),
+          description: t(`submenus.training_program.description`),
+          icon: <Zap className="size-5 shrink-0" />,
+          url: `/training_program`,
+        },
       ],
     },
     { title: t("mentorias"), url: "/#treinamentos" },
@@ -151,7 +157,7 @@ const Navbar = ({ logo, currentLocale = "pt" }: NavbarProps) => {
 
   const SubMenuLink = ({ item }: { item: MenuItem }) => (
     <Link
-      className="bg-white text-red-600 hover:bg-red-600 hover:text-white flex select-none flex-row gap-4 rounded-md p-3 mt-3 transition-colors"
+      className="bg-white text-red-600 hover:bg-red-600 hover:text-white flex select-none flex-row gap-4 rounded-md p-3 mt-3 transition-colors" target="_blank"
       href={item.url}
     >
       <div>{item.icon}</div>
