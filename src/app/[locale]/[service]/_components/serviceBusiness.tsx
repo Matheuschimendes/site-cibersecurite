@@ -75,7 +75,7 @@ const SectionBusiness = () => {
               "
               asChild
             >
-              <Link href="http://wa.me/447367184395?text=Quero%20agendar%20uma%20analise%20de%20risco" passHref target="_blank">
+              <Link href="http://wa.me/447367184395" passHref target="_blank">
                 <HoverScrambleButton
                   text={t("button")}
                   className="

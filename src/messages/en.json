@@ -284,8 +284,8 @@
           "Real-time alerts about exposures"
         ],
         "list_description": "Information without context is just noise.",
-        "image_desafio": "/ataque.webp",
-        "image_solucao": "/monitoramento.webp",
+        "image_desafio": "/treinamentoCorporativo.webp",
+        "image_solucao": "/treinamentoEquipe.webp",
         "SectionServiceSecond": {
           "title": "Our Differentials",
           "title2": "Detection of Digital Asset Exposure",

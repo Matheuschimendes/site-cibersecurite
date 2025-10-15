@@ -123,7 +123,7 @@ const SectionServiceSecond = ({ features = [] }: AboutProps) => {
               className="z-10 rounded-lg px-5 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold text-white transition-colors"
               asChild
             >
-              <Link href="http://wa.me/447367184395?text=Quero%20agendar%20uma%20analise%20de%20risco" passHref target="_blank">
+              <Link href="http://wa.me/447367184395" passHref target="_blank">
                 <HoverScrambleButton
                   text={t("SectionServiceSecond.button")}
                   className="cursor-pointer rounded bg-[#E32320] px-5 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold text-white transition hover:bg-white hover:text-[#E32320]"

@@ -205,7 +205,7 @@
       "vip_protection": {
         "title": "Vigilância e Proteção de Ativos na Deep & Dark Web",
         "description": "Um serviço unificado para monitorar tanto o ator da ameaça quanto seus ativos digitais expostos.",
-        "button": "Agende uma Análise de Risco",
+        "button": "Agende um Briefing de Ameaças",
         "list_title_desafio": "Quando a Informação Está em Perigo",
         "list_title_Description_desafio": "Sua empresa enfrenta dois riscos críticos e invisíveis: o adversário que planeja um ataque e o seu próprio dado sensível que já pode estar comprometido. Como monitorar ambos os lados dessa equação – o caçador e a presa – em um ambiente anônimo e hostil como a Deep & Dark Web? Contratar soluções separadas gera complexidade e desconecta a inteligência da ação.",
         "list_title_solucao": "Monitoramento e Proteção de Dados Críticos",
@@ -266,7 +266,7 @@
               "description": "Simplifique a gestão de segurança externa com um único parceiro especialista, em vez de múltiplos fornecedores."
             }
           },
-          "button": "Agende uma Análise de Risco"
+          "button": "Agende um Briefing de Ameaças"
         }
       },
       "training_program": {
@@ -284,8 +284,8 @@
           "Alertas em tempo real sobre exposições"
         ],
         "list_description": "A informação sem contexto é apenas ruído.",
-        "image_desafio": "/ataque.webp",
-        "image_solucao": "/monitoramento.webp",
+        "image_desafio": "/treinamentoCorporativo.webp",
+        "image_solucao": "/treinamentoEquipe.webp",
         "SectionServiceSecond": {
           "title": "Nossos diferenciais",
           "title2": "Detecção de Exposição de Ativos Digitais ",
