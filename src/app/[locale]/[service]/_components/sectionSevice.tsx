@@ -53,7 +53,7 @@ export default function SectionSevice() {
                 className="text-white font-semibold text-base px-6 py-3 rounded-lg transition-colors"
                 asChild
               >
-                <Link href="http://wa.me/447367184395" passHref target="_blank">
+                <Link href="http://wa.me/553284263423" passHref target="_blank">
                   <HoverScrambleButton
                     text={t('button')}       // aqui passa o texto corretamente
                     className="bg-red-600 hover:bg-white hover:text-[#E32320] text-white font-semibold px-6 py-3 rounded transition cursor-pointer"

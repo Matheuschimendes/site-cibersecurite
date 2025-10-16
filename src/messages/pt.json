@@ -270,10 +270,10 @@
         }
       },
       "training_program": {
-        "title": "Eleve a cibersegurança da sua organização",
+        "title": "Treinamento Corporativo",
         "description": "Treinamentos desenvolvidos para elevar a maturidade cibernética da sua empresa.",
         "button": "Agende um treinamento",
-        "list_title_desafio": "Treinamento corporativo",
+        "list_title_desafio": "Eleve a cibersegurança da sua organização",
         "list_title_Description_desafio": "Nossos treinamentos corporativos foram desenvolvidos para elevar a maturidade cibernética da sua organização, combinando metodologia sólida, frameworks reconhecidos e experiência prática em Cyber Threat Intelligence (CTI).",
         "list_title_solucao": "Programas personalizados para equipes de Segurança",
         "list_title_Description_solucao": "Oferecemos programas personalizados para equipes de Segurança, SOC, CSIRT, Red/Blue Teams, Inteligência e áreas correlatas, adaptando o conteúdo ao nível técnico, setor de atuação e desafios específicos de cada empresa. Nossos diferenciais",
@@ -512,6 +512,7 @@
       "brandProtection": "Contrainteligência Corporativa",
       "leakDetection": "Inteligência de Ameaças Estratégica e Tática",
       "vipProtection": "Vigilância e Proteção de Ativos na Deep & Dark Web",
+      "trainingProgram": "Eleve a cibersegurança da sua organização",
       "trainings": "Treinamentos"
     },
     "securityNotice": {

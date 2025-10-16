@@ -14,12 +14,12 @@ import {
   TwitchIcon,
   TwitterIcon,
   LinkedinIcon,
-  InstagramIcon
+  InstagramIcon,
+  Zap
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { ta } from "zod/v4/locales";
 
 export const FooterPage = () => {
   const t = useTranslations("Footer");
@@ -38,6 +38,7 @@ export const FooterPage = () => {
         { title: t("services.brandProtection"), href: "/brand_protection", icon: <ShieldIcon className="size-5 shrink-0" />, },
         { title: t("services.leakDetection"), href: "/leak_detection", icon: <Search className="size-5 shrink-0" />, },
         { title: t("services.vipProtection"), href: "/vip_protection", icon: <Eye className="size-5 shrink-0" />, },
+        { title: t("services.trainingProgram"), href: "/training_program", icon: <Zap className="size-5 shrink-0" />, },
         { title: t("services.trainings"), href: "/#treinamentos", icon: <ChartColumnIncreasing className="size-5 shrink-0" /> },
       ],
     },

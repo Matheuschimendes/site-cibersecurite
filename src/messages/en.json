@@ -270,10 +270,10 @@
         }
       },
       "training_program": {
-        "title": "Elevate your organization's cybersecurity",
+        "title": "Corporate Training",
         "description": "Training developed to elevate your company's cyber maturity.",
         "button": "Schedule a training",
-        "list_title_desafio": "Corporate Training",
+        "list_title_desafio": "Elevate your organization's cybersecurity",
         "list_title_Description_desafio": "Our corporate training programs were developed to elevate your organization's cyber maturity, combining solid methodology, recognized frameworks, and practical experience in Cyber Threat Intelligence (CTI).",
         "list_title_solucao": "Customized Programs for Security Teams",
         "list_title_Description_solucao": "We offer customized programs for Security, SOC, CSIRT, Red/Blue Teams, Intelligence, and related areas, adapting the content to the technical level, sector of operation, and specific challenges of each company. Our Differentials",
@@ -510,7 +510,10 @@
     },
     "services": {
       "brandProtection": "Corporate Counterintelligence",
-      "leakDetection": "Threat Intelligence"
+      "leakDetection": "Threat Intelligence",
+      "vipProtection": "Deep & Dark Web Surveillance and Asset Protection",
+      "trainingProgram": "Elevate your organization's cybersecurity",
+      "trainings": "Trainings"
     }
   }
 }
