@@ -56,8 +56,8 @@
     "button": "Schedule a Risk Analysis"
   },
   "galLery": {
-    "title": "Services",
-    "subtitle": "Intelligence",
+    "title": "Intelligence",
+    "subtitle": "Services",
     "description": "Complete threat intelligence and digital investigation solutions to protect your organization.",
     "learn_more": "Learn more",
     "url": "en/services",
@@ -514,6 +514,10 @@
       "vipProtection": "Deep & Dark Web Surveillance and Asset Protection",
       "trainingProgram": "Elevate your organization's cybersecurity",
       "trainings": "Trainings"
+    },
+    "securityNotice": {
+      "title": "Security Notice: ",
+      "description": "All communications are encrypted and handled with the highest level of confidentiality. Our services follow the highest standards of information security."
     }
   }
 }
