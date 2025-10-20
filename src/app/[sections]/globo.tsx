@@ -140,7 +140,7 @@ export default function Globe() {
       {/* 🌍 Renderiza o globo */}
       {showGlobe && (
         <div
-          className="md:-mt-200 absolute w-full -bottom-20 md:-bottom-10 h-100 md:h-150"
+          className="md:-mt-200 absolute w-full -bottom-40 md:-bottom-10 h-100 md:h-150"
           id="hero-lightpass"
         >
           <World
