@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "NODE_ENV=development next dev",
     "build": "NODE_ENV=production next build",
-    "start": "NODE_ENV=production node --max-old-space-size=512 node_modules/next/dist/bin/next start",
-    "lint": "next lint",
-    "serve-static": "NODE_ENV=production next export && npx serve out"
+    "start": "NODE_ENV=production node --max-old-space-size=1024 node_modules/next/dist/bin/next start",
+    "export": "NODE_ENV=production next export",
+    "serve-static": "npm run export && npx serve out"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
