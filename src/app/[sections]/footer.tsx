@@ -46,7 +46,7 @@ export const FooterPage = () => {
       title: t("sections.contacts"),
       links: [
         { title: "contact@kryfal.com", href: "mailto:contact@kryfal.com", icon: <Mail className="size-5 shrink-0" /> },
-        { title: "+44 7367 184395", href: "tel:+551199999999", icon: <Phone className="size-5 shrink-0" /> },
+        { title: "+55 32 8426-3423", href: "tel:+553284263423", icon: <Phone className="size-5 shrink-0" /> },
         { title: t("address"), href: "#", icon: <MapPin className="size-5 shrink-0" /> },
       ],
     },

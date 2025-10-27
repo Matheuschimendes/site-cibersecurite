@@ -26,7 +26,7 @@ const InformacoesContato = () => {
       {/* Telefone */}
       <div className="flex items-start gap-4">
         <div className="p-3 rounded-lg bg-[#1b1b1b] flex items-center justify-center">
-          <Phone className="w-6 h-6 text-red-600" />
+          <Phone className="w-6 h-6 text-red-600" href="tel:+553284263423" />
         </div>
         <div>
           <h3 className="font-bold text-white">{t("phone.title")}</h3>
