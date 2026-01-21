@@ -112,9 +112,4 @@ Nosso fluxo segue o modelo padrão de colaboração do GitHub.
 
 Este projeto está licenciado sob a **MIT License** — veja o arquivo `LICENSE` para detalhes.
 
-
----
-
-Se você quiser, posso também te ajudar com **badges**, **exemplos de screenshot do site**, ou se quiser traduzir para inglês!
-
 [1]: https://github.com/Matheuschimendes/site-cibersecurite "GitHub - Matheuschimendes/site-cibersecurite"
