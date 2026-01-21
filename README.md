@@ -1,37 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 🛡️ site-cibersecurite
 
-First, run the development server:
+Um projeto de **site estático dinâmico** sobre cibersegurança, desenvolvido com **Next.js** e hospedado em Vercel. Este site pode servir de **portfólio, material educativo ou blog pessoal** focado em temas de segurança digital.
+
+🔗 Acesse o site online: [https://site-cibersecurite.vercel.app](https://site-cibersecurite.vercel.app)
+
+---
+
+## 📌 Sobre
+
+Este repositório contém o código-fonte de um site criado com **Next.js**, utilizando TypeScript e tecnologias modernas de frontend. O objetivo do projeto é **apresentar conteúdo relacionado à cibersegurança**, com foco em boas práticas de desenvolvimento web e conteúdo educativo para quem quer aprender mais sobre a área.
+
+O projeto foi iniciado com o **Create Next App**, padrão recomendado para aplicações em Next.js. ([GitHub][1])
+
+---
+
+## 🚀 Tecnologias
+
+O projeto utiliza:
+
+✔️ **Next.js** — framework React para aplicações web
+✔️ **TypeScript** — tipagem estática para JavaScript
+✔️ **CSS / Tailwind (se aplicável)** — estilos e layout
+✔️ **Vercel** — plataforma de deploy contínuo
+
+---
+
+## 📥 Como usar
+
+### 🧑‍💻 Instalar dependências
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/Matheuschimendes/site-cibersecurite.git
+```
+
+Entre na pasta:
+
+```bash
+cd site-cibersecurite
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+---
+
+### ▶️ Rodar em modo de desenvolvimento
+
+Inicie o servidor local:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra o navegador em:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+### 📦 Build para produção
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧩 Estrutura do projeto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+├── data/           # Dados e conteúdo (se aplicável)
+├── public/         # Arquivos estáticos (imagens, ícones etc.)
+├── src/            # Código fonte principal
+│   ├── app/        # Páginas e rotas
+│   ├── components/ # Componentes React reutilizáveis
+└── ...
+```
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# site-cibersecurite
+## 🤝 Contribuições
+
+Contribuições são sempre bem-vindas! 😊
+
+Se você quiser:
+
+✔️ sugerir melhorias
+✔️ corrigir bugs
+✔️ adicionar conteúdo novo
+
+Siga estes passos:
+
+1. Faça um **fork** do projeto
+2. Crie uma **branch** feature (`git checkout -b feature/nome`)
+3. Faça suas alterações e dê um **commit**
+4. Envie para sua branch no GitHub
+5. Abra um **Pull Request**
+
+Nosso fluxo segue o modelo padrão de colaboração do GitHub.
+
+---
+
+## 📝 Licença
+
+Este projeto está licenciado sob a **MIT License** — veja o arquivo `LICENSE` para detalhes.
+
+
+---
+
+Se você quiser, posso também te ajudar com **badges**, **exemplos de screenshot do site**, ou se quiser traduzir para inglês!
+
+[1]: https://github.com/Matheuschimendes/site-cibersecurite "GitHub - Matheuschimendes/site-cibersecurite"
